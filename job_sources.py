@@ -568,7 +568,12 @@ class LinkedInJobsSource(BaseSource):
             "Azure DevOps Engineer",
             "Cloud Infrastructure Engineer",
             "Site Reliability Engineer",
-            "Platform Engineer"
+            "Platform Engineer",
+            "DevSecOps Engineer",
+            "Linux Systems Engineer",
+            "Cloud Security Engineer",
+            "Kubernetes AKS Engineer",
+            "Cloud Automation Engineer"
         ]
         target_locations = [
             ("Bengaluru", "bengaluru"),
@@ -580,7 +585,7 @@ class LinkedInJobsSource(BaseSource):
             "Accept-Language": "en-US,en;q=0.9",
         }
 
-        for term in search_terms[:2]:  # Query high-priority keyword groups
+        for term in search_terms[:5]:  # Query high-priority keyword groups
             for loc_name, loc_cat in target_locations:
                 try:
                     url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords={requests.utils.quote(term)}&location={requests.utils.quote(loc_name)}&f_TPR=r86400&start=0"
