@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-20T07:18:14.103671+00:00",
+  "last_updated": "2026-10-20T07:21:47.780033+00:00",
   "total_records": 33,
   "applied_count": 0,
   "records": {
@@ -20,7 +20,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.361511+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.099065+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.775566+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Wellfound on 2026-10-20"
@@ -41,7 +41,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.361511+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.099400+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.775903+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Wellfound on 2026-10-20"
@@ -62,7 +62,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.362517+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T07:18:14.099987+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.776489+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Arbeitnow on 2026-10-20"
@@ -83,7 +83,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.362517+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.099568+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.776072+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Jobicy on 2026-10-20"
@@ -104,7 +104,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.364101+00:00",
       "original_posting_date": "2026-10-05",
-      "last_verified_at": "2026-10-20T07:18:14.100241+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.776754+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via RemoteOK on 2026-10-20"
@@ -125,7 +125,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.364101+00:00",
       "original_posting_date": "2026-09-16",
-      "last_verified_at": "2026-10-20T07:18:14.100431+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.776950+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via RemoteOK on 2026-10-20"
@@ -146,7 +146,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.365386+00:00",
       "original_posting_date": "2026-10-06",
-      "last_verified_at": "2026-10-20T07:18:14.100807+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.777316+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Hacker News (Who is Hiring) on 2026-10-20"
@@ -167,7 +167,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.365978+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T07:18:14.101166+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.777907+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -188,7 +188,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.365978+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T07:18:14.101274+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778011+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -272,7 +272,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.367587+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.101553+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778079+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -293,7 +293,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368179+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.101630+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778159+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -314,7 +314,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368179+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.101698+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778232+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -335,7 +335,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.101763+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778309+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -356,7 +356,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.101877+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778401+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -377,7 +377,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.101973+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778499+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -398,7 +398,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102040+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778572+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -419,7 +419,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102103+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778638+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -440,7 +440,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102170+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778712+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -461,7 +461,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102233+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778779+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -482,7 +482,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102304+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778852+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -503,7 +503,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102374+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.778927+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -524,7 +524,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102443+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.779000+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -545,7 +545,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102515+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.779078+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -566,7 +566,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102587+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.779155+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -587,7 +587,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.371749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102659+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.779229+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -608,7 +608,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.371749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102727+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.779302+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -629,7 +629,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.372748+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T07:18:14.102792+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.779372+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -646,13 +646,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
         "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244"
       ],
       "first_discovered_at": "2026-10-20T07:13:26.610338+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T07:13:26.610338+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T07:21:47.777567+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -672,7 +671,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:13:26.610970+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T07:18:14.100982+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.777732+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -693,7 +692,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:13:26.610970+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T07:18:14.101099+00:00",
+      "last_verified_at": "2026-10-20T07:21:47.777842+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
