@@ -219,6 +219,76 @@ class TestApplicationTrackerAndFilter(unittest.TestCase):
         self.filter_engine.evaluate_and_deduplicate([j])
         self.assertEqual(j.application_status, "PREVIOUSLY_REVIEWED")
 
+    def test_previously_reviewed_3_day_cutoff(self):
+        """Test that previously reviewed jobs older than 3 days are excluded from the daily report."""
+        from datetime import timedelta
+        # Job A: Discovered 1 day ago (within 3-day cutoff)
+        j_recent = JobPosting(
+            id="recent_job",
+            title="Cloud Platform Engineer",
+            company="Startup A",
+            location="Bengaluru",
+            location_category="bengaluru",
+            work_arrangement="hybrid",
+            original_posting_date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            date_is_verified=True,
+            experience_requirement="3-5 years",
+            source_name="Official Careers",
+            direct_job_url="https://startupa.io/jobs/1",
+            description="Azure, Terraform, Kubernetes",
+        )
+        key_a = generate_canonical_key(j_recent.company, j_recent.title, j_recent.location)
+        self.tracker.data["records"][key_a] = {
+            "canonical_job_key": key_a,
+            "company": j_recent.company,
+            "job_title": j_recent.title,
+            "location": j_recent.location,
+            "canonical_application_url": j_recent.direct_job_url,
+            "all_source_urls": [j_recent.direct_job_url],
+            "first_discovered_at": (datetime.now(timezone.utc) - timedelta(days=1)).isoformat(),
+            "status": "PREVIOUSLY_REVIEWED",
+            "score": 80.0,
+        }
+
+        # Job B: Discovered 5 days ago (older than 3-day cutoff)
+        j_old = JobPosting(
+            id="old_job",
+            title="Site Reliability Engineer",
+            company="Startup B",
+            location="Bengaluru",
+            location_category="bengaluru",
+            work_arrangement="hybrid",
+            original_posting_date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            date_is_verified=True,
+            experience_requirement="3-5 years",
+            source_name="Official Careers",
+            direct_job_url="https://startupb.io/jobs/2",
+            description="Azure, Linux, Monitoring",
+        )
+        key_b = generate_canonical_key(j_old.company, j_old.title, j_old.location)
+        self.tracker.data["records"][key_b] = {
+            "canonical_job_key": key_b,
+            "company": j_old.company,
+            "job_title": j_old.title,
+            "location": j_old.location,
+            "canonical_application_url": j_old.direct_job_url,
+            "all_source_urls": [j_old.direct_job_url],
+            "first_discovered_at": (datetime.now(timezone.utc) - timedelta(days=5)).isoformat(),
+            "status": "PREVIOUSLY_REVIEWED",
+            "score": 80.0,
+        }
+        self.tracker.save()
+
+        # Run filter on both
+        results = self.filter_engine.evaluate_and_deduplicate([j_recent, j_old])
+
+        # j_recent (1 day old) must be included in the report
+        self.assertIn(j_recent, results)
+        self.assertEqual(j_recent.recommendation, "REVIEW")
+
+        # j_old (5 days old) must be excluded from today's report
+        self.assertNotIn(j_old, results)
+
     def test_hard_7_plus_years_excluded(self):
         """Test that jobs requiring 7+ years hard minimum are excluded."""
         j = JobPosting(

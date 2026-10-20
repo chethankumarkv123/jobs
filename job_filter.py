@@ -283,8 +283,15 @@ class JobFilterEngine:
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = "ALREADY APPLIED: You have already applied for this opening. Do not submit duplicate application."
             elif app_status == "PREVIOUSLY_REVIEWED":
+                cutoff_days = self.config.get("history_display", {}).get("previously_reviewed_cutoff_days", 3)
+                days_discovered = self.tracker.get_days_since_first_discovered(can_key)
+                if days_discovered > cutoff_days:
+                    # Suppress from daily report once older than 3 days
+                    job.recommendation = "SKIP"
+                    job.recommendation_rationale = f"Previously reviewed {days_discovered:.1f} days ago (exceeds {cutoff_days}-day display cutoff). Kept in history."
+                    continue
                 job.recommendation = "REVIEW"
-                job.recommendation_rationale = f"Previously reviewed vacancy. No new application recommended unless requirements have changed."
+                job.recommendation_rationale = f"Previously reviewed vacancy (Day {int(days_discovered) + 1} of {cutoff_days} display window). No new application recommended unless requirements have changed."
             elif (
                 job.estimated_match_score >= self.thresholds.get("apply_min_score", 65)
                 and job.date_is_verified

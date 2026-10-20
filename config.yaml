@@ -146,6 +146,10 @@ freshness:
   require_original_posting_date: true
   unverified_date_to_review: true
 
+history_display:
+  previously_reviewed_cutoff_days: 3  # Display previously reviewed jobs in Section 4 for up to 3 days, then hide
+  applied_retention_days: permanent   # Keep applied jobs permanently to guard against duplicate applications
+
 sources:
   official_career_pages:
     enabled: true

@@ -147,6 +147,25 @@ class ApplicationTracker:
 
         return None
 
+    def get_record(self, canonical_key: str) -> Optional[Dict[str, Any]]:
+        """Returns tracked record by canonical key if present."""
+        return self.data.get("records", {}).get(canonical_key)
+
+    def get_days_since_first_discovered(self, canonical_key: str) -> float:
+        """Returns elapsed days since the opening was first recorded."""
+        rec = self.get_record(canonical_key)
+        if not rec:
+            return 0.0
+        date_str = rec.get("first_discovered_at") or rec.get("first_discovered_date")
+        if not date_str:
+            return 0.0
+        try:
+            first_dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            now_dt = datetime.now(timezone.utc)
+            return max(0.0, (now_dt - first_dt).total_seconds() / 86400.0)
+        except Exception:
+            return 0.0
+
     def evaluate_and_track(
         self,
         job_data: Dict[str, Any]

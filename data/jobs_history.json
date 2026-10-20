@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-20T12:50:44.804794+00:00",
-  "total_tracked": 75,
+  "last_updated": "2026-10-20T13:00:36.393015+00:00",
+  "total_tracked": 73,
   "applied_count": 0,
   "saved_count": 0,
   "jobs": {
@@ -159,7 +159,7 @@
       "estimated_match_score": 44.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:09.566243+00:00",
-      "last_seen": "2026-10-20T12:50:37.315529+00:00",
+      "last_seen": "2026-10-20T12:51:18.713809+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 39.5
     },
@@ -186,7 +186,7 @@
       "estimated_match_score": 60.3,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:09.570242+00:00",
-      "last_seen": "2026-10-20T12:50:37.317255+00:00",
+      "last_seen": "2026-10-20T12:51:18.716806+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 37.5
     },
@@ -226,7 +226,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:07.303132+00:00",
-      "last_seen": "2026-10-20T12:50:36.764812+00:00",
+      "last_seen": "2026-10-20T12:51:17.739555+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 72.0
     },
@@ -240,7 +240,7 @@
       "estimated_match_score": 94.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:08.030138+00:00",
-      "last_seen": "2026-10-20T12:50:37.185226+00:00",
+      "last_seen": "2026-10-20T12:51:18.615920+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 67.0
     },
@@ -254,7 +254,7 @@
       "estimated_match_score": 94.2,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:09.451590+00:00",
-      "last_seen": "2026-10-20T12:50:37.583750+00:00",
+      "last_seen": "2026-10-20T12:51:20.201439+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 61.0
     },
@@ -268,7 +268,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:10.238265+00:00",
-      "last_seen": "2026-10-20T12:50:37.762159+00:00",
+      "last_seen": "2026-10-20T12:51:20.899773+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 63.0
     },
@@ -282,7 +282,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:10.678500+00:00",
-      "last_seen": "2026-10-20T12:50:37.865904+00:00",
+      "last_seen": "2026-10-20T12:51:21.653898+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 53.5
     },
@@ -296,7 +296,7 @@
       "estimated_match_score": 82.3,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:11.937389+00:00",
-      "last_seen": "2026-10-20T12:50:39.482754+00:00",
+      "last_seen": "2026-10-20T12:51:23.904266+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 59.0
     },
@@ -310,7 +310,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:12.451455+00:00",
-      "last_seen": "2026-10-20T12:50:39.639102+00:00",
+      "last_seen": "2026-10-20T12:51:24.504705+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 67.0
     },
@@ -324,7 +324,7 @@
       "estimated_match_score": 66.2,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:14.025319+00:00",
-      "last_seen": "2026-10-20T12:50:41.523875+00:00",
+      "last_seen": "2026-10-20T12:51:27.955974+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 78.0
     },
@@ -338,7 +338,7 @@
       "estimated_match_score": 94.2,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:15.054399+00:00",
-      "last_seen": "2026-10-20T12:50:40.798913+00:00",
+      "last_seen": "2026-10-20T12:51:27.359775+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 71.5
     },
@@ -352,7 +352,7 @@
       "estimated_match_score": 100,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:15.642547+00:00",
-      "last_seen": "2026-10-20T12:50:40.601001+00:00",
+      "last_seen": "2026-10-20T12:51:25.974571+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 80.5
     },
@@ -379,7 +379,7 @@
       "estimated_match_score": 54.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:36:37.945526+00:00",
-      "last_seen": "2026-10-20T12:50:37.331629+00:00",
+      "last_seen": "2026-10-20T12:51:20.286408+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 36.0
     },
@@ -406,7 +406,7 @@
       "score": 61.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:10.138304+00:00",
-      "last_seen": "2026-10-20T12:50:36.441352+00:00",
+      "last_seen": "2026-10-20T12:51:15.830360+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "79b3d29c2b10aabd": {
@@ -419,7 +419,7 @@
       "score": 63.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:10.138304+00:00",
-      "last_seen": "2026-10-20T12:50:36.441372+00:00",
+      "last_seen": "2026-10-20T12:51:15.830360+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "e6216de52ef64ae2": {
@@ -432,7 +432,7 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:11.507860+00:00",
-      "last_seen": "2026-10-20T12:50:37.021372+00:00",
+      "last_seen": "2026-10-20T12:51:17.332113+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "7877c005dd406b84": {
@@ -458,7 +458,7 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:13.036301+00:00",
-      "last_seen": "2026-10-20T12:50:37.629718+00:00",
+      "last_seen": "2026-10-20T12:51:18.563615+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "6883c9d3c4b9ba17": {
@@ -471,7 +471,7 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:13.036945+00:00",
-      "last_seen": "2026-10-20T12:50:37.629866+00:00",
+      "last_seen": "2026-10-20T12:51:18.563615+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "286295c69f42918a": {
@@ -484,7 +484,7 @@
       "score": 39.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:14.354764+00:00",
-      "last_seen": "2026-10-20T12:50:38.179220+00:00",
+      "last_seen": "2026-10-20T12:51:19.763878+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "38d8ac96e62313e3": {
@@ -510,7 +510,7 @@
       "score": 70.5,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:45:21.838527+00:00",
-      "last_seen": "2026-10-20T12:50:41.643839+00:00",
+      "last_seen": "2026-10-20T12:51:28.618447+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "3f7756cfddad250c": {
@@ -523,7 +523,7 @@
       "score": 65.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:23.366363+00:00",
-      "last_seen": "2026-10-20T12:50:42.394159+00:00",
+      "last_seen": "2026-10-20T12:51:30.739272+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "840de8fe4976b75d": {
@@ -536,7 +536,7 @@
       "score": 76.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:23.931687+00:00",
-      "last_seen": "2026-10-20T12:50:43.199479+00:00",
+      "last_seen": "2026-10-20T12:51:33.826204+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "b276ce5652fa183c": {
@@ -549,7 +549,7 @@
       "score": 60.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:24.477462+00:00",
-      "last_seen": "2026-10-20T12:50:43.382875+00:00",
+      "last_seen": "2026-10-20T12:51:34.321352+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "989218e04a6585fd": {
@@ -562,7 +562,7 @@
       "score": 61.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:25.578112+00:00",
-      "last_seen": "2026-10-20T12:50:43.829308+00:00",
+      "last_seen": "2026-10-20T12:51:35.396410+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "4d85912e837810e5": {
@@ -575,7 +575,7 @@
       "score": 68.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:26.081562+00:00",
-      "last_seen": "2026-10-20T12:50:43.980321+00:00",
+      "last_seen": "2026-10-20T12:51:35.923821+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "1f625e24b33925e7": {
@@ -588,7 +588,7 @@
       "score": 75.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:27.780226+00:00",
-      "last_seen": "2026-10-20T12:50:44.363334+00:00",
+      "last_seen": "2026-10-20T12:51:37.974982+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "f93ffb4e9ca02ac9": {
@@ -601,7 +601,7 @@
       "score": 61.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:28.376614+00:00",
-      "last_seen": "2026-10-20T12:50:44.797719+00:00",
+      "last_seen": "2026-10-20T12:51:39.246064+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "9af9e691f84fb144": {
@@ -614,7 +614,7 @@
       "score": 39.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:46:03.570204+00:00",
-      "last_seen": "2026-10-20T12:50:38.605016+00:00",
+      "last_seen": "2026-10-20T12:51:20.741511+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "936553995e6bbe0e": {
@@ -627,7 +627,7 @@
       "score": 39.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:46:03.570204+00:00",
-      "last_seen": "2026-10-20T12:50:38.605166+00:00",
+      "last_seen": "2026-10-20T12:51:20.741511+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "adaa75ca9a308604": {
@@ -655,7 +655,7 @@
       "recommendation": "SKIP",
       "application_status": "APPLIED",
       "first_seen": "2026-10-20T07:12:01.119560+00:00",
-      "last_seen": "2026-10-20T07:12:33.659006+00:00",
+      "last_seen": "2026-10-20T13:00:36.216979+00:00",
       "status": "APPLIED"
     },
     "rev_job_1": {
@@ -670,7 +670,7 @@
       "recommendation": "REVIEW",
       "application_status": "PREVIOUSLY_REVIEWED",
       "first_seen": "2026-10-20T07:12:01.214584+00:00",
-      "last_seen": "2026-10-20T07:12:33.749921+00:00",
+      "last_seen": "2026-10-20T13:00:36.343330+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "startup_1": {
@@ -685,7 +685,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T07:12:01.261961+00:00",
-      "last_seen": "2026-10-20T07:12:33.794302+00:00",
+      "last_seen": "2026-10-20T13:00:36.393015+00:00",
       "status": "NEW"
     },
     "s1": {
@@ -714,7 +714,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T07:12:40.160183+00:00",
-      "last_seen": "2026-10-20T12:50:37.241687+00:00",
+      "last_seen": "2026-10-20T12:51:17.485457+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "a171a5d2200b4ff1": {
@@ -728,8 +728,8 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:37.021252+00:00",
-      "last_seen": "2026-10-20T12:50:37.021263+00:00"
+      "first_seen": "2026-10-20T12:51:17.331075+00:00",
+      "last_seen": "2026-10-20T12:51:17.331075+00:00"
     },
     "e866cd2596c9fd39": {
       "id": "e866cd2596c9fd39",
@@ -742,8 +742,8 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:37.021459+00:00",
-      "last_seen": "2026-10-20T12:50:37.021460+00:00"
+      "first_seen": "2026-10-20T12:51:17.332113+00:00",
+      "last_seen": "2026-10-20T12:51:17.332113+00:00"
     },
     "97cbe50640cd65cb": {
       "id": "97cbe50640cd65cb",
@@ -756,8 +756,8 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:37.021529+00:00",
-      "last_seen": "2026-10-20T12:50:37.021530+00:00"
+      "first_seen": "2026-10-20T12:51:17.332113+00:00",
+      "last_seen": "2026-10-20T12:51:17.332113+00:00"
     },
     "66b912d8057bc5c1": {
       "id": "66b912d8057bc5c1",
@@ -770,8 +770,8 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:37.629797+00:00",
-      "last_seen": "2026-10-20T12:50:37.629798+00:00"
+      "first_seen": "2026-10-20T12:51:18.563615+00:00",
+      "last_seen": "2026-10-20T12:51:18.563615+00:00"
     },
     "b072efdca34e4881": {
       "id": "b072efdca34e4881",
@@ -784,8 +784,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:39.137390+00:00",
-      "last_seen": "2026-10-20T12:50:39.137401+00:00"
+      "first_seen": "2026-10-20T12:51:21.938087+00:00",
+      "last_seen": "2026-10-20T12:51:21.938087+00:00"
     },
     "19165c8bd204758a": {
       "id": "19165c8bd204758a",
@@ -798,8 +798,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:39.137482+00:00",
-      "last_seen": "2026-10-20T12:50:39.137484+00:00"
+      "first_seen": "2026-10-20T12:51:21.938087+00:00",
+      "last_seen": "2026-10-20T12:51:21.938087+00:00"
     },
     "b272f0098a720e51": {
       "id": "b272f0098a720e51",
@@ -812,8 +812,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:39.137555+00:00",
-      "last_seen": "2026-10-20T12:50:39.137556+00:00"
+      "first_seen": "2026-10-20T12:51:21.938087+00:00",
+      "last_seen": "2026-10-20T12:51:21.938087+00:00"
     },
     "daa0f6f03a47d941": {
       "id": "daa0f6f03a47d941",
@@ -826,8 +826,8 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:39.137620+00:00",
-      "last_seen": "2026-10-20T12:50:39.137622+00:00"
+      "first_seen": "2026-10-20T12:51:21.939057+00:00",
+      "last_seen": "2026-10-20T12:51:21.939057+00:00"
     },
     "50d150890d580081": {
       "id": "50d150890d580081",
@@ -840,8 +840,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:39.668681+00:00",
-      "last_seen": "2026-10-20T12:50:39.668682+00:00"
+      "first_seen": "2026-10-20T12:51:23.038455+00:00",
+      "last_seen": "2026-10-20T12:51:23.038455+00:00"
     },
     "df9b2d974fdb5f64": {
       "id": "df9b2d974fdb5f64",
@@ -854,8 +854,8 @@
       "score": 36.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:40.166933+00:00",
-      "last_seen": "2026-10-20T12:50:40.166942+00:00"
+      "first_seen": "2026-10-20T12:51:24.055835+00:00",
+      "last_seen": "2026-10-20T12:51:24.055835+00:00"
     },
     "3750e9c971f4f314": {
       "id": "3750e9c971f4f314",
@@ -868,8 +868,8 @@
       "score": 36.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:40.167072+00:00",
-      "last_seen": "2026-10-20T12:50:40.167075+00:00"
+      "first_seen": "2026-10-20T12:51:24.056837+00:00",
+      "last_seen": "2026-10-20T12:51:24.056837+00:00"
     },
     "6fce3c85799d179d": {
       "id": "6fce3c85799d179d",
@@ -882,8 +882,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:40.167192+00:00",
-      "last_seen": "2026-10-20T12:50:40.167194+00:00"
+      "first_seen": "2026-10-20T12:51:24.056837+00:00",
+      "last_seen": "2026-10-20T12:51:24.056837+00:00"
     },
     "951d26eb56ef7b32": {
       "id": "951d26eb56ef7b32",
@@ -896,50 +896,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:40.167329+00:00",
-      "last_seen": "2026-10-20T12:50:40.167333+00:00"
-    },
-    "ba23f31c3af70561": {
-      "id": "ba23f31c3af70561",
-      "canonical_job_key": "thomsonreuters::engineer,i,reliability,site,sre::india_other",
-      "title": "Senior Site Reliability Engineer (SRE) I",
-      "company": "Thomson Reuters",
-      "location": "Greater Hyderabad Area",
-      "source_name": "LinkedIn Jobs",
-      "official_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-sre-i-at-thomson-reuters-4480239073",
-      "score": 36.0,
-      "recommendation": "REVIEW",
-      "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:40.526182+00:00",
-      "last_seen": "2026-10-20T12:50:40.526192+00:00"
-    },
-    "7463a30b14ff982d": {
-      "id": "7463a30b14ff982d",
-      "canonical_job_key": "marriotttechaccelerator::30242,engineer,ii,sre,systems,t500::india_other",
-      "title": "Senior Systems Engineer II - SRE [T500-30242]",
-      "company": "Marriott Tech Accelerator",
-      "location": "Hyderabad, Telangana, India",
-      "source_name": "LinkedIn Jobs",
-      "official_application_url": "https://in.linkedin.com/jobs/view/senior-systems-engineer-ii-sre-t500-30242-at-marriott-tech-accelerator-4480975967",
-      "score": 36.0,
-      "recommendation": "REVIEW",
-      "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:40.526367+00:00",
-      "last_seen": "2026-10-20T12:50:40.526368+00:00"
-    },
-    "2f9f93220757224b": {
-      "id": "2f9f93220757224b",
-      "canonical_job_key": "side::engineer,reliability,site::india_other",
-      "title": "Site Reliability Engineer",
-      "company": "Side",
-      "location": "Hyderabad, Telangana, India",
-      "source_name": "LinkedIn Jobs",
-      "official_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-side-4480257119",
-      "score": 32.0,
-      "recommendation": "REVIEW",
-      "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:40.526433+00:00",
-      "last_seen": "2026-10-20T12:50:40.526434+00:00"
+      "first_seen": "2026-10-20T12:51:24.056837+00:00",
+      "last_seen": "2026-10-20T12:51:24.056837+00:00"
     },
     "a35c3c4ea54c6b10": {
       "id": "a35c3c4ea54c6b10",
@@ -952,8 +910,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:41.100826+00:00",
-      "last_seen": "2026-10-20T12:50:41.100828+00:00"
+      "first_seen": "2026-10-20T12:51:25.943819+00:00",
+      "last_seen": "2026-10-20T12:51:25.943819+00:00"
     },
     "21ea9b880c35131f": {
       "id": "21ea9b880c35131f",
@@ -966,8 +924,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:41.100894+00:00",
-      "last_seen": "2026-10-20T12:50:41.100896+00:00"
+      "first_seen": "2026-10-20T12:51:25.943819+00:00",
+      "last_seen": "2026-10-20T12:51:25.943819+00:00"
     },
     "b6da197eb8921995": {
       "id": "b6da197eb8921995",
@@ -980,8 +938,8 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:41.100960+00:00",
-      "last_seen": "2026-10-20T12:50:41.100961+00:00"
+      "first_seen": "2026-10-20T12:51:25.943819+00:00",
+      "last_seen": "2026-10-20T12:51:25.943819+00:00"
     },
     "e82d8fcfe7b8ea48": {
       "id": "e82d8fcfe7b8ea48",
@@ -994,8 +952,8 @@
       "score": 43.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:41.543236+00:00",
-      "last_seen": "2026-10-20T12:50:41.543238+00:00"
+      "first_seen": "2026-10-20T12:51:27.078830+00:00",
+      "last_seen": "2026-10-20T12:51:27.078830+00:00"
     },
     "069a04c2845f5db5": {
       "id": "069a04c2845f5db5",
@@ -1008,8 +966,8 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:41.543319+00:00",
-      "last_seen": "2026-10-20T12:50:41.543321+00:00"
+      "first_seen": "2026-10-20T12:51:27.079834+00:00",
+      "last_seen": "2026-10-20T12:51:27.079834+00:00"
     },
     "73f71d3e4fe66333": {
       "id": "73f71d3e4fe66333",
@@ -1022,8 +980,22 @@
       "score": 32.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
-      "first_seen": "2026-10-20T12:50:41.543387+00:00",
-      "last_seen": "2026-10-20T12:50:41.543388+00:00"
+      "first_seen": "2026-10-20T12:51:27.079834+00:00",
+      "last_seen": "2026-10-20T12:51:27.079834+00:00"
+    },
+    "recent_job": {
+      "id": "recent_job",
+      "canonical_job_key": "startup::cloud,engineer,platform::blr",
+      "title": "Cloud Platform Engineer",
+      "company": "Startup A",
+      "location": "Bengaluru",
+      "source_name": "Official Careers",
+      "official_application_url": "https://startupa.io/jobs/1",
+      "score": 49.5,
+      "recommendation": "REVIEW",
+      "application_status": "PREVIOUSLY_REVIEWED",
+      "first_seen": "2026-10-20T13:00:36.308415+00:00",
+      "last_seen": "2026-10-20T13:00:36.308415+00:00"
     }
   }
 }

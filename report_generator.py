@@ -442,7 +442,7 @@ class ReportGenerator:
         <!-- 4. PREVIOUSLY REVIEWED JOBS -->
         <div class="section-wrap" id="sec-4">
             <div class="sec-header">
-                <h2>📋 4. Previously Reviewed & Applied Jobs <span class="badge-count">{len(sec_4)}</span></h2>
+                <h2>📋 4. Previously Reviewed & Applied Jobs (3-Day Display Window) <span class="badge-count">{len(sec_4)}</span></h2>
                 <span class="loc-priority">Historical Audit &bull; Anti-Spam Lock</span>
             </div>
             <div class="cards-list">

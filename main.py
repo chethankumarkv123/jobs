@@ -163,7 +163,7 @@ def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
 
     # Section 4: History Tracked (Previously Reviewed / Applied)
     if sec_4:
-        table_4 = Table(title="[bold magenta]4. Previously Reviewed or Applied Jobs (Anti-Duplicate Guard)[/]", border_style="magenta")
+        table_4 = Table(title="[bold magenta]4. Previously Reviewed or Applied Jobs (3-Day Display Window)[/]", border_style="magenta")
         table_4.add_column("Company", style="bold white", width=14)
         table_4.add_column("Role", style="cyan", width=30)
         table_4.add_column("Tracker Status", style="bold magenta", width=22)
