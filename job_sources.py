@@ -64,6 +64,16 @@ class JobPosting:
     is_active: bool = True
     startup_category: str = "Tech Startup"
 
+    # Anti-duplicate & Application Tracking attributes
+    canonical_job_key: str = ""
+    official_requisition_id: Optional[str] = None
+    LinkedIn_job_id: Optional[str] = None
+    Wellfound_job_id: Optional[str] = None
+    all_source_urls: List[str] = field(default_factory=list)
+    duplicate_check_result: str = ""
+    application_status: str = "NEW"  # NEW | PREVIOUSLY_REVIEWED | APPLIED | REJECTED | CLOSED
+    candidate_experience_fit: str = ""
+
     # Scored attributes (evaluated by job_filter)
     estimated_match_score: float = 0.0
     matching_skills: List[str] = field(default_factory=list)
@@ -80,6 +90,10 @@ class JobPosting:
         self.technical_skills = sanitize_tags(self.technical_skills)
         self.matching_skills = sanitize_tags(self.matching_skills)
         self.missing_skills = sanitize_tags(self.missing_skills)
+        if self.direct_job_url and self.direct_job_url not in self.all_source_urls:
+            self.all_source_urls.append(self.direct_job_url)
+        if self.direct_application_url and self.direct_application_url not in self.all_source_urls:
+            self.all_source_urls.append(self.direct_application_url)
 
     @staticmethod
     def generate_id(company: str, title: str, url: str) -> str:

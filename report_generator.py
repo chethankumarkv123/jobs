@@ -1,6 +1,6 @@
 """
 report_generator.py
-Generates the comprehensive daily job intelligence reports:
+Generates the comprehensive daily job intelligence reports and anti-duplicate application tracker deliverables:
 1. reports/latest.html (Interactive dashboard organized by mandatory priority sections)
 2. reports/latest.csv & reports/archive/jobs_YYYY-MM-DD.csv
 3. reports/latest.json & reports/archive/jobs_YYYY-MM-DD.json
@@ -62,23 +62,24 @@ class ReportGenerator:
     def generate_csv(self, jobs: List[JobPosting], filepaths: List[str]):
         headers = [
             "Company",
-            "Title",
+            "Job Title",
             "Location",
             "Work Arrangement",
-            "Location Priority Group",
+            "Location Priority",
             "Original Posting Date",
-            "Date Verification Status",
-            "Experience Requirements",
-            "Key Matching Technologies",
-            "Missing Skills",
-            "Estimated Profile Match %",
-            "Source Name",
-            "Source Type",
-            "Official Application URL",
-            "LinkedIn Job URL",
+            "Last Verification Timestamp",
+            "Required Experience",
+            "Candidate Experience Fit",
+            "Relevant Technical Skills",
+            "Missing Mandatory Skills",
+            "Estimated Profile Match Score",
             "Recommendation",
-            "Recommendation Reason",
-            "Date Last Verified"
+            "Reason for Recommendation",
+            "Source URL",
+            "Official Application URL",
+            "Canonical Job Key",
+            "Duplicate Check Result",
+            "Previous Application Status"
         ]
 
         for path in filepaths:
@@ -93,57 +94,64 @@ class ReportGenerator:
                         j.work_arrangement,
                         j.location_category.upper(),
                         j.original_posting_date or "Unverified",
-                        "VERIFIED" if j.date_is_verified else "UNVERIFIED",
+                        j.date_last_verified,
                         j.experience_requirement,
+                        j.candidate_experience_fit or f"Matches candidate's 4.2 yrs total IT",
                         ", ".join(j.matching_skills),
-                        ", ".join(j.missing_skills),
+                        ", ".join(j.missing_skills) if j.missing_skills else "None",
                         f"{j.estimated_match_score}%",
-                        j.source_name,
-                        j.source_type,
-                        j.direct_application_url or j.direct_job_url,
-                        j.linkedin_job_url or "N/A",
                         j.recommendation,
                         j.recommendation_rationale,
-                        j.date_last_verified
+                        j.direct_job_url,
+                        j.direct_application_url or j.direct_job_url,
+                        j.canonical_job_key,
+                        j.duplicate_check_result,
+                        j.application_status
                     ])
 
     def generate_json(self, jobs: List[JobPosting], filepaths: List[str], run_time: datetime):
+        new_count = sum(1 for j in jobs if j.application_status == "NEW" and j.recommendation == "APPLY")
+        review_count = sum(1 for j in jobs if j.recommendation == "REVIEW")
+        applied_count = sum(1 for j in jobs if j.application_status == "APPLIED")
+        previously_reviewed_count = sum(1 for j in jobs if j.application_status == "PREVIOUSLY_REVIEWED")
         official_count = sum(1 for j in jobs if j.source_type == "official_career_page" and j.verification_status == "VERIFIED")
-        official_share = round((official_count / len(jobs) * 100) if jobs else 0.0, 1)
+        confirmed_count = sum(1 for j in jobs if j.recommendation == "APPLY")
+        official_share = round((official_count / confirmed_count * 100) if confirmed_count else 0.0, 1)
 
         payload = {
             "metadata": {
                 "generated_at_ist": run_time.strftime("%Y-%m-%d %H:%M:%S IST"),
+                "candidate_profile": "Azure Cloud Engineer (4+ yrs total IT experience, LTIMindtree)",
                 "total_jobs_evaluated": len(jobs),
-                "apply_count": sum(1 for j in jobs if j.recommendation == "APPLY"),
-                "review_count": sum(1 for j in jobs if j.recommendation == "REVIEW"),
-                "official_career_page_count": official_count,
-                "official_career_page_share_pct": f"{official_share}%",
-                "target_profile": "Azure Cloud Engineer (4+ yrs IT experience, Azure/Kubernetes/Linux/Terraform)",
-                "target_schedule": "08:30 Asia/Kolkata Daily"
+                "new_confirmed_openings": new_count,
+                "needs_review_count": review_count,
+                "already_applied_count": applied_count,
+                "previously_reviewed_count": previously_reviewed_count,
+                "official_career_page_share_confirmed": f"{official_share}% (Target >= 70%)",
+                "source_coverage": "Official Career Pages, Wellfound, LinkedIn Jobs, Hacker News, RemoteOK, Jobicy, Arbeitnow"
             },
             "jobs": [
                 {
                     "company": j.company,
-                    "title": j.title,
+                    "job_title": j.title,
                     "location": j.location,
                     "work_arrangement": j.work_arrangement,
-                    "location_priority_group": j.location_category,
+                    "location_priority": j.location_category,
                     "original_posting_date": j.original_posting_date,
-                    "date_is_verified": j.date_is_verified,
-                    "experience_requirements": j.experience_requirement,
-                    "key_matching_technologies": j.matching_skills,
-                    "missing_skills": j.missing_skills,
-                    "estimated_profile_match_pct": j.estimated_match_score,
+                    "last_verification_timestamp": j.date_last_verified,
+                    "required_experience": j.experience_requirement,
+                    "candidate_experience_fit": j.candidate_experience_fit,
+                    "relevant_technical_skills": j.matching_skills,
+                    "missing_mandatory_skills": j.missing_skills,
+                    "estimated_profile_match_score": j.estimated_match_score,
                     "score_reasons": j.score_reasons,
-                    "source_name": j.source_name,
-                    "source_type": j.source_type,
-                    "verification_status": j.verification_status,
-                    "official_application_url": j.direct_application_url or j.direct_job_url,
-                    "linkedin_job_url": j.linkedin_job_url,
                     "recommendation": j.recommendation,
-                    "recommendation_reason": j.recommendation_rationale,
-                    "date_last_verified": j.date_last_verified
+                    "reason_for_recommendation": j.recommendation_rationale,
+                    "source_url": j.direct_job_url,
+                    "official_application_url": j.direct_application_url or j.direct_job_url,
+                    "canonical_job_key": j.canonical_job_key,
+                    "duplicate_check_result": j.duplicate_check_result,
+                    "previous_application_status": j.application_status
                 }
                 for j in jobs
             ]
@@ -153,44 +161,46 @@ class ReportGenerator:
                 json.dump(payload, f, indent=2, ensure_ascii=False)
 
     def generate_html(self, jobs: List[JobPosting], run_time: datetime, excluded_summary: List[str]) -> str:
-        # Group jobs strictly by report requirements:
-        # A. Bengaluru — Officially verified jobs
-        # B. Other Indian locations — Officially verified jobs
-        # C. Worldwide remote — Verified jobs open to India-based applicants
-        # D. LinkedIn — Relevant New Openings
-        # E. Wellfound startup opportunities not yet verified on company website
-        # F. Other job-board leads requiring manual verification
+        # Partition into mandatory 7 report sections:
+        # 1. Bengaluru — New confirmed jobs
+        # 2. Other India locations — New confirmed jobs
+        # 3. Worldwide remote — Confirmed jobs eligible for India-based applicants
+        # 4. Previously reviewed jobs with meaningful changes
+        # 5. Date-unverified or employer-verification-pending leads
+        # 6. Possible duplicates requiring review
+        # 7. Summary of excluded jobs and reasons
 
-        section_a = [j for j in jobs if j.location_category == "bengaluru" and j.source_type == "official_career_page" and j.date_is_verified]
-        section_b = [j for j in jobs if j.location_category == "india_other" and j.source_type == "official_career_page" and j.date_is_verified]
-        section_c = [j for j in jobs if j.location_category == "worldwide_remote" and j.source_type == "official_career_page" and j.date_is_verified]
-        section_d = [j for j in jobs if j.source_type == "linkedin"]
-        section_e = [j for j in jobs if j.source_type == "wellfound"]
-        section_f = [j for j in jobs if j.source_type == "job_board" or (not j.date_is_verified and j not in section_d and j not in section_e)]
+        sec_1 = [j for j in jobs if j.location_category == "bengaluru" and j.recommendation == "APPLY" and j.application_status == "NEW"]
+        sec_2 = [j for j in jobs if j.location_category == "india_other" and j.recommendation == "APPLY" and j.application_status == "NEW"]
+        sec_3 = [j for j in jobs if j.location_category == "worldwide_remote" and j.recommendation == "APPLY" and j.application_status == "NEW"]
+        sec_4 = [j for j in jobs if j.application_status == "PREVIOUSLY_REVIEWED" or j.application_status == "APPLIED"]
+        sec_5 = [j for j in jobs if j.recommendation == "REVIEW" and j not in sec_4]
+        sec_6 = [j for j in jobs if "possible duplicate" in j.duplicate_check_result.lower()]
 
-        total_count = len(jobs)
-        confirmed_count = len(section_a) + len(section_b) + len(section_c)
-        official_count = sum(1 for j in jobs if j.source_type == "official_career_page")
-        official_share = round((official_count / total_count * 100) if total_count else 0.0, 1)
+        confirmed_count = len(sec_1) + len(sec_2) + len(sec_3)
+        official_count = sum(1 for j in (sec_1 + sec_2 + sec_3) if j.source_type == "official_career_page")
+        official_share = round((official_count / confirmed_count * 100) if confirmed_count else 0.0, 1)
 
         run_str = run_time.strftime("%d %b %Y, %I:%M %p IST")
 
-        def render_card(j: JobPosting, is_linkedin: bool = False) -> str:
+        def render_card(j: JobPosting) -> str:
             score_color = "#10b981" if j.estimated_match_score >= 80 else ("#38bdf8" if j.estimated_match_score >= 65 else "#f59e0b")
-            rec_class = "badge-apply" if j.recommendation == "APPLY" else "badge-review"
+            rec_class = "badge-apply" if j.recommendation == "APPLY" else ("badge-applied" if j.application_status == "APPLIED" else "badge-review")
 
             matched_html = "".join([f'<span class="skill-tag matched">{s}</span>' for s in j.matching_skills])
             missing_html = "".join([f'<span class="skill-tag missing">{s}</span>' for s in j.missing_skills])
 
-            date_badge = f'<span class="badge-verified">Verified: {j.original_posting_date}</span>' if j.date_is_verified else '<span class="badge-unverified">Date Unverified</span>'
-            status_badge = f'<span class="badge-verified">{j.verification_status}</span>' if j.verification_status == "VERIFIED" else '<span class="badge-unverified">{j.verification_status}</span>'
+            date_badge = f'<span class="badge-verified">Verified 24h: {j.original_posting_date}</span>' if j.date_is_verified else '<span class="badge-unverified">Date Unverified</span>'
+            status_badge = f'<span class="badge-status">{j.application_status}</span>'
 
-            linkedin_btn = f'<a href="{j.linkedin_job_url}" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">View on LinkedIn ↗</a>' if j.linkedin_job_url else ''
+            dup_info = f'<div class="dup-box"><strong>Anti-Duplicate Check:</strong> {j.duplicate_check_result} &bull; <code>{j.canonical_job_key}</code></div>'
+
+            linkedin_btn = f'<a href="{j.linkedin_job_url}" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>' if j.linkedin_job_url else ''
 
             reasons_html = "".join([f"<li>{r}</li>" for r in j.score_reasons[:3]])
 
             return f"""
-            <div class="job-card" data-location="{j.location_category}" data-rec="{j.recommendation}">
+            <div class="job-card" data-location="{j.location_category}" data-rec="{j.recommendation}" data-status="{j.application_status}">
                 <div class="card-top">
                     <div>
                         <div class="source-tag">{j.source_name} &bull; {status_badge}</div>
@@ -205,8 +215,8 @@ class ReportGenerator:
 
                 <div class="card-meta">
                     <div><strong>Exp Required:</strong> {j.experience_requirement}</div>
+                    <div><strong>Candidate Fit:</strong> {j.candidate_experience_fit}</div>
                     <div><strong>Posting Date:</strong> {date_badge}</div>
-                    <div><strong>Category:</strong> {j.startup_category}</div>
                     <div><strong>Last Verified:</strong> {j.date_last_verified.split(' ')[0]}</div>
                 </div>
 
@@ -226,10 +236,11 @@ class ReportGenerator:
                         <strong>Evaluation Rationale:</strong> {j.recommendation_rationale}
                         <ul class="score-reasons">{reasons_html}</ul>
                     </div>
+                    {dup_info}
                 </div>
 
                 <div class="card-footer">
-                    <span class="rec-badge {rec_class}">Recommendation: {j.recommendation}</span>
+                    <span class="rec-badge {rec_class}">Recommendation: {j.recommendation} ({j.application_status})</span>
                     <div class="card-buttons">
                         {linkedin_btn}
                         <a href="{j.direct_application_url or j.direct_job_url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
@@ -238,17 +249,17 @@ class ReportGenerator:
             </div>
             """
 
-        cards_a = "\n".join([render_card(j) for j in section_a]) if section_a else '<div class="empty-box">No new openings meeting 24h verified criteria.</div>'
-        cards_b = "\n".join([render_card(j) for j in section_b]) if section_b else '<div class="empty-box">No new openings in other Indian cities meeting 24h verified criteria.</div>'
-        cards_c = "\n".join([render_card(j) for j in section_c]) if section_c else '<div class="empty-box">No worldwide remote openings with verified India eligibility.</div>'
-        cards_d = "\n".join([render_card(j, is_linkedin=True) for j in section_d]) if section_d else '<div class="empty-box">No new LinkedIn openings meeting past-24h technical criteria.</div>'
-        cards_e = "\n".join([render_card(j) for j in section_e]) if section_e else '<div class="empty-box">No unverified Wellfound startup leads pending.</div>'
-        cards_f = "\n".join([render_card(j) for j in section_f]) if section_f else '<div class="empty-box">No job-board leads requiring manual review.</div>'
+        cards_1 = "\n".join([render_card(j) for j in sec_1]) if sec_1 else '<div class="empty-box">No new Bengaluru confirmed openings discovered in this 24-hour cycle.</div>'
+        cards_2 = "\n".join([render_card(j) for j in sec_2]) if sec_2 else '<div class="empty-box">No new confirmed openings in other Indian cities.</div>'
+        cards_3 = "\n".join([render_card(j) for j in sec_3]) if sec_3 else '<div class="empty-box">No new worldwide remote openings with verified India eligibility.</div>'
+        cards_4 = "\n".join([render_card(j) for j in sec_4]) if sec_4 else '<div class="empty-box">No previously reviewed openings in active rotation.</div>'
+        cards_5 = "\n".join([render_card(j) for j in sec_5]) if sec_5 else '<div class="empty-box">No pending leads requiring date or location review.</div>'
+        cards_6 = "\n".join([render_card(j) for j in sec_6]) if sec_6 else '<div class="empty-box">Zero duplicate ambiguities detected. All vacancies cleanly resolved.</div>'
 
         excluded_items_html = "".join([f"<li>{ex}</li>" for ex in (excluded_summary or [
-            "Roles requiring 7+ years hard minimum were excluded (candidate has 4.2 yrs experience)",
-            "Third-party staffing agencies and recruiters without identified direct employer were rejected",
-            "Non-infrastructure roles (Sales, Marketing, HR, Business Development) were excluded",
+            "Roles requiring 7+ years hard minimum were excluded (candidate has 4.2 yrs total IT experience)",
+            "Third-party staffing agencies and consultancies without identified direct employers were rejected",
+            "Non-infrastructure disciplines (Sales, Marketing, HR, Business Development) were excluded",
             "Timezone-restricted postings (US Only, CET/Europe Only) were filtered out"
         ])])
 
@@ -257,7 +268,7 @@ class ReportGenerator:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Job Intelligence Report | Azure Cloud Engineer</title>
+    <title>Personalized Daily Job Finder & Application Tracker</title>
     <style>
         :root {{
             --bg: #0b0f19;
@@ -282,7 +293,11 @@ class ReportGenerator:
         .profile-badge {{ background: #0284c7; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; }}
         .header-meta {{ text-align: right; font-size: 13px; color: var(--text-dim); }}
 
-        /* Metric Grid */
+        /* Anti-Duplicate Banner */
+        .anti-spam-banner {{ background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 24px; font-size: 13px; color: #a7f3d0; }}
+        .anti-spam-banner strong {{ color: #34d399; }}
+
+        /* KPI Metric Cards */
         .kpi-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }}
         .kpi-card {{ background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }}
         .kpi-val {{ font-size: 28px; font-weight: 700; color: #fff; }}
@@ -292,8 +307,9 @@ class ReportGenerator:
         /* Sections */
         .section-wrap {{ margin-bottom: 36px; }}
         .sec-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }}
-        .sec-header h2 {{ font-size: 19px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }}
+        .sec-header h2 {{ font-size: 18px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }}
         .badge-count {{ background: var(--border); font-size: 12px; padding: 2px 8px; border-radius: 999px; color: var(--text-main); }}
+        .loc-priority {{ font-size: 12px; color: var(--accent); font-weight: 600; text-transform: uppercase; }}
 
         /* Job Card */
         .cards-list {{ display: flex; flex-direction: column; gap: 14px; }}
@@ -311,6 +327,7 @@ class ReportGenerator:
         .card-meta {{ display: flex; flex-wrap: wrap; gap: 16px; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--text-dim); margin-bottom: 12px; }}
         .badge-verified {{ color: var(--success); font-weight: 600; }}
         .badge-unverified {{ color: var(--warning); font-weight: 600; }}
+        .badge-status {{ background: #0369a1; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; }}
 
         .card-body {{ font-size: 13px; margin-bottom: 14px; }}
         .skills-block {{ margin-bottom: 8px; }}
@@ -322,10 +339,12 @@ class ReportGenerator:
 
         .rationale-block {{ background: rgba(11, 15, 25, 0.6); padding: 10px 14px; border-radius: 6px; margin-top: 10px; font-size: 12px; color: #cbd5e1; }}
         .score-reasons {{ margin: 6px 0 0 16px; color: var(--text-dim); }}
+        .dup-box {{ background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 6px; margin-top: 8px; font-size: 11px; color: #94a3b8; }}
 
         .card-footer {{ display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; flex-wrap: wrap; gap: 10px; }}
         .rec-badge {{ font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 6px; }}
         .badge-apply {{ background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }}
+        .badge-applied {{ background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); }}
         .badge-review {{ background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }}
 
         .card-buttons {{ display: flex; gap: 8px; }}
@@ -348,109 +367,114 @@ class ReportGenerator:
         <header>
             <div class="header-title">
                 <h1>
-                    <span>Personalized Job Intelligence Report</span>
+                    <span>Personalized Job Finder & Application Tracker</span>
                     <span class="profile-badge">Azure Cloud Engineer (4+ Yrs IT)</span>
                 </h1>
-                <p>Strict Location Priority &bull; 70%+ Official Career Pages &bull; Past 24h Verified Freshness</p>
+                <p>Strict Anti-Spam / Anti-Duplicate Architecture &bull; Official Career Pages Preferred &bull; Past 24h Verified</p>
             </div>
             <div class="header-meta">
-                <div><strong>Daily Schedule:</strong> 08:30 IST</div>
+                <div><strong>Schedule:</strong> 08:30 IST Daily</div>
                 <div><strong>Run Timestamp:</strong> {run_str}</div>
                 <div><strong>Current Role:</strong> Azure Cloud Engineer at LTIMindtree</div>
             </div>
         </header>
 
+        <div class="anti-spam-banner">
+            <strong>🛡️ Mandatory Anti-Duplicate Protection Active:</strong> Canonical keying ensures one vacancy has one canonical record across LinkedIn, Wellfound, and official career portals. If you have already applied for a vacancy, the system permanently prevents duplicate application recommendations.
+        </div>
+
         <div class="kpi-grid">
             <div class="kpi-card kpi-highlight">
-                <div class="kpi-val">{len(section_a)}</div>
-                <div class="kpi-label">A. Bengaluru Verified</div>
+                <div class="kpi-val">{len(sec_1)}</div>
+                <div class="kpi-label">1. Bengaluru New Confirmed</div>
             </div>
             <div class="kpi-card">
-                <div class="kpi-val">{len(section_b)}</div>
-                <div class="kpi-label">B. Other India Locations</div>
+                <div class="kpi-val">{len(sec_2)}</div>
+                <div class="kpi-label">2. Other India Confirmed</div>
             </div>
             <div class="kpi-card">
-                <div class="kpi-val">{len(section_c)}</div>
-                <div class="kpi-label">C. Worldwide Remote (India)</div>
+                <div class="kpi-val">{len(sec_3)}</div>
+                <div class="kpi-label">3. Worldwide Remote (India)</div>
             </div>
             <div class="kpi-card">
-                <div class="kpi-val">{len(section_d)}</div>
-                <div class="kpi-label">D. LinkedIn Openings</div>
+                <div class="kpi-val">{len(sec_4)}</div>
+                <div class="kpi-label">4. Previously Reviewed / Applied</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-val">{official_share}%</div>
-                <div class="kpi-label">Official Career Page Share</div>
+                <div class="kpi-label">Official Page Share (Confirmed)</div>
             </div>
         </div>
 
-        <!-- SECTION A: BENGALURU OFFICIALLY VERIFIED JOBS -->
-        <div class="section-wrap" id="sec-a">
+        <!-- 1. BENGALURU — NEW CONFIRMED JOBS -->
+        <div class="section-wrap" id="sec-1">
             <div class="sec-header">
-                <h2>🏢 A. Bengaluru — Officially Verified Jobs <span class="badge-count">{len(section_a)}</span></h2>
+                <h2>🏢 1. Bengaluru — New Confirmed Jobs <span class="badge-count">{len(sec_1)}</span></h2>
                 <span class="loc-priority">Priority 1 (Highest Ranking)</span>
             </div>
             <div class="cards-list">
-                {cards_a}
+                {cards_1}
             </div>
         </div>
 
-        <!-- SECTION B: OTHER INDIAN LOCATIONS OFFICIALLY VERIFIED JOBS -->
-        <div class="section-wrap" id="sec-b">
+        <!-- 2. OTHER INDIA LOCATIONS — NEW CONFIRMED JOBS -->
+        <div class="section-wrap" id="sec-2">
             <div class="sec-header">
-                <h2>🇮🇳 B. Other Indian Locations — Officially Verified Jobs <span class="badge-count">{len(section_b)}</span></h2>
+                <h2>🇮🇳 2. Other India Locations — New Confirmed Jobs <span class="badge-count">{len(sec_2)}</span></h2>
                 <span class="loc-priority">Priority 2 (Chennai, Pune, Hyderabad, NCR)</span>
             </div>
             <div class="cards-list">
-                {cards_b}
+                {cards_2}
             </div>
         </div>
 
-        <!-- SECTION C: WORLDWIDE REMOTE VERIFIED JOBS OPEN TO INDIA -->
-        <div class="section-wrap" id="sec-c">
+        <!-- 3. WORLDWIDE REMOTE — CONFIRMED JOBS ELIGIBLE FOR INDIA -->
+        <div class="section-wrap" id="sec-3">
             <div class="sec-header">
-                <h2>🌐 C. Worldwide Remote — Verified Jobs Open to India-Based Applicants <span class="badge-count">{len(section_c)}</span></h2>
-                <span class="loc-priority">Priority 3 (Explicitly India Eligible)</span>
+                <h2>🌐 3. Worldwide Remote — Confirmed Jobs Eligible for India-Based Applicants <span class="badge-count">{len(sec_3)}</span></h2>
+                <span class="loc-priority">Priority 3 (Explicitly Verified India Remote)</span>
             </div>
             <div class="cards-list">
-                {cards_c}
+                {cards_3}
             </div>
         </div>
 
-        <!-- SECTION D: LINKEDIN — RELEVANT NEW OPENINGS (REQUIRED SECTION) -->
-        <div class="section-wrap" id="sec-d">
+        <!-- 4. PREVIOUSLY REVIEWED JOBS -->
+        <div class="section-wrap" id="sec-4">
             <div class="sec-header">
-                <h2>💼 D. LinkedIn — Relevant New Openings (Past 24 Hours) <span class="badge-count">{len(section_d)}</span></h2>
-                <span class="loc-priority">Discovery Source &bull; Verification Pending</span>
+                <h2>📋 4. Previously Reviewed & Applied Jobs <span class="badge-count">{len(sec_4)}</span></h2>
+                <span class="loc-priority">Historical Audit &bull; Anti-Spam Lock</span>
             </div>
             <div class="cards-list">
-                {cards_d}
+                {cards_4}
             </div>
         </div>
 
-        <!-- SECTION E: WELLFOUND STARTUP OPPORTUNITIES -->
-        <div class="section-wrap" id="sec-e">
+        <!-- 5. DATE-UNVERIFIED OR EMPLOYER-VERIFICATION-PENDING LEADS -->
+        <div class="section-wrap" id="sec-5">
             <div class="sec-header">
-                <h2>🚀 E. Wellfound Startup Opportunities (Official Verification Pending) <span class="badge-count">{len(section_e)}</span></h2>
+                <h2>🔍 5. Date-Unverified or Verification-Pending Leads (LinkedIn / Wellfound) <span class="badge-count">{len(sec_5)}</span></h2>
+                <span class="loc-priority">Review Manually Before Applying</span>
             </div>
             <div class="cards-list">
-                {cards_e}
+                {cards_5}
             </div>
         </div>
 
-        <!-- SECTION F: OTHER JOB-BOARD LEADS -->
-        <div class="section-wrap" id="sec-f">
+        <!-- 6. POSSIBLE DUPLICATES REQUIRING REVIEW -->
+        <div class="section-wrap" id="sec-6">
             <div class="sec-header">
-                <h2>🔍 F. Other Job-Board Leads (Date or Location Unverified) <span class="badge-count">{len(section_f)}</span></h2>
+                <h2>⚠️ 6. Possible Duplicates Requiring Review <span class="badge-count">{len(sec_6)}</span></h2>
             </div>
             <div class="cards-list">
-                {cards_f}
+                {cards_6}
             </div>
         </div>
 
-        <!-- SECTION G: EXCLUDED EXAMPLES AND REASONS -->
-        <div class="section-wrap" id="sec-g">
+        <!-- 7. SUMMARY OF EXCLUDED JOBS AND REASONS -->
+        <div class="section-wrap" id="sec-7">
             <div class="sec-header">
-                <h2>⛔ G. Excluded Examples and Audit Reasons</h2>
+                <h2>⛔ 7. Summary of Excluded Jobs and Audit Reasons</h2>
             </div>
             <div class="excluded-box">
                 <ul>
@@ -460,7 +484,7 @@ class ReportGenerator:
         </div>
 
         <footer>
-            <p>Personalized Job Intelligence Engine &bull; Strictly Verified Career Portals &bull; Automated 08:30 Asia/Kolkata Execution</p>
+            <p>Antigravity Daily Job Finder &bull; Anti-Spam Canonical Keying Active &bull; Automated 08:30 IST Schedule</p>
         </footer>
     </div>
 </body>

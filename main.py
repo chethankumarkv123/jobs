@@ -61,26 +61,30 @@ def load_config(config_path: str = "config.yaml") -> dict:
 def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
     now_ist = datetime.now(IST_OFFSET).strftime("%Y-%m-%d %H:%M:%S IST")
 
-    # Categories
-    sec_a = [j for j in jobs if j.location_category == "bengaluru" and j.source_type == "official_career_page" and j.date_is_verified]
-    sec_b = [j for j in jobs if j.location_category == "india_other" and j.source_type == "official_career_page" and j.date_is_verified]
-    sec_c = [j for j in jobs if j.location_category == "worldwide_remote" and j.source_type == "official_career_page" and j.date_is_verified]
-    sec_d = [j for j in jobs if j.source_type == "linkedin"]
-    sec_e = [j for j in jobs if j.source_type == "wellfound"]
-    sec_f = [j for j in jobs if j.source_type == "job_board" or (not j.date_is_verified and j not in sec_d and j not in sec_e)]
+    # Mirror exact 7 sections from report_generator.py & AGENTS.md
+    sec_1 = [j for j in jobs if j.location_category == "bengaluru" and j.recommendation == "APPLY" and j.application_status == "NEW"]
+    sec_2 = [j for j in jobs if j.location_category == "india_other" and j.recommendation == "APPLY" and j.application_status == "NEW"]
+    sec_3 = [j for j in jobs if j.location_category == "worldwide_remote" and j.recommendation == "APPLY" and j.application_status == "NEW"]
+    sec_4 = [j for j in jobs if j.application_status in ("PREVIOUSLY_REVIEWED", "APPLIED")]
+    sec_5 = [j for j in jobs if j.recommendation == "REVIEW" and j not in sec_4]
+    sec_6 = [j for j in jobs if "possible duplicate" in (j.duplicate_check_result or "").lower()]
 
-    apply_count = sum(1 for j in jobs if j.recommendation == "APPLY")
-    review_count = sum(1 for j in jobs if j.recommendation == "REVIEW")
-    official_count = sum(1 for j in jobs if j.source_type == "official_career_page")
-    official_share = round((official_count / len(jobs) * 100) if jobs else 0.0, 1)
+    new_apply_count = len(sec_1) + len(sec_2) + len(sec_3)
+    review_count = len(sec_5)
+    applied_count = sum(1 for j in jobs if j.application_status == "APPLIED")
+    prev_reviewed_count = sum(1 for j in jobs if j.application_status == "PREVIOUSLY_REVIEWED")
+    confirmed_jobs = sec_1 + sec_2 + sec_3
+    official_count = sum(1 for j in confirmed_jobs if j.source_type == "official_career_page")
+    official_share = round((official_count / new_apply_count * 100) if new_apply_count else 0.0, 1)
 
     console.print()
     console.print(
         Panel(
-            f"[bold cyan]Antigravity Job Finder | Run Summary[/]\n"
-            f"[dim]Timestamp:[/] {now_ist} | [dim]Candidate:[/] Azure Cloud Engineer (4+ yrs IT experience)\n"
-            f"[green bold]APPLY:[/] {apply_count} | [yellow bold]REVIEW:[/] {review_count} | [bold]Total Qualified:[/] {len(jobs)} | [bold cyan]Official Career Page Share:[/] {official_share}% (Target >= 70%)\n"
-            f"[dim]Location Distribution:[/] Bengaluru: {len(sec_a)} | Other India: {len(sec_b)} | Worldwide Remote: {len(sec_c)} | LinkedIn: {len(sec_d)} | Wellfound: {len(sec_e)} | Review: {len(sec_f)}",
+            f"[bold cyan]Antigravity Resume-Based Job Finder | Daily Run[/]\n"
+            f"[dim]Timestamp:[/] {now_ist} | [dim]Candidate:[/] Azure Cloud Engineer (4.2 yrs IT experience, LTIMindtree)\n"
+            f"[green bold]NEW APPLY:[/] {new_apply_count} | [yellow bold]REVIEW:[/] {review_count} | [magenta bold]PREV REVIEWED:[/] {prev_reviewed_count} | [blue bold]ALREADY APPLIED:[/] {applied_count}\n"
+            f"[bold cyan]Official Career Page Share (Confirmed):[/] {official_share}% (Target >= 70%)\n"
+            f"[dim]Sections:[/] 1. BLR ({len(sec_1)}) | 2. India Other ({len(sec_2)}) | 3. Remote ({len(sec_3)}) | 4. History Tracked ({len(sec_4)}) | 5. Date Unverified/Review ({len(sec_5)}) | 6. Possible Dups ({len(sec_6)})",
             border_style="cyan",
         )
     )
@@ -88,7 +92,7 @@ def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
     if not jobs:
         console.print(
             Panel(
-                "[bold yellow]Zero qualifying openings found meeting strict 24h & experience criteria during this run.[/]\n"
+                "[bold yellow]Zero qualifying openings found meeting strict criteria during this run.[/]\n"
                 "[dim]Filters enforced: 3-6 yrs experience, direct employer only, India eligibility confirmed. Pipeline will re-run tomorrow at 08:30 IST.[/]",
                 title="Summary",
                 border_style="yellow"
@@ -96,17 +100,17 @@ def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
         )
         return
 
-    # Render Priority 1: Bengaluru Confirmed
-    if sec_a:
-        table_a = Table(title="[bold green]A. Bengaluru — Officially Verified Jobs (Priority 1)[/]", border_style="green")
-        table_a.add_column("Company", style="bold white", width=14)
-        table_a.add_column("Role", style="cyan", width=32)
-        table_a.add_column("Arrangement", style="magenta", width=18)
-        table_a.add_column("Score", style="bold green", justify="center", width=8)
-        table_a.add_column("Rec", justify="center", width=8)
-        table_a.add_column("Official Application URL", style="blue underline", width=36)
-        for j in sec_a:
-            table_a.add_row(
+    # Section 1: Bengaluru Confirmed
+    if sec_1:
+        table_1 = Table(title="[bold green]1. Bengaluru — Confirmed Matches (Priority 1)[/]", border_style="green")
+        table_1.add_column("Company", style="bold white", width=14)
+        table_1.add_column("Role", style="cyan", width=32)
+        table_1.add_column("Arrangement", style="magenta", width=16)
+        table_1.add_column("Score", style="bold green", justify="center", width=8)
+        table_1.add_column("Rec", justify="center", width=8)
+        table_1.add_column("Official / Direct Application URL", style="blue underline", width=38)
+        for j in sec_1:
+            table_1.add_row(
                 j.company,
                 j.title,
                 j.work_arrangement,
@@ -114,20 +118,20 @@ def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
                 f"[bold green]{j.recommendation}[/]",
                 j.direct_application_url or j.direct_job_url
             )
-        console.print(table_a)
+        console.print(table_1)
         console.print()
 
-    # Render Priority 2: Other India Confirmed
-    if sec_b:
-        table_b = Table(title="[bold cyan]B. Other Indian Locations — Officially Verified Jobs (Priority 2)[/]", border_style="cyan")
-        table_b.add_column("Company", style="bold white", width=14)
-        table_b.add_column("Role", style="cyan", width=32)
-        table_b.add_column("City & Arrangement", style="magenta", width=22)
-        table_b.add_column("Score", style="bold green", justify="center", width=8)
-        table_b.add_column("Rec", justify="center", width=8)
-        table_b.add_column("Official Application URL", style="blue underline", width=36)
-        for j in sec_b:
-            table_b.add_row(
+    # Section 2: Other India Confirmed
+    if sec_2:
+        table_2 = Table(title="[bold cyan]2. Other Indian Locations — Confirmed Matches (Priority 2)[/]", border_style="cyan")
+        table_2.add_column("Company", style="bold white", width=14)
+        table_2.add_column("Role", style="cyan", width=32)
+        table_2.add_column("City & Arrangement", style="magenta", width=22)
+        table_2.add_column("Score", style="bold green", justify="center", width=8)
+        table_2.add_column("Rec", justify="center", width=8)
+        table_2.add_column("Official / Direct Application URL", style="blue underline", width=38)
+        for j in sec_2:
+            table_2.add_row(
                 j.company,
                 j.title,
                 f"{j.location[:14]} ({j.work_arrangement[:7]})",
@@ -135,47 +139,81 @@ def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
                 f"[bold green]{j.recommendation}[/]",
                 j.direct_application_url or j.direct_job_url
             )
-        console.print(table_b)
+        console.print(table_2)
         console.print()
 
-    # Render Priority 3: Worldwide Remote Confirmed
-    if sec_c:
-        table_c = Table(title="[bold blue]C. Worldwide Remote — Verified Jobs Open to India-Based Applicants (Priority 3)[/]", border_style="blue")
-        table_c.add_column("Company", style="bold white", width=16)
-        table_c.add_column("Role", style="cyan", width=32)
-        table_c.add_column("Score", style="bold green", justify="center", width=8)
-        table_c.add_column("Rec", justify="center", width=8)
-        table_c.add_column("Official Application URL", style="blue underline", width=38)
-        for j in sec_c:
-            table_c.add_row(
+    # Section 3: Worldwide Remote Confirmed
+    if sec_3:
+        table_3 = Table(title="[bold blue]3. Worldwide Remote — Confirmed Matches Open to India (Priority 3)[/]", border_style="blue")
+        table_3.add_column("Company", style="bold white", width=16)
+        table_3.add_column("Role", style="cyan", width=32)
+        table_3.add_column("Score", style="bold green", justify="center", width=8)
+        table_3.add_column("Rec", justify="center", width=8)
+        table_3.add_column("Official / Direct Application URL", style="blue underline", width=38)
+        for j in sec_3:
+            table_3.add_row(
                 j.company,
                 j.title,
                 f"{j.estimated_match_score}%",
                 f"[bold green]{j.recommendation}[/]",
                 j.direct_application_url or j.direct_job_url
             )
-        console.print(table_c)
+        console.print(table_3)
         console.print()
 
-    # Render Priority 4: LinkedIn Openings (Dedicated Section)
-    if sec_d:
-        table_d = Table(title="[bold yellow]D. LinkedIn — Relevant New Openings (Past 24 Hours)[/]", border_style="yellow")
-        table_d.add_column("Company", style="bold white", width=16)
-        table_d.add_column("Role", style="cyan", width=30)
-        table_d.add_column("Location", style="magenta", width=18)
-        table_d.add_column("Score", style="bold green", justify="center", width=8)
-        table_d.add_column("Rec", justify="center", width=8)
-        table_d.add_column("LinkedIn Link", style="blue underline", width=34)
-        for j in sec_d:
-            table_d.add_row(
+    # Section 4: History Tracked (Previously Reviewed / Applied)
+    if sec_4:
+        table_4 = Table(title="[bold magenta]4. Previously Reviewed or Applied Jobs (Anti-Duplicate Guard)[/]", border_style="magenta")
+        table_4.add_column("Company", style="bold white", width=14)
+        table_4.add_column("Role", style="cyan", width=30)
+        table_4.add_column("Tracker Status", style="bold magenta", width=22)
+        table_4.add_column("Duplicate Check Note", style="dim", width=36)
+        for j in sec_4[:10]:
+            table_4.add_row(
+                j.company,
+                j.title,
+                j.application_status,
+                j.duplicate_check_result[:35]
+            )
+        console.print(table_4)
+        console.print()
+
+    # Section 5: Date Unverified / Review Manually
+    if sec_5:
+        table_5 = Table(title="[bold yellow]5. Date Unverified / Review Manually[/]", border_style="yellow")
+        table_5.add_column("Company", style="bold white", width=16)
+        table_5.add_column("Role", style="cyan", width=30)
+        table_5.add_column("Location", style="magenta", width=18)
+        table_5.add_column("Score", style="bold green", justify="center", width=8)
+        table_5.add_column("Rec", justify="center", width=8)
+        table_5.add_column("Application Link", style="blue underline", width=34)
+        for j in sec_5:
+            table_5.add_row(
                 j.company,
                 j.title,
                 j.location[:18],
                 f"{j.estimated_match_score}%",
                 f"[bold yellow]{j.recommendation}[/]",
-                j.linkedin_job_url or j.direct_job_url
+                j.direct_application_url or j.direct_job_url
             )
-        console.print(table_d)
+        console.print(table_5)
+        console.print()
+
+    # Section 6: Possible Duplicates
+    if sec_6:
+        table_6 = Table(title="[bold red]6. Possible Duplicates Requiring Review[/]", border_style="red")
+        table_6.add_column("Company", style="bold white", width=16)
+        table_6.add_column("Role", style="cyan", width=30)
+        table_6.add_column("Canonical Key", style="dim", width=30)
+        table_6.add_column("Details", style="yellow", width=30)
+        for j in sec_6:
+            table_6.add_row(
+                j.company,
+                j.title,
+                j.canonical_job_key[:28],
+                j.duplicate_check_result[:28]
+            )
+        console.print(table_6)
         console.print()
 
     # Source coverage summary
@@ -185,7 +223,8 @@ def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
             f"[bold green][OK] HTML Dashboard:[/] [white underline]{outputs['html']}[/]\n"
             f"[bold green][OK] CSV Table:[/]     [white underline]{outputs['csv']}[/]\n"
             f"[bold green][OK] JSON Payload:[/]   [white underline]{outputs['json']}[/]\n"
-            f"[bold green][OK] Dated Archive:[/]  [white underline]{outputs['archive_html']}[/]",
+            f"[bold green][OK] Dated Archive:[/]  [white underline]{outputs['archive_html']}[/]\n"
+            f"[bold green][OK] App Tracker:[/]   [white underline]data/application_history.json[/]",
             title="Generated Reports & Verification Status",
             border_style="green"
         )

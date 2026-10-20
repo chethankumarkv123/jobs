@@ -1,7 +1,7 @@
 """
 job_filter.py
 Intelligent filtering, resume-specific scoring (0-100), location prioritization,
-deduplication, and recommendation engine for the Bangalore Startup Job Finder.
+cross-source deduplication, and application history tracking engine.
 """
 
 import json
@@ -11,6 +11,7 @@ import re
 from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any, Tuple, Set
 from job_sources import JobPosting
+from application_tracker import ApplicationTracker, clean_tracking_params, generate_canonical_key
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +19,9 @@ logger = logging.getLogger(__name__)
 class JobFilterEngine:
     def __init__(self, config: Dict[str, Any]):
         self.config = config
-        self.history_file = config.get("storage", {}).get("history_file", "data/jobs_history.json")
+        self.tracker = ApplicationTracker("data/application_history.json")
+
+        self.history_file = config.get("storage", {}).get("jobs_history_file", "data/jobs_history.json")
         self.history_data: Dict[str, Any] = self._load_history()
 
         candidate = config.get("candidate", {})
@@ -39,14 +42,16 @@ class JobFilterEngine:
             "adecco", "teamlease", "allegis", "kelly services", "recruise"
         ]
 
+        self.excluded_reasons_log: List[str] = []
+
     def _load_history(self) -> Dict[str, Any]:
         if os.path.exists(self.history_file):
             try:
                 with open(self.history_file, "r", encoding="utf-8") as f:
                     return json.load(f)
             except Exception as e:
-                logger.error(f"Error loading history file {self.history_file}: {e}")
-        return {"version": "2.0.0", "last_updated": None, "total_tracked": 0, "jobs": {}}
+                logger.error(f"Error loading {self.history_file}: {e}")
+        return {"version": "3.0.0", "last_updated": None, "total_tracked": 0, "jobs": {}}
 
     def save_history(self):
         try:
@@ -55,6 +60,7 @@ class JobFilterEngine:
             self.history_data["total_tracked"] = len(self.history_data.get("jobs", {}))
             with open(self.history_file, "w", encoding="utf-8") as f:
                 json.dump(self.history_data, f, indent=2, ensure_ascii=False)
+            self.tracker.save()
             logger.info(f"Updated job history ({self.history_data['total_tracked']} jobs recorded).")
         except Exception as e:
             logger.error(f"Failed to save job history: {e}")
@@ -73,7 +79,7 @@ class JobFilterEngine:
             "bpo", "telecaller", "customer support", "content writer", "copywriter",
             "business development", "product manager", "ui/ux designer", "finance lead",
             "supply chain", "legal counsel", "chief of staff", "graphic designer",
-            "logistics", "specialist â€” logistics"
+            "logistics", "specialist — logistics", "specialist - data engineering"
         ]
         for bad in disqualified:
             if bad in title_lower:
@@ -81,13 +87,6 @@ class JobFilterEngine:
         return False, ""
 
     def evaluate_location(self, job: JobPosting) -> Tuple[float, str, str, bool]:
-        """
-        Evaluates location priority:
-        Priority 1: Bengaluru / Bangalore
-        Priority 2: Other India city (Hyderabad, Pune, Chennai, Mumbai, NCR, etc.)
-        Priority 3: Worldwide remote (India eligible)
-        Returns: (points, location_category, location_notes, is_eligible)
-        """
         loc_lower = f"{job.location} {job.work_arrangement}".lower()
         desc_lower = job.description.lower()
 
@@ -103,7 +102,6 @@ class JobFilterEngine:
         if is_other_india:
             return 10.0, "india_other", f"India Location: {job.location} — Priority 2", True
 
-        # Check for foreign country/timezone exclusions
         foreign_excl = [
             "us only", "usa only", "uk only", "eu only", "germany only", "canada only",
             "cet", "cest", "pst", "est", "san francisco", "berlin", "germany", "london"
@@ -113,7 +111,6 @@ class JobFilterEngine:
         if has_foreign and not (is_blr or is_other_india):
             return 0.0, "foreign_restricted", f"Ineligible Foreign Location / Timezone ({job.location})", False
 
-        # Worldwide remote open to India
         if any(w in loc_lower for w in ["worldwide", "anywhere", "remote worldwide", "remote - india", "india eligible"]):
             return 8.0, "worldwide_remote", "Worldwide Remote (India Eligible) — Priority 3", True
 
@@ -123,23 +120,12 @@ class JobFilterEngine:
         return 0.0, "foreign_restricted", f"Location Ineligible: {job.location}", False
 
     def calculate_match_score(self, job: JobPosting, loc_pts: float, loc_cat: str) -> Tuple[float, List[str], List[str], List[str]]:
-        """
-        Calculates estimated profile match score (0-100) using the exact rubric:
-        - 35 pts: Core technical match (Azure, Terraform, Linux, Ansible, CI/CD, cloud networking, monitoring, scripting)
-        - 20 pts: Duties match (provisioning, operations, incident response, hardening, automation)
-        - 15 pts: Experience fit (3-6 years; prioritize 4-5)
-        - 10 pts: Location and India work eligibility
-        - 10 pts: Relevant production scale/impact
-        - 5 pts: Role and employer fit
-        - 5 pts: Evidence quality
-        """
         reasons: List[str] = []
         combined_text = f"{job.title} {job.description} {' '.join(job.technical_skills)}".lower()
 
-        # 1. Core Technical Match (Max 35 pts)
-        tech_score = 0.0
+        # 1. Technical Skills Match (Max 35 pts)
         core_tech = [
-            ("Azure", ["azure", "aks", "microsoft azure", "vnet", "azure devops", "azure monitor"]),
+            ("Azure", ["azure", "aks", "microsoft azure", "vnet", "azure devops", "azure monitor", "app service", "key vault"]),
             ("Kubernetes", ["kubernetes", "k8s", "aks", "container orchestration"]),
             ("Linux", ["linux", "rhel", "ubuntu", "centos", "systemd", "shell", "bash"]),
             ("Terraform", ["terraform", "iac", "infrastructure as code"]),
@@ -147,7 +133,7 @@ class JobFilterEngine:
             ("CI/CD", ["ci/cd", "github actions", "azure devops", "pipeline"]),
             ("Docker", ["docker", "containers"]),
             ("Monitoring", ["monitoring", "prometheus", "grafana", "log analytics", "azure monitor", "telemetry"]),
-            ("Security/Hardening", ["devsecops", "qualys", "cis hardening", "vulnerability", "defender for cloud", "cve"]),
+            ("Security/Hardening", ["devsecops", "qualys", "cis hardening", "vulnerability", "defender for cloud", "cve", "bigfix"]),
             ("Scripting", ["python", "bash", "shell scripting"])
         ]
         matched_skills = []
@@ -159,12 +145,10 @@ class JobFilterEngine:
             else:
                 missing_skills.append(skill_name)
 
-        # 3.5 points per matched core tech domain up to 35
         tech_score = min(len(matched_skills) * 3.5, 35.0)
-        reasons.append(f"Core Tech: Matched {len(matched_skills)}/10 key skill domains ({', '.join(matched_skills[:4])})")
+        reasons.append(f"Core Tech: Matched {len(matched_skills)}/10 skill domains ({', '.join(matched_skills[:4])})")
 
-        # 2. Duties Match (Max 20 pts)
-        duty_score = 0.0
+        # 2. Responsibilities Match (Max 20 pts)
         duties = [
             ("Provisioning & IaC", ["provision", "iac", "deploy", "architecture", "terraform"]),
             ("Cloud Operations & Patching", ["operations", "patching", "maintenance", "lifecycle", "drift", "support"]),
@@ -177,34 +161,40 @@ class JobFilterEngine:
         reasons.append(f"Duties: Aligned on {', '.join(matched_duties[:3])}")
 
         # 3. Experience Fit (Max 15 pts)
-        # Target: 3-6 years; prioritize 4-5. Candidate has 4+ yrs IT experience (Azure Engineer since 2024, Linux 2022-2024).
+        # Evaluates total IT experience (4.2 yrs) vs cloud engineering tenure (since 2024).
         exp_score = 0.0
         if job.min_years_exp is not None:
             if 4.0 <= job.min_years_exp <= 5.0:
                 exp_score = 15.0
-                reasons.append(f"Experience Fit: Ideal match ({job.experience_requirement} vs candidate's 4.2 yrs)")
+                job.candidate_experience_fit = f"Ideal Fit ({job.experience_requirement} vs candidate's 4.2 yrs total IT)"
+                reasons.append(f"Experience: {job.candidate_experience_fit}")
             elif job.min_years_exp == 3.0:
                 exp_score = 14.0
-                reasons.append(f"Experience Fit: Strong fit ({job.experience_requirement} vs candidate's 4.2 yrs)")
+                job.candidate_experience_fit = f"Strong Fit ({job.experience_requirement} vs candidate's 4.2 yrs)"
+                reasons.append(f"Experience: {job.candidate_experience_fit}")
             elif 5.0 < job.min_years_exp <= 6.0:
                 exp_score = 12.0
-                reasons.append(f"Experience Fit: Acceptable reach ({job.experience_requirement} - candidate has 4.2 yrs overall IT)")
+                job.candidate_experience_fit = f"Acceptable Reach ({job.experience_requirement} - candidate has 4.2 yrs overall IT, Azure Engineer since 2024)"
+                reasons.append(f"Experience: {job.candidate_experience_fit}")
             elif job.min_years_exp < 3.0:
                 exp_score = 12.0
-                reasons.append(f"Experience Fit: Early career bracket ({job.experience_requirement})")
+                job.candidate_experience_fit = f"Early Career Bracket ({job.experience_requirement})"
+                reasons.append(f"Experience: {job.candidate_experience_fit}")
             else:
                 exp_score = 0.0
+                job.candidate_experience_fit = f"Experience Mismatch ({job.experience_requirement})"
         else:
             exp_score = 10.0
-            reasons.append("Experience Fit: Unspecified in posting (Startup flexible)")
+            job.candidate_experience_fit = "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)"
+            reasons.append("Experience: Unspecified in posting (Startup flexible)")
 
         # 4. Location & India Work Eligibility (Max 10 pts)
         location_score = loc_pts
         reasons.append(f"Location Fit: {loc_cat.upper()} ({location_score}/10 pts)")
 
-        # 5. Production Scale & Impact (Max 10 pts)
+        # 5. Production Achievements & Scale (Max 10 pts)
         scale_score = 0.0
-        scale_tokens = ["high availability", "scale", "production", "99.9", "microservices", "large scale", "distributed", "critical"]
+        scale_tokens = ["high availability", "scale", "production", "99.9", "microservices", "100+ servers", "distributed", "critical", "compliance"]
         matched_scale = [t for t in scale_tokens if t in combined_text]
         if len(matched_scale) >= 2:
             scale_score = 10.0
@@ -216,7 +206,7 @@ class JobFilterEngine:
         # 6. Role & Employer Fit (Max 5 pts)
         role_employer_score = 5.0 if job.source_type in ("official_career_page", "wellfound") else 3.5
 
-        # 7. Evidence Quality (Max 5 pts)
+        # 7. Evidence Quality & Verification (Max 5 pts)
         evidence_score = 5.0 if (job.source_type == "official_career_page" and job.date_is_verified) else (3.5 if job.date_is_verified else 2.0)
 
         total_score = round(tech_score + duty_score + exp_score + location_score + scale_score + role_employer_score + evidence_score, 1)
@@ -226,15 +216,16 @@ class JobFilterEngine:
         evaluated_jobs: List[JobPosting] = []
         history_jobs = self.history_data.setdefault("jobs", {})
 
-        # Deduplication map: key = (normalized_company, normalized_title, normalized_location)
-        dedup_seen: Dict[str, JobPosting] = {}
+        # In-run deduplication map
+        in_run_seen: Dict[str, JobPosting] = {}
 
         for job in raw_jobs:
             # 1. Employer Rule: Check if recruitment agency
             if self.is_recruitment_agency(job):
                 job.is_agency = True
                 job.recommendation = "SKIP"
-                job.recommendation_rationale = "Recruitment agency / consultancy listing without verified direct employer"
+                job.recommendation_rationale = "Recruitment agency / consultancy listing without identified direct employer"
+                self.excluded_reasons_log.append(f"Agency rejected: {job.company} - {job.title}")
                 logger.info(f"Skipping agency listing: {job.company} - {job.title}")
                 continue
 
@@ -243,6 +234,7 @@ class JobFilterEngine:
             if disqualified_role:
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = role_reason
+                self.excluded_reasons_log.append(f"Non-target discipline: {job.company} - {job.title} ({role_reason})")
                 logger.info(f"Skipping {job.company} - {job.title}: {role_reason}")
                 continue
 
@@ -252,6 +244,7 @@ class JobFilterEngine:
             if not loc_eligible:
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = loc_notes
+                self.excluded_reasons_log.append(f"Ineligible location: {job.company} - {job.title} ({loc_notes})")
                 logger.info(f"Skipping ineligible location: {job.location}")
                 continue
 
@@ -259,42 +252,55 @@ class JobFilterEngine:
             if job.min_years_exp is not None and job.min_years_exp >= self.hard_exclude_min_exp:
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = f"Exceeds experience cap: Requires {job.min_years_exp}+ yrs (Limit is 6 yrs)"
+                self.excluded_reasons_log.append(f"Experience > 6 yrs: {job.company} - {job.title} ({job.experience_requirement})")
                 logger.info(f"Skipping {job.company} - {job.title}: Demands {job.min_years_exp}+ yrs")
                 continue
 
-            # 5. Profile Match Scoring
+            # 5. Clean URLs
+            job.direct_job_url = clean_tracking_params(job.direct_job_url)
+            job.direct_application_url = clean_tracking_params(job.direct_application_url or job.direct_job_url)
+
+            # 6. Profile Match Scoring
             score, matched_skills, missing_skills, reasons = self.calculate_match_score(job, loc_pts, loc_cat)
             job.estimated_match_score = score
             job.matching_skills = matched_skills
             job.missing_skills = missing_skills
             job.score_reasons = reasons
 
-            # 6. Apply vs Review vs Skip Decision
-            # Main confirmed report (APPLY) requires:
-            # - Active vacancy confirmed
-            # - Date verified within last 24h
-            # - Direct employer application URL
-            # - Score >= apply_min_score (65)
-            # If date is unverified or remote eligibility is uncertain -> REVIEW
+            # 7. ANTI-DUPLICATE & APPLICATION HISTORY TRACKER
+            can_key, app_status, dup_result, is_new_opening = self.tracker.evaluate_and_track(job.to_dict())
+            job.canonical_job_key = can_key
+            job.application_status = app_status
+            job.duplicate_check_result = dup_result
+            job.is_new = is_new_opening
+
+            # 8. Recommendation Decision Engine
             if not job.is_active:
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = "Vacancy link inactive or broken"
+            elif app_status == "APPLIED":
+                # NEVER recommend applying again to a vacancy already applied to!
+                job.recommendation = "SKIP"
+                job.recommendation_rationale = "ALREADY APPLIED: You have already applied for this opening. Do not submit duplicate application."
+            elif app_status == "PREVIOUSLY_REVIEWED":
+                job.recommendation = "REVIEW"
+                job.recommendation_rationale = f"Previously reviewed vacancy. No new application recommended unless requirements have changed."
             elif (
                 job.estimated_match_score >= self.thresholds.get("apply_min_score", 65)
                 and job.date_is_verified
                 and job.source_type == "official_career_page"
             ):
                 job.recommendation = "APPLY"
-                job.recommendation_rationale = "High technical match, verified within 24h on official company career page, verified India location eligibility"
+                job.recommendation_rationale = "Strong technical fit, verified within 24h on official company career page, direct application route"
             elif job.source_type == "linkedin":
                 job.recommendation = "REVIEW"
-                job.recommendation_rationale = "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification"
+                job.recommendation_rationale = "Discovered on LinkedIn past 24h feed. Official employer career site verification pending"
             elif job.source_type == "wellfound":
                 job.recommendation = "REVIEW"
-                job.recommendation_rationale = "Wellfound startup lead. Pending employer website cross-verification"
+                job.recommendation_rationale = "Wellfound startup lead. Official employer website cross-verification pending"
             elif not job.date_is_verified:
                 job.recommendation = "REVIEW"
-                job.recommendation_rationale = "Posting date unverified from source. Requires manual verification before applying"
+                job.recommendation_rationale = "Posting date unverified from source. Routed to manual review section"
             elif job.estimated_match_score >= self.thresholds.get("review_min_score", 40):
                 job.recommendation = "REVIEW"
                 job.recommendation_rationale = "Partial technical match or location eligibility requires manual review"
@@ -302,15 +308,10 @@ class JobFilterEngine:
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = f"Score ({job.estimated_match_score}) below review threshold"
 
-            # 7. Deduplication across multiple sources
-            # Normalize key: company + normalized title
-            norm_comp = re.sub(r'[^a-zA-Z0-9]', '', job.company.lower())
-            norm_title = re.sub(r'[^a-zA-Z0-9]', '', job.title.lower())
-            dedup_key = f"{norm_comp}:{norm_title}"
-
-            if dedup_key in dedup_seen:
-                existing = dedup_seen[dedup_key]
-                # Prioritize official career page over job boards / LinkedIn
+            # 9. In-run Cross-Source Deduplication (Merge records across sites)
+            if can_key in in_run_seen:
+                existing = in_run_seen[can_key]
+                # Prioritize official career page URL as primary application link
                 if job.source_type == "official_career_page" and existing.source_type != "official_career_page":
                     existing.direct_job_url = job.direct_job_url
                     existing.direct_application_url = job.direct_application_url
@@ -318,26 +319,27 @@ class JobFilterEngine:
                     existing.verification_status = "VERIFIED"
                     existing.date_is_verified = True
                     existing.recommendation = "APPLY"
+                    existing.recommendation_rationale = "Merged cross-source listing; upgraded to official career page"
+                if job.direct_job_url and job.direct_job_url not in existing.all_source_urls:
+                    existing.all_source_urls.append(job.direct_job_url)
                 if job.linkedin_job_url:
                     existing.linkedin_job_url = job.linkedin_job_url
                 continue
             else:
-                dedup_seen[dedup_key] = job
+                in_run_seen[can_key] = job
 
-            # History persistence
+            # History file update
             if job.id in history_jobs:
-                job.is_new = False
                 prev = history_jobs[job.id]
                 job.first_seen = prev.get("first_seen", job.first_seen)
-                job.status = prev.get("status", "seen")
                 prev["last_seen"] = job.last_seen
                 prev["score"] = job.estimated_match_score
                 prev["recommendation"] = job.recommendation
+                prev["status"] = job.application_status
             else:
-                job.is_new = True
-                job.status = "new"
                 history_jobs[job.id] = {
                     "id": job.id,
+                    "canonical_job_key": job.canonical_job_key,
                     "title": job.title,
                     "company": job.company,
                     "location": job.location,
@@ -345,22 +347,26 @@ class JobFilterEngine:
                     "official_application_url": job.direct_application_url or job.direct_job_url,
                     "score": job.estimated_match_score,
                     "recommendation": job.recommendation,
+                    "application_status": job.application_status,
                     "first_seen": job.first_seen,
                     "last_seen": job.last_seen,
-                    "status": "new"
                 }
 
-            if job.recommendation in ("APPLY", "REVIEW"):
+            # Retain non-skipped or review jobs in final report
+            if job.recommendation in ("APPLY", "REVIEW") or job.application_status == "APPLIED":
                 evaluated_jobs.append(job)
 
         # Ranking rules:
         # 1st: Location Priority (Bengaluru -> Other India -> Worldwide Remote)
-        # 2nd: Recommendation (APPLY before REVIEW)
-        # 3rd: Match score descending
+        # 2nd: Recommendation (APPLY before REVIEW before SKIP)
+        # 3rd: Application Status (NEW before PREVIOUSLY_REVIEWED before APPLIED)
+        # 4th: Score descending
         loc_order = {"bengaluru": 0, "india_other": 1, "worldwide_remote": 2, "foreign_restricted": 3}
         rec_order = {"APPLY": 0, "REVIEW": 1, "SKIP": 2}
+        status_order = {"NEW": 0, "PREVIOUSLY_REVIEWED": 1, "APPLIED": 2, "CLOSED": 3}
 
         evaluated_jobs.sort(key=lambda j: (
+            status_order.get(j.application_status, 1),
             loc_order.get(j.location_category, 3),
             rec_order.get(j.recommendation, 2),
             -j.estimated_match_score

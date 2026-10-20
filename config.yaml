@@ -1,16 +1,16 @@
 # ==============================================================================
-# Bangalore Startup Job Finder - Master Configuration
-# Candidate Profile: Azure Cloud Engineer (LTIMindtree, 4+ yrs IT, Azure/DevOps/Linux)
+# Resume-Based Daily Job Finder and Application Tracker - Configuration
+# Candidate: Azure Cloud Engineer (LTIMindtree, 4+ yrs IT experience)
 # ==============================================================================
 
 app:
-  name: "Bangalore Startup Job Finder"
-  version: "2.0.0"
+  name: "Resume-Based Daily Job Finder and Application Tracker"
+  version: "3.0.0"
   timezone: "Asia/Kolkata"
 
 candidate:
   current_employer: "LTIMindtree"
-  current_location: "Bengaluru, India"
+  current_location: "Bengaluru, Karnataka, India"
   total_experience_years: 4.2
   current_role: "Azure Cloud Engineer"
   current_role_since: "2024-06"
@@ -19,64 +19,105 @@ candidate:
   education:
     degree: "BCA"
     diploma: "Diploma in Computer Science"
-    startup_exception: true # Ignore degree, college, and backlog requirements entirely for startups
-  az104_status: "in_progress" # In progress - do not represent as completed; do not reject if absent
+    active_backlog: true
+    startup_exception: true # Ignore degree and backlog completely for startups
+    established_company_rule: "Record explicit mandatory education requirements; do not reject automatically"
+  az104_status: "in_progress" # Never represent as completed; do not reject if in progress
 
   core_skills:
     cloud:
       - "Microsoft Azure"
-      - "Azure VMs (Linux/Windows)"
-      - "AKS / Kubernetes"
-      - "App Service"
-      - "Key Vault"
-      - "Azure Storage"
-      - "VNets / Subnets / NSGs / UDRs"
-      - "Load Balancers / Application Gateway"
-      - "RBAC"
-      - "Azure Monitor / Log Analytics"
-      - "Backup & Disaster Recovery"
       - "AWS"
       - "GCP"
-    automation_iac:
+      - "Azure Virtual Machines"
+      - "Azure networking"
+      - "VNets, subnets, NSGs, UDRs"
+      - "Load Balancers and Application Gateway"
+      - "Azure Key Vault"
+      - "Azure Storage"
+      - "Azure RBAC"
+      - "Azure Monitor and Log Analytics"
+      - "Azure Kubernetes Service (AKS)"
+    infrastructure_automation:
       - "Terraform"
+      - "Infrastructure as Code"
       - "Ansible"
       - "Python"
-      - "Bash / Shell Scripting"
+      - "Bash and shell scripting"
       - "GitHub Actions"
       - "Azure DevOps"
-      - "Git / YAML / Groovy"
-    containers_linux:
-      - "Docker"
-      - "AKS"
-      - "Microservices"
-      - "RHEL / Ubuntu / CentOS"
+      - "Git"
+      - "YAML"
+      - "Groovy"
+    platforms:
+      - "Linux administration"
+      - "RHEL"
+      - "Ubuntu"
+      - "CentOS"
       - "Windows Server"
-      - "Patching & Server Lifecycle"
-      - "Golden Images"
-      - "SSH & Access Hardening"
-      - "Configuration Drift / Baseline Enforcement"
-    security_governance:
+      - "Docker"
+      - "Kubernetes"
+      - "Linux patch management"
+      - "Golden images"
+      - "Configuration management"
+      - "Server lifecycle management"
+    security:
       - "Qualys"
       - "BigFix"
-      - "CIS Benchmarks"
-      - "Vulnerability Remediation"
-      - "CVE Triage"
+      - "CIS benchmarks"
+      - "Linux hardening"
+      - "Vulnerability management"
+      - "CVE remediation"
       - "Microsoft Defender for Cloud"
+      - "Security compliance"
       - "DevSecOps"
     operations:
       - "ServiceNow"
-      - "P1/P2 Incidents"
-      - "RCA / Post-Incident Reports"
-      - "On-call Support"
-      - "SLA / MTTR Improvement"
-      - "Grafana / Monitoring"
-    impact:
-      - "Supported production environments with 99.9% uptime"
-      - "Secured and configured connectivity for 100+ servers"
-      - "Standardized automation and configuration for 100+ Linux servers"
-      - "Delivered a $2.5M Linux MDM SaaS platform from PoC to production as sole technical owner"
-      - "Achieved 66% production server compliance in one overnight operational window"
-      - "Recurring Azure resource reviews and cloud cost optimization"
+      - "P1/P2 incident management"
+      - "Root Cause Analysis"
+      - "Production troubleshooting"
+      - "Monitoring and alerting"
+      - "SLA management"
+      - "On-call support"
+      - "Grafana"
+      - "Cloud cost optimization"
+  achievements:
+    - "Delivered a $2.5M Linux MDM SaaS platform from PoC to production as sole technical owner"
+    - "Supported production environments with 99.9% uptime target"
+    - "Worked with infrastructure covering 100+ servers"
+    - "Achieved 66% production server compliance in one overnight operational window"
+    - "Standardized infrastructure deployments using Terraform"
+    - "Automated configuration and operational workflows using Ansible, GitHub Actions, Python, and Bash"
+    - "Vulnerability remediation, Linux hardening, and cloud security operations"
+
+# 26 Target Job Titles + Variants
+target_job_titles:
+  - "Azure Cloud Engineer"
+  - "Senior Azure Cloud Engineer"
+  - "Cloud Engineer"
+  - "Senior Cloud Engineer"
+  - "DevOps Engineer"
+  - "Senior DevOps Engineer"
+  - "Azure DevOps Engineer"
+  - "Cloud Infrastructure Engineer"
+  - "Infrastructure Engineer (Azure)"
+  - "Terraform / IaC Engineer"
+  - "Cloud Automation Engineer"
+  - "Platform Engineer"
+  - "Site Reliability Engineer (SRE)"
+  - "Cloud Operations Engineer"
+  - "Cloud Support Engineer (L2/L3)"
+  - "Linux Systems Engineer"
+  - "Senior Linux Administrator"
+  - "DevSecOps Engineer"
+  - "Cloud Security Engineer"
+  - "Vulnerability Management Engineer"
+  - "Patch Management / Security Compliance Engineer"
+  - "Cloud Security Operations Engineer"
+  - "Kubernetes / AKS Engineer"
+  - "Cloud Migration Engineer"
+  - "Azure Solutions Engineer"
+  - "Technical Lead – Cloud" # Stretch category: include only when requirements fit
 
 location_priority:
   - priority: 1
@@ -97,6 +138,7 @@ experience_filter:
   target_max_years: 6
   preferred_years: [4, 5]
   hard_exclude_min_years: 7 # Exclude roles explicitly requiring 7+ years
+  evaluate_total_it_vs_cloud_title: true
   startup_flexibility: true # Do not reject senior title if listed responsibilities fit 4-5 yrs
 
 freshness:
@@ -108,7 +150,7 @@ sources:
   official_career_pages:
     enabled: true
     priority: 1
-    target_confirmed_share: 0.70 # Aim for at least 70% of confirmed listings
+    target_confirmed_share: 0.70
   wellfound:
     enabled: true
     priority: 2
@@ -119,23 +161,13 @@ sources:
   job_boards:
     enabled: true
     priority: 4
-    platforms:
-      - "Hacker News (Who is Hiring)"
-      - "RemoteOK"
-      - "Jobicy"
-      - "Arbeitnow"
-      - "Naukri"
-      - "Indeed India"
-      - "Cutshort"
-      - "Instahyre"
-      - "Y Combinator"
 
 scoring_weights:
-  core_technical_match: 35
-  duties_match: 20
+  technical_skills_match: 35
+  responsibilities_match: 20
   experience_fit: 15
   location_eligibility: 10
-  production_scale_impact: 10
+  production_achievements: 10
   employer_role_fit: 5
   evidence_quality: 5
   total: 100
@@ -144,8 +176,13 @@ thresholds:
   apply_min_score: 65
   review_min_score: 40
 
+storage:
+  jobs_history_file: "data/jobs_history.json"
+  application_history_file: "data/application_history.json"
+  logs_file: "logs/job_finder.log"
+
 schedule:
-  time_kolkata: "08:00"
+  time_kolkata: "08:30"
   timezone: "Asia/Kolkata"
   task_name: "BangaloreStartupJobFinderDaily"
 
