@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-20T12:51:39.378732+00:00",
-  "total_records": 52,
+  "last_updated": "2026-10-20T13:01:32.540235+00:00",
+  "total_records": 55,
   "applied_count": 0,
   "records": {
     "devzero::&,cloud,engineer,infrastructure,platform::blr": {
@@ -20,7 +20,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.361511+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.305543+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.528967+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Wellfound on 2026-10-20"
@@ -41,7 +41,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.361511+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.307553+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.529481+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Wellfound on 2026-10-20"
@@ -83,7 +83,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.362517+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.309075+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.529730+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Jobicy on 2026-10-20"
@@ -104,7 +104,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.364101+00:00",
       "original_posting_date": "2026-10-05",
-      "last_verified_at": "2026-10-20T12:51:39.341931+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.530662+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via RemoteOK on 2026-10-20"
@@ -125,7 +125,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.364101+00:00",
       "original_posting_date": "2026-09-16",
-      "last_verified_at": "2026-10-20T12:51:39.344068+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.531159+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via RemoteOK on 2026-10-20"
@@ -146,7 +146,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.365386+00:00",
       "original_posting_date": "2026-10-06",
-      "last_verified_at": "2026-10-20T12:51:39.348770+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.538768+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Hacker News (Who is Hiring) on 2026-10-20"
@@ -167,7 +167,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.365978+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.351486+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532957+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -209,7 +209,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.366574+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.351486+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532716+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -272,7 +272,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.367587+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.367699+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.535871+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -293,7 +293,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368179+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.367699+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536008+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -314,7 +314,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368179+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.368277+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536130+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -335,7 +335,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.368277+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536257+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -356,7 +356,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.368833+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536437+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -377,7 +377,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.368833+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536567+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -398,7 +398,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.368833+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536685+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -419,7 +419,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.369416+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536804+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -440,7 +440,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.370028+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.536930+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -461,7 +461,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.370028+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537045+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -482,7 +482,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.370567+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537171+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -503,7 +503,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.370567+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537316+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -524,7 +524,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.371137+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537467+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -545,7 +545,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.371704+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537598+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -566,7 +566,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.371704+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537727+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -587,7 +587,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.371749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.372289+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537852+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -608,7 +608,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.371749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.372289+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.537979+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -629,7 +629,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.372748+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.372831+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.538098+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -650,7 +650,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:13:26.610338+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.349915+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.531806+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -671,7 +671,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:13:26.610970+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.352487+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532185+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -692,7 +692,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:13:26.610970+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.350473+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532487+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -713,7 +713,7 @@
       ],
       "first_discovered_at": "2026-10-20T12:51:39.349915+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.351486+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532598+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -734,7 +734,7 @@
       ],
       "first_discovered_at": "2026-10-20T12:51:39.350473+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.351486+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532842+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -755,7 +755,7 @@
       ],
       "first_discovered_at": "2026-10-20T12:51:39.350473+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.351486+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532068+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -776,7 +776,7 @@
       ],
       "first_discovered_at": "2026-10-20T12:51:39.350473+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.360499+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.532345+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -797,7 +797,7 @@
       ],
       "first_discovered_at": "2026-10-20T12:51:39.352487+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.353730+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.533200+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
@@ -814,13 +814,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-sde-2-at-jupiter-4470842394",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/devops-engineer-sde-2-at-jupiter-4470842394",
         "https://in.linkedin.com/jobs/view/devops-engineer-sde-2-at-jupiter-4470842394"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.352487+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.352487+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.533366+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -836,13 +835,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/cloud-engineer-%E2%80%93-aws-ai-ml-infrastructure-at-aptiv-4472754070",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/cloud-engineer-%E2%80%93-aws-ai-ml-infrastructure-at-aptiv-4472754070",
         "https://in.linkedin.com/jobs/view/cloud-engineer-%E2%80%93-aws-ai-ml-infrastructure-at-aptiv-4472754070"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.352487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.352487+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.533515+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -858,13 +856,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-cloud-devops-engineer-aws-ci-cd-ai-at-ust-4471201821",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-cloud-devops-engineer-aws-ci-cd-ai-at-ust-4471201821",
         "https://in.linkedin.com/jobs/view/senior-cloud-devops-engineer-aws-ci-cd-ai-at-ust-4471201821"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.352487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.352487+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.533642+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -902,13 +899,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-sre-i-at-thomson-reuters-4480228528",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-sre-i-at-thomson-reuters-4480228528",
         "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-sre-i-at-thomson-reuters-4480228528"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.362498+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.362498+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.534379+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -924,13 +920,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-sre-devops-engineer-at-verve-4472742447",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-sre-devops-engineer-at-verve-4472742447",
         "https://in.linkedin.com/jobs/view/senior-sre-devops-engineer-at-verve-4472742447"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.363451+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.363451+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.534499+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -946,13 +941,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-iii-at-jpmorganchase-4481271482",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/site-reliability-engineer-iii-at-jpmorganchase-4481271482",
         "https://in.linkedin.com/jobs/view/site-reliability-engineer-iii-at-jpmorganchase-4481271482"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.363961+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.363961+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.533994+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -968,13 +962,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-bnp-paribas-4480990408",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-bnp-paribas-4480990408",
         "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-bnp-paribas-4480990408"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.363961+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.363961+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.534102+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -990,13 +983,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-software-engineer-platform-engineering-at-guidewire-software-4414636144",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-software-engineer-platform-engineering-at-guidewire-software-4414636144",
         "https://in.linkedin.com/jobs/view/senior-software-engineer-platform-engineering-at-guidewire-software-4414636144"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.365052+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.365052+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.534872+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -1012,13 +1004,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/gcp-developer-at-infosys-4471394281",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/gcp-developer-at-infosys-4471394281",
         "https://in.linkedin.com/jobs/view/gcp-developer-at-infosys-4471394281"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.365464+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.365464+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.535051+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -1034,13 +1025,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/sr-engineer-managed-containers-at-target-4474621171",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/sr-engineer-managed-containers-at-target-4474621171",
         "https://in.linkedin.com/jobs/view/sr-engineer-managed-containers-at-target-4474621171"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.365976+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.365976+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.535171+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -1056,13 +1046,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-software-engineer-cloud-infrastructure-kubernetes-golang-python-at-red-hat-4480239080",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-software-engineer-cloud-infrastructure-kubernetes-golang-python-at-red-hat-4480239080",
         "https://in.linkedin.com/jobs/view/senior-software-engineer-cloud-infrastructure-kubernetes-golang-python-at-red-hat-4480239080"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.366634+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.366634+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.535448+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -1078,13 +1067,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-backend-and-devops-engineer-at-mogi-i-o-ott-podcast-short-video-apps-for-you-4478853138",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-backend-and-devops-engineer-at-mogi-i-o-ott-podcast-short-video-apps-for-you-4478853138",
         "https://in.linkedin.com/jobs/view/senior-backend-and-devops-engineer-at-mogi-i-o-ott-podcast-short-video-apps-for-you-4478853138"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.367147+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-10-20T12:51:39.367147+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-10-20T13:01:32.535625+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
     },
@@ -1100,12 +1088,77 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-platform-engineer-at-arkose-labs-4480271852",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-platform-engineer-at-arkose-labs-4480271852",
         "https://in.linkedin.com/jobs/view/senior-platform-engineer-at-arkose-labs-4480271852"
       ],
       "first_discovered_at": "2026-10-20T12:51:39.367147+00:00",
       "original_posting_date": "2026-10-19",
-      "last_verified_at": "2026-10-20T12:51:39.367147+00:00",
+      "last_verified_at": "2026-10-20T13:01:32.535750+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
+    },
+    "mizuho::devops,engineer::india_other": {
+      "canonical_job_key": "mizuho::devops,engineer::india_other",
+      "company": "Mizuho",
+      "job_title": "DevOps Engineer",
+      "location": "Pune City, Maharashtra, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-mizuho-4480224982",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/devops-engineer-at-mizuho-4480224982",
+        "https://in.linkedin.com/jobs/view/devops-engineer-at-mizuho-4480224982"
+      ],
+      "first_discovered_at": "2026-10-20T13:01:32.533071+00:00",
+      "original_posting_date": "2026-10-19",
+      "last_verified_at": "2026-10-20T13:01:32.533071+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
+    },
+    "thomsonreuters::engineer,i,reliability,site,sre::india_other": {
+      "canonical_job_key": "thomsonreuters::engineer,i,reliability,site,sre::india_other",
+      "company": "Thomson Reuters",
+      "job_title": "Senior Site Reliability Engineer (SRE) I",
+      "location": "Greater Hyderabad Area",
+      "work_arrangement": "Remote",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-sre-i-at-thomson-reuters-4480239073",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-sre-i-at-thomson-reuters-4480239073",
+        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-sre-i-at-thomson-reuters-4480239073"
+      ],
+      "first_discovered_at": "2026-10-20T13:01:32.534217+00:00",
+      "original_posting_date": "2026-10-19",
+      "last_verified_at": "2026-10-20T13:01:32.534217+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
+    },
+    "side::engineer,reliability,site::india_other": {
+      "canonical_job_key": "side::engineer,reliability,site::india_other",
+      "company": "Side",
+      "job_title": "Site Reliability Engineer",
+      "location": "Hyderabad, Telangana, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-side-4480257119",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-side-4480257119",
+        "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-side-4480257119"
+      ],
+      "first_discovered_at": "2026-10-20T13:01:32.534614+00:00",
+      "original_posting_date": "2026-10-19",
+      "last_verified_at": "2026-10-20T13:01:32.534614+00:00",
       "status": "NEW",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-20"
