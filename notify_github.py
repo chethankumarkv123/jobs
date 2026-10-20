@@ -5,10 +5,11 @@ native notification system (Zero Password / Zero Secret required).
 
 How it works:
 1. Formats the daily report into a GitHub Issue with direct application links.
-2. Uses the built-in GITHUB_TOKEN (provided automatically by GitHub Actions).
-3. GitHub automatically sends an email notification with the full report to the repo
+2. Directly tags and assigns @chethankumarkv123 to trigger GitHub's notification engine.
+3. Uses the built-in GITHUB_TOKEN (provided automatically by GitHub Actions).
+4. GitHub sends an email notification with the full report to the repo
    owner's registered email address (chethankumarkv123@gmail.com).
-4. No Gmail App Password, SMTP setup, or personal credentials are required.
+5. No Gmail App Password, SMTP setup, or personal credentials are required.
 """
 
 import os
@@ -47,8 +48,10 @@ def build_markdown_body(data: dict) -> str:
 
     new_apply_count = len(sec_1) + len(sec_2) + len(sec_3)
     repo = os.environ.get("GITHUB_REPOSITORY", "chethankumarkv123/jobs")
+    owner = repo.split("/")[0] if "/" in repo else "chethankumarkv123"
 
     md = []
+    md.append(f"Hey @{owner} — Here are your verified daily job recommendations for today!\n")
     md.append(f"# 🎯 Daily Job Intelligence Report — {today_str}\n")
     md.append(f"> **Candidate:** Chethan Gowda | **Role:** Azure Cloud Engineer (4.2 yrs IT experience, LTIMindtree)")
     md.append(f"> **Run Timestamp:** {now_ist} | **New Confirmed Openings:** `{new_apply_count}` | **Review Openings:** `{len(sec_5)}`")
@@ -122,7 +125,7 @@ def build_markdown_body(data: dict) -> str:
 
 
 def create_github_issue(title: str, body: str, token: str, repo: str) -> bool:
-    """Creates an issue using GitHub REST API, which automatically triggers an email to the owner."""
+    """Creates an issue using GitHub REST API, assigning the owner so GitHub delivers an email notification."""
     api_url = f"https://api.github.com/repos/{repo}/issues"
     headers = {
         "Authorization": f"Bearer {token}",
@@ -130,6 +133,8 @@ def create_github_issue(title: str, body: str, token: str, repo: str) -> bool:
         "Content-Type": "application/json",
         "User-Agent": "JobFinder-Notifier"
     }
+
+    owner = repo.split("/")[0] if "/" in repo else "chethankumarkv123"
 
     # 1. Close older daily run issues to keep the tracker clean
     try:
@@ -145,10 +150,11 @@ def create_github_issue(title: str, body: str, token: str, repo: str) -> bool:
     except Exception as e:
         logger.warning(f"Could not close old issues (harmless): {e}")
 
-    # 2. Create the new issue
+    # 2. Create the new issue with explicit assignment
     payload = {
         "title": title,
         "body": body,
+        "assignees": [owner],
         "labels": ["daily-job-report", "azure-cloud-jobs"]
     }
 
@@ -159,7 +165,7 @@ def create_github_issue(title: str, body: str, token: str, repo: str) -> bool:
             res_data = json.loads(resp.read().decode("utf-8"))
             issue_url = res_data.get("html_url")
             logger.info(f"Created daily report issue: {issue_url}")
-            logger.info(f"GitHub email notification dispatched directly to repository owner (chethankumarkv123@gmail.com).")
+            logger.info(f"Assigned to @{owner} — GitHub email notification dispatched to chethankumarkv123@gmail.com.")
             return True
     except urllib.error.HTTPError as e:
         logger.error(f"GitHub API Error: {e.code} {e.reason}")
