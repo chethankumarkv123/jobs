@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "generated_at_ist": "2026-10-20 12:17:38 IST",
-    "total_jobs_evaluated": 26,
+    "generated_at_ist": "2026-10-20 12:30:12 IST",
+    "total_jobs_evaluated": 23,
     "apply_count": 10,
-    "review_count": 16,
+    "review_count": 13,
     "official_career_page_count": 17,
-    "official_career_page_share_pct": "65.4%",
+    "official_career_page_share_pct": "73.9%",
     "target_profile": "Azure Cloud Engineer (4+ yrs IT experience, Azure/Kubernetes/Linux/Terraform)",
     "target_schedule": "08:30 Asia/Kolkata Daily"
   },
@@ -45,7 +45,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Jupiter Money",
@@ -84,7 +84,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Hasura",
@@ -123,7 +123,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Pixxel",
@@ -162,7 +162,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Zerodha",
@@ -199,7 +199,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Atlan",
@@ -236,7 +236,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "SigNoz",
@@ -274,7 +274,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Wellfound startup lead. Pending employer website cross-verification",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "DevZero",
@@ -312,7 +312,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Wellfound startup lead. Pending employer website cross-verification",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Postman",
@@ -349,7 +349,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Razorpay",
@@ -386,7 +386,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Sarvam AI",
@@ -423,7 +423,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "BrowserStack",
@@ -459,7 +459,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Infosys",
@@ -494,7 +494,7 @@
       "linkedin_job_url": "https://in.linkedin.com/jobs/view/azure-devops-at-infosys-4471316366",
       "recommendation": "REVIEW",
       "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
-      "date_last_verified": "2026-10-20 06:47:25 UTC"
+      "date_last_verified": "2026-10-20 07:00:00 UTC"
     },
     {
       "company": "Albemarle Corporation",
@@ -528,7 +528,7 @@
       "linkedin_job_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
       "recommendation": "REVIEW",
       "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
-      "date_last_verified": "2026-10-20 06:47:22 UTC"
+      "date_last_verified": "2026-10-20 07:00:00 UTC"
     },
     {
       "company": "Burns & McDonnell India",
@@ -562,7 +562,7 @@
       "linkedin_job_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-at-burns-mcdonnell-india-4480233411",
       "recommendation": "REVIEW",
       "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
-      "date_last_verified": "2026-10-20 06:47:22 UTC"
+      "date_last_verified": "2026-10-20 07:00:00 UTC"
     },
     {
       "company": "HighRadius",
@@ -600,7 +600,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Elastic",
@@ -639,7 +639,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "GitLab",
@@ -676,7 +676,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Persistent Systems",
@@ -714,7 +714,7 @@
       "linkedin_job_url": null,
       "recommendation": "APPLY",
       "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Canonical (Ubuntu)",
@@ -752,7 +752,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "CrowdStrike",
@@ -789,7 +789,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Zoho",
@@ -824,7 +824,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:20 UTC"
+      "date_last_verified": "2026-10-20 06:59:59 UTC"
     },
     {
       "company": "Trusted Shops SE (DE)",
@@ -856,112 +856,7 @@
       "linkedin_job_url": null,
       "recommendation": "REVIEW",
       "recommendation_reason": "Partial technical match or location eligibility requires manual review",
-      "date_last_verified": "2026-10-20 06:47:23 UTC"
-    },
-    {
-      "company": "Value Creed",
-      "title": "Senior Consultant - DevOps",
-      "location": "Hyderabad, Telangana, India",
-      "work_arrangement": "Onsite India",
-      "location_priority_group": "india_other",
-      "original_posting_date": "2026-10-19",
-      "date_is_verified": true,
-      "experience_requirements": "Unspecified",
-      "key_matching_technologies": [
-        "Azure",
-        "CI/CD"
-      ],
-      "missing_skills": [
-        "Kubernetes",
-        "Linux",
-        "Terraform",
-        "Ansible"
-      ],
-      "estimated_profile_match_pct": 39.0,
-      "score_reasons": [
-        "Core Tech: Matched 2/10 key skill domains (Azure, CI/CD)",
-        "Duties: Aligned on ",
-        "Experience Fit: Unspecified in posting (Startup flexible)",
-        "Location Fit: INDIA_OTHER (10.0/10 pts)"
-      ],
-      "source_name": "LinkedIn Jobs",
-      "source_type": "linkedin",
-      "verification_status": "UNVERIFIED",
-      "official_application_url": "https://in.linkedin.com/jobs/view/senior-consultant-devops-at-value-creed-4472291486",
-      "linkedin_job_url": "https://in.linkedin.com/jobs/view/senior-consultant-devops-at-value-creed-4472291486",
-      "recommendation": "REVIEW",
-      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
-      "date_last_verified": "2026-10-20 06:47:27 UTC"
-    },
-    {
-      "company": "Arcana",
-      "title": "DevOps Engineer",
-      "location": "Coimbatore, Tamil Nadu, India",
-      "work_arrangement": "Onsite India",
-      "location_priority_group": "india_other",
-      "original_posting_date": "2026-10-19",
-      "date_is_verified": true,
-      "experience_requirements": "Unspecified",
-      "key_matching_technologies": [
-        "Azure",
-        "CI/CD"
-      ],
-      "missing_skills": [
-        "Kubernetes",
-        "Linux",
-        "Terraform",
-        "Ansible"
-      ],
-      "estimated_profile_match_pct": 39.0,
-      "score_reasons": [
-        "Core Tech: Matched 2/10 key skill domains (Azure, CI/CD)",
-        "Duties: Aligned on ",
-        "Experience Fit: Unspecified in posting (Startup flexible)",
-        "Location Fit: INDIA_OTHER (10.0/10 pts)"
-      ],
-      "source_name": "LinkedIn Jobs",
-      "source_type": "linkedin",
-      "verification_status": "UNVERIFIED",
-      "official_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-arcana-4474280672",
-      "linkedin_job_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-arcana-4474280672",
-      "recommendation": "REVIEW",
-      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
-      "date_last_verified": "2026-10-20 06:47:27 UTC"
-    },
-    {
-      "company": "Tata Consultancy Services",
-      "title": "Azure Devops",
-      "location": "Mumbai, Maharashtra, India",
-      "work_arrangement": "Onsite India",
-      "location_priority_group": "india_other",
-      "original_posting_date": "2026-10-19",
-      "date_is_verified": true,
-      "experience_requirements": "Unspecified",
-      "key_matching_technologies": [
-        "Azure",
-        "CI/CD"
-      ],
-      "missing_skills": [
-        "Kubernetes",
-        "Linux",
-        "Terraform",
-        "Ansible"
-      ],
-      "estimated_profile_match_pct": 39.0,
-      "score_reasons": [
-        "Core Tech: Matched 2/10 key skill domains (Azure, CI/CD)",
-        "Duties: Aligned on ",
-        "Experience Fit: Unspecified in posting (Startup flexible)",
-        "Location Fit: INDIA_OTHER (10.0/10 pts)"
-      ],
-      "source_name": "LinkedIn Jobs",
-      "source_type": "linkedin",
-      "verification_status": "UNVERIFIED",
-      "official_application_url": "https://in.linkedin.com/jobs/view/azure-devops-at-tata-consultancy-services-4479960803",
-      "linkedin_job_url": "https://in.linkedin.com/jobs/view/azure-devops-at-tata-consultancy-services-4479960803",
-      "recommendation": "REVIEW",
-      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
-      "date_last_verified": "2026-10-20 06:47:27 UTC"
+      "date_last_verified": "2026-10-20 07:00:00 UTC"
     }
   ]
 }

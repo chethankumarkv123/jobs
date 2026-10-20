@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-20T06:47:38.081887+00:00",
+  "last_updated": "2026-10-20T07:00:12.835223+00:00",
   "total_tracked": 48,
   "applied_count": 0,
   "saved_count": 0,
@@ -41,7 +41,7 @@
       "estimated_match_score": 62.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:06.735728+00:00",
-      "last_seen": "2026-10-20T06:47:23.790732+00:00",
+      "last_seen": "2026-10-20T07:00:00.073446+00:00",
       "status": "new",
       "score": 44.0
     },
@@ -159,7 +159,7 @@
       "estimated_match_score": 44.0,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:34:09.566243+00:00",
-      "last_seen": "2026-10-20T06:47:27.295382+00:00",
+      "last_seen": "2026-10-20T07:00:00.594451+00:00",
       "status": "new",
       "score": 39.5
     },
@@ -186,7 +186,7 @@
       "estimated_match_score": 60.3,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:34:09.570242+00:00",
-      "last_seen": "2026-10-20T06:47:27.299619+00:00",
+      "last_seen": "2026-10-20T07:00:00.596027+00:00",
       "status": "new",
       "score": 37.5
     },
@@ -226,7 +226,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:34:07.303132+00:00",
-      "last_seen": "2026-10-20T06:47:22.762675+00:00",
+      "last_seen": "2026-10-20T06:59:59.940368+00:00",
       "status": "new",
       "score": 72.0
     },
@@ -240,7 +240,7 @@
       "estimated_match_score": 94.0,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:34:08.030138+00:00",
-      "last_seen": "2026-10-20T06:47:23.615265+00:00",
+      "last_seen": "2026-10-20T07:00:00.332304+00:00",
       "status": "new",
       "score": 67.0
     },
@@ -254,7 +254,7 @@
       "estimated_match_score": 94.2,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:09.451590+00:00",
-      "last_seen": "2026-10-20T06:47:25.345441+00:00",
+      "last_seen": "2026-10-20T07:00:00.976855+00:00",
       "status": "new",
       "score": 61.0
     },
@@ -268,7 +268,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:10.238265+00:00",
-      "last_seen": "2026-10-20T06:47:26.220181+00:00",
+      "last_seen": "2026-10-20T07:00:01.995347+00:00",
       "status": "new",
       "score": 61.0
     },
@@ -282,7 +282,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:10.678500+00:00",
-      "last_seen": "2026-10-20T06:47:26.774306+00:00",
+      "last_seen": "2026-10-20T07:00:02.052342+00:00",
       "status": "new",
       "score": 53.5
     },
@@ -296,7 +296,7 @@
       "estimated_match_score": 82.3,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:11.937389+00:00",
-      "last_seen": "2026-10-20T06:47:27.766618+00:00",
+      "last_seen": "2026-10-20T07:00:03.967677+00:00",
       "status": "new",
       "score": 59.0
     },
@@ -310,7 +310,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:34:12.451455+00:00",
-      "last_seen": "2026-10-20T06:47:28.336204+00:00",
+      "last_seen": "2026-10-20T07:00:04.116908+00:00",
       "status": "new",
       "score": 65.0
     },
@@ -324,7 +324,7 @@
       "estimated_match_score": 66.2,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:34:14.025319+00:00",
-      "last_seen": "2026-10-20T06:47:31.031968+00:00",
+      "last_seen": "2026-10-20T07:00:05.921528+00:00",
       "status": "new",
       "score": 78.0
     },
@@ -338,7 +338,7 @@
       "estimated_match_score": 94.2,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:34:15.054399+00:00",
-      "last_seen": "2026-10-20T06:47:30.445042+00:00",
+      "last_seen": "2026-10-20T07:00:04.985278+00:00",
       "status": "new",
       "score": 71.5
     },
@@ -352,7 +352,7 @@
       "estimated_match_score": 100,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:34:15.642547+00:00",
-      "last_seen": "2026-10-20T06:47:28.935463+00:00",
+      "last_seen": "2026-10-20T07:00:04.706377+00:00",
       "status": "new",
       "score": 77.5
     },
@@ -379,7 +379,7 @@
       "estimated_match_score": 54.5,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:36:37.945526+00:00",
-      "last_seen": "2026-10-20T06:47:24.706044+00:00",
+      "last_seen": "2026-10-20T07:00:00.355716+00:00",
       "status": "new",
       "score": 36.0
     },
@@ -406,7 +406,7 @@
       "score": 61.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:10.138304+00:00",
-      "last_seen": "2026-10-20T06:47:20.791831+00:00",
+      "last_seen": "2026-10-20T06:59:59.694355+00:00",
       "status": "new"
     },
     "79b3d29c2b10aabd": {
@@ -419,7 +419,7 @@
       "score": 63.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:10.138304+00:00",
-      "last_seen": "2026-10-20T06:47:20.791831+00:00",
+      "last_seen": "2026-10-20T06:59:59.694372+00:00",
       "status": "new"
     },
     "e6216de52ef64ae2": {
@@ -432,7 +432,7 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:11.507860+00:00",
-      "last_seen": "2026-10-20T06:47:22.976792+00:00",
+      "last_seen": "2026-10-20T07:00:00.186733+00:00",
       "status": "new"
     },
     "7877c005dd406b84": {
@@ -484,7 +484,7 @@
       "score": 39.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:14.354764+00:00",
-      "last_seen": "2026-10-20T06:47:25.843240+00:00",
+      "last_seen": "2026-10-20T07:00:00.824066+00:00",
       "status": "new"
     },
     "38d8ac96e62313e3": {
@@ -497,7 +497,7 @@
       "score": 35.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:14.355763+00:00",
-      "last_seen": "2026-10-20T06:47:22.976792+00:00",
+      "last_seen": "2026-10-20T07:00:00.186868+00:00",
       "status": "new"
     },
     "6e59967986052f84": {
@@ -510,7 +510,7 @@
       "score": 70.5,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:45:21.838527+00:00",
-      "last_seen": "2026-10-20T06:47:31.727408+00:00",
+      "last_seen": "2026-10-20T07:00:06.093237+00:00",
       "status": "new"
     },
     "3f7756cfddad250c": {
@@ -523,7 +523,7 @@
       "score": 65.5,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:45:23.366363+00:00",
-      "last_seen": "2026-10-20T06:47:32.877378+00:00",
+      "last_seen": "2026-10-20T07:00:07.437129+00:00",
       "status": "new"
     },
     "840de8fe4976b75d": {
@@ -536,7 +536,7 @@
       "score": 76.5,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:45:23.931687+00:00",
-      "last_seen": "2026-10-20T06:47:33.553200+00:00",
+      "last_seen": "2026-10-20T07:00:08.506090+00:00",
       "status": "new"
     },
     "b276ce5652fa183c": {
@@ -549,7 +549,7 @@
       "score": 60.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:24.477462+00:00",
-      "last_seen": "2026-10-20T06:47:34.089679+00:00",
+      "last_seen": "2026-10-20T07:00:08.685253+00:00",
       "status": "new"
     },
     "989218e04a6585fd": {
@@ -562,7 +562,7 @@
       "score": 61.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:25.578112+00:00",
-      "last_seen": "2026-10-20T06:47:35.232060+00:00",
+      "last_seen": "2026-10-20T07:00:09.249303+00:00",
       "status": "new"
     },
     "4d85912e837810e5": {
@@ -575,7 +575,7 @@
       "score": 68.0,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:45:26.081562+00:00",
-      "last_seen": "2026-10-20T06:47:35.739614+00:00",
+      "last_seen": "2026-10-20T07:00:09.372490+00:00",
       "status": "new"
     },
     "1f625e24b33925e7": {
@@ -588,7 +588,7 @@
       "score": 75.5,
       "recommendation": "APPLY",
       "first_seen": "2026-10-20T06:45:27.780226+00:00",
-      "last_seen": "2026-10-20T06:47:37.456414+00:00",
+      "last_seen": "2026-10-20T07:00:12.396272+00:00",
       "status": "new"
     },
     "f93ffb4e9ca02ac9": {
@@ -601,7 +601,7 @@
       "score": 61.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:28.376614+00:00",
-      "last_seen": "2026-10-20T06:47:38.057758+00:00",
+      "last_seen": "2026-10-20T07:00:12.831837+00:00",
       "status": "new"
     },
     "9af9e691f84fb144": {
