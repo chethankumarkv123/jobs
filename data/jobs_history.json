@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-20T07:21:47.779458+00:00",
+  "last_updated": "2026-10-20T12:48:44.963896+00:00",
   "total_tracked": 53,
   "applied_count": 0,
   "saved_count": 0,
@@ -655,7 +655,7 @@
       "recommendation": "SKIP",
       "application_status": "APPLIED",
       "first_seen": "2026-10-20T07:12:01.119560+00:00",
-      "last_seen": "2026-10-20T07:12:33.659006+00:00",
+      "last_seen": "2026-10-20T12:48:44.825936+00:00",
       "status": "APPLIED"
     },
     "rev_job_1": {
@@ -670,7 +670,7 @@
       "recommendation": "REVIEW",
       "application_status": "PREVIOUSLY_REVIEWED",
       "first_seen": "2026-10-20T07:12:01.214584+00:00",
-      "last_seen": "2026-10-20T07:12:33.749921+00:00",
+      "last_seen": "2026-10-20T12:48:44.918088+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "startup_1": {
@@ -685,7 +685,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T07:12:01.261961+00:00",
-      "last_seen": "2026-10-20T07:12:33.794302+00:00",
+      "last_seen": "2026-10-20T12:48:44.963896+00:00",
       "status": "NEW"
     },
     "s1": {
