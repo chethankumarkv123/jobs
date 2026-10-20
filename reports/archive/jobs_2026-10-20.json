@@ -1,0 +1,967 @@
+{
+  "metadata": {
+    "generated_at_ist": "2026-10-20 12:17:38 IST",
+    "total_jobs_evaluated": 26,
+    "apply_count": 10,
+    "review_count": 16,
+    "official_career_page_count": 17,
+    "official_career_page_share_pct": "65.4%",
+    "target_profile": "Azure Cloud Engineer (4+ yrs IT experience, Azure/Kubernetes/Linux/Terraform)",
+    "target_schedule": "08:30 Asia/Kolkata Daily"
+  },
+  "jobs": [
+    {
+      "company": "CRED",
+      "title": "Cloud Operations & Reliability Engineer",
+      "location": "Indiranagar, Bengaluru, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Terraform",
+        "Ansible",
+        "Monitoring",
+        "Security/Hardening"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "CI/CD"
+      ],
+      "estimated_profile_match_pct": 78.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Terraform, Ansible, Monitoring, Security/Hardening)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Incident Response & SRE",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://careers.cred.club/",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Jupiter Money",
+      "title": "Azure Cloud & DevOps Engineer",
+      "location": "HSR Layout, Bengaluru, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "CI/CD",
+        "Docker",
+        "Security/Hardening"
+      ],
+      "missing_skills": [
+        "Ansible",
+        "Monitoring",
+        "Scripting"
+      ],
+      "estimated_profile_match_pct": 77.5,
+      "score_reasons": [
+        "Core Tech: Matched 7/10 key skill domains (Azure, Kubernetes, Linux, Terraform)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Hardening & Compliance",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://jupiter.money/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Hasura",
+      "title": "Cloud Platform Engineer (Kubernetes & SRE)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Docker",
+        "Monitoring"
+      ],
+      "missing_skills": [
+        "Ansible",
+        "CI/CD",
+        "Security/Hardening",
+        "Scripting"
+      ],
+      "estimated_profile_match_pct": 72.0,
+      "score_reasons": [
+        "Core Tech: Matched 6/10 key skill domains (Azure, Kubernetes, Linux, Terraform)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://hasura.io/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Pixxel",
+      "title": "Cloud Platform & DevOps Engineer",
+      "location": "HSR Layout, Bengaluru, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "CI/CD",
+        "Docker",
+        "Monitoring",
+        "Scripting"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Ansible",
+        "Security/Hardening"
+      ],
+      "estimated_profile_match_pct": 71.5,
+      "score_reasons": [
+        "Core Tech: Matched 7/10 key skill domains (Kubernetes, Linux, Terraform, CI/CD)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.pixxel.space/careers",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Zerodha",
+      "title": "Cloud Systems & Infrastructure Engineer",
+      "location": "JP Nagar, Bengaluru, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Linux",
+        "Ansible",
+        "Security/Hardening",
+        "Scripting"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD"
+      ],
+      "estimated_profile_match_pct": 67.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Linux, Ansible, Security/Hardening, Scripting)",
+        "Duties: Aligned on Cloud Operations & Patching, Hardening & Compliance, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://careers.zerodha.com",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Atlan",
+      "title": "Cloud Infrastructure Automation Engineer",
+      "location": "Bengaluru, India (Remote Eligible)",
+      "work_arrangement": "Remote within India",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD"
+      ],
+      "missing_skills": [
+        "Linux",
+        "Ansible",
+        "Docker",
+        "Monitoring"
+      ],
+      "estimated_profile_match_pct": 65.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Azure, Kubernetes, Terraform, CI/CD)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://atlan.com/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "SigNoz",
+      "title": "Site Reliability Engineer / DevOps Engineer",
+      "location": "Bengaluru, Karnataka, India (Remote Eligible)",
+      "work_arrangement": "Remote within India",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": false,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Kubernetes",
+        "Linux",
+        "CI/CD",
+        "Docker",
+        "Monitoring"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Terraform",
+        "Ansible",
+        "Security/Hardening"
+      ],
+      "estimated_profile_match_pct": 63.5,
+      "score_reasons": [
+        "Core Tech: Matched 5/10 key skill domains (Kubernetes, Linux, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Wellfound",
+      "source_type": "wellfound",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://wellfound.com/company/signoz/jobs",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Wellfound startup lead. Pending employer website cross-verification",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "DevZero",
+      "title": "Cloud Platform & Infrastructure Engineer",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": false,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Docker"
+      ],
+      "missing_skills": [
+        "Ansible",
+        "CI/CD",
+        "Monitoring",
+        "Security/Hardening"
+      ],
+      "estimated_profile_match_pct": 61.5,
+      "score_reasons": [
+        "Core Tech: Matched 5/10 key skill domains (Azure, Kubernetes, Linux, Terraform)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Wellfound",
+      "source_type": "wellfound",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://wellfound.com/company/devzero/jobs",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Wellfound startup lead. Pending employer website cross-verification",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Postman",
+      "title": "Cloud DevOps & Platform Engineer",
+      "location": "Indiranagar, Bengaluru, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Linux",
+        "Ansible",
+        "Monitoring"
+      ],
+      "estimated_profile_match_pct": 61.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Kubernetes, Terraform, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.postman.com/company/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Razorpay",
+      "title": "DevSecOps & Cloud Security Engineer",
+      "location": "Koramangala, Bengaluru, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "CI/CD",
+        "Security/Hardening"
+      ],
+      "missing_skills": [
+        "Linux",
+        "Terraform",
+        "Ansible",
+        "Docker"
+      ],
+      "estimated_profile_match_pct": 61.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Azure, Kubernetes, CI/CD, Security/Hardening)",
+        "Duties: Aligned on Incident Response & SRE, Hardening & Compliance",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://razorpay.com/jobs/",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Sarvam AI",
+      "title": "AI Cloud Infrastructure & Systems Engineer",
+      "location": "Koramangala, Bengaluru, India",
+      "work_arrangement": "Onsite Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Kubernetes",
+        "Linux",
+        "CI/CD",
+        "Scripting"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Terraform",
+        "Ansible",
+        "Docker"
+      ],
+      "estimated_profile_match_pct": 59.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Kubernetes, Linux, CI/CD, Scripting)",
+        "Duties: Aligned on Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.sarvam.ai/careers",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "BrowserStack",
+      "title": "Site Reliability Engineer (SRE) - Cloud Infrastructure",
+      "location": "Outer Ring Road, Bengaluru, India",
+      "work_arrangement": "Hybrid Bengaluru / Remote India",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Kubernetes",
+        "Linux",
+        "Monitoring"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Terraform",
+        "Ansible",
+        "CI/CD"
+      ],
+      "estimated_profile_match_pct": 53.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 key skill domains (Kubernetes, Linux, Monitoring)",
+        "Duties: Aligned on Incident Response & SRE",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.browserstack.com/careers",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Infosys",
+      "title": "Azure DevOps",
+      "location": "Bengaluru East, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-19",
+      "date_is_verified": true,
+      "experience_requirements": "Unspecified",
+      "key_matching_technologies": [
+        "Azure",
+        "CI/CD"
+      ],
+      "missing_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_pct": 39.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 key skill domains (Azure, CI/CD)",
+        "Duties: Aligned on ",
+        "Experience Fit: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "LinkedIn Jobs",
+      "source_type": "linkedin",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-devops-at-infosys-4471316366",
+      "linkedin_job_url": "https://in.linkedin.com/jobs/view/azure-devops-at-infosys-4471316366",
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
+      "date_last_verified": "2026-10-20 06:47:25 UTC"
+    },
+    {
+      "company": "Albemarle Corporation",
+      "title": "Cloud Infrastructure Engineer",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-19",
+      "date_is_verified": true,
+      "experience_requirements": "Unspecified",
+      "key_matching_technologies": [
+        "Azure"
+      ],
+      "missing_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_pct": 35.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 key skill domains (Azure)",
+        "Duties: Aligned on ",
+        "Experience Fit: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "LinkedIn Jobs",
+      "source_type": "linkedin",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
+      "linkedin_job_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
+      "date_last_verified": "2026-10-20 06:47:22 UTC"
+    },
+    {
+      "company": "Burns & McDonnell India",
+      "title": "Senior DevOps Engineer",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority_group": "bengaluru",
+      "original_posting_date": "2026-10-19",
+      "date_is_verified": true,
+      "experience_requirements": "Unspecified",
+      "key_matching_technologies": [
+        "Azure"
+      ],
+      "missing_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_pct": 35.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 key skill domains (Azure)",
+        "Duties: Aligned on ",
+        "Experience Fit: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "source_name": "LinkedIn Jobs",
+      "source_type": "linkedin",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-at-burns-mcdonnell-india-4480233411",
+      "linkedin_job_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-at-burns-mcdonnell-india-4480233411",
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
+      "date_last_verified": "2026-10-20 06:47:22 UTC"
+    },
+    {
+      "company": "HighRadius",
+      "title": "Cloud Operations & Automation Engineer",
+      "location": "Hyderabad, Telangana, India",
+      "work_arrangement": "Hybrid Hyderabad",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Linux",
+        "Ansible",
+        "CI/CD",
+        "Monitoring",
+        "Security/Hardening"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "Docker"
+      ],
+      "estimated_profile_match_pct": 76.5,
+      "score_reasons": [
+        "Core Tech: Matched 5/10 key skill domains (Linux, Ansible, CI/CD, Monitoring)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Incident Response & SRE",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.highradius.com/company/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Elastic",
+      "title": "Cloud Infrastructure Engineer - Azure & Automation (Remote - India)",
+      "location": "Remote - India (Worldwide Eligible)",
+      "work_arrangement": "Remote within India",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible",
+        "Docker",
+        "Security/Hardening"
+      ],
+      "missing_skills": [
+        "CI/CD",
+        "Monitoring",
+        "Scripting"
+      ],
+      "estimated_profile_match_pct": 75.5,
+      "score_reasons": [
+        "Core Tech: Matched 7/10 key skill domains (Azure, Kubernetes, Linux, Terraform)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.elastic.co/about/careers",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "GitLab",
+      "title": "Site Reliability Engineer (SRE) - Cloud Platform (Remote - India)",
+      "location": "Remote - India (Worldwide Eligible)",
+      "work_arrangement": "Remote within India",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "4-5 years",
+      "key_matching_technologies": [
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "Monitoring"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Linux",
+        "Ansible",
+        "Docker"
+      ],
+      "estimated_profile_match_pct": 68.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Kubernetes, Terraform, CI/CD, Monitoring)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Automation",
+        "Experience Fit: Ideal match (4-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://about.gitlab.com/jobs/",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Persistent Systems",
+      "title": "Azure DevOps & Cloud Infrastructure Engineer",
+      "location": "Pune, Maharashtra, India",
+      "work_arrangement": "Hybrid Pune",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "4-6 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "Monitoring"
+      ],
+      "missing_skills": [
+        "Linux",
+        "Ansible",
+        "Docker",
+        "Security/Hardening"
+      ],
+      "estimated_profile_match_pct": 65.5,
+      "score_reasons": [
+        "Core Tech: Matched 5/10 key skill domains (Azure, Kubernetes, Terraform, CI/CD)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance",
+        "Experience Fit: Ideal match (4-6 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.persistent.com/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "APPLY",
+      "recommendation_reason": "High technical match, verified within 24h on official company career page, verified India location eligibility",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Canonical (Ubuntu)",
+      "title": "Cloud Systems Engineer - Azure & Kubernetes (Remote - India)",
+      "location": "Remote - India (Worldwide Eligible)",
+      "work_arrangement": "Remote within India",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "4-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Ansible",
+        "Scripting"
+      ],
+      "missing_skills": [
+        "Terraform",
+        "CI/CD",
+        "Docker",
+        "Monitoring"
+      ],
+      "estimated_profile_match_pct": 61.5,
+      "score_reasons": [
+        "Core Tech: Matched 5/10 key skill domains (Azure, Kubernetes, Linux, Ansible)",
+        "Duties: Aligned on Automation",
+        "Experience Fit: Ideal match (4-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://canonical.com/careers",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "CrowdStrike",
+      "title": "Cloud Security & DevSecOps Engineer (Remote - India)",
+      "location": "Remote - India (Worldwide Eligible)",
+      "work_arrangement": "Remote within India",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Azure",
+        "Kubernetes",
+        "CI/CD",
+        "Security/Hardening"
+      ],
+      "missing_skills": [
+        "Linux",
+        "Terraform",
+        "Ansible",
+        "Docker"
+      ],
+      "estimated_profile_match_pct": 61.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 key skill domains (Azure, Kubernetes, CI/CD, Security/Hardening)",
+        "Duties: Aligned on Hardening & Compliance, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.crowdstrike.com/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Zoho",
+      "title": "Linux Systems & Cloud Infrastructure Engineer",
+      "location": "Chennai, Tamil Nadu, India",
+      "work_arrangement": "Onsite Chennai",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-20",
+      "date_is_verified": true,
+      "experience_requirements": "3-5 years",
+      "key_matching_technologies": [
+        "Linux",
+        "Scripting"
+      ],
+      "missing_skills": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_pct": 60.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 key skill domains (Linux, Scripting)",
+        "Duties: Aligned on Cloud Operations & Patching, Hardening & Compliance, Automation",
+        "Experience Fit: Strong fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Official Company Career Pages",
+      "source_type": "official_career_page",
+      "verification_status": "VERIFIED",
+      "official_application_url": "https://www.zoho.com/careers/",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:20 UTC"
+    },
+    {
+      "company": "Trusted Shops SE (DE)",
+      "title": "Cloud Engineer (f/m/d)",
+      "location": "Remote job (Remote)",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-19",
+      "date_is_verified": true,
+      "experience_requirements": "3+ years",
+      "key_matching_technologies": [],
+      "missing_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_pct": 44.0,
+      "score_reasons": [
+        "Core Tech: Matched 0/10 key skill domains ()",
+        "Duties: Aligned on Cloud Operations & Patching, Hardening & Compliance",
+        "Experience Fit: Strong fit (3+ years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "Arbeitnow",
+      "source_type": "job_board",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://www.arbeitnow.com/jobs/companies/trusted-shops-se-de/remote-cloud-engineer-cologne-307668",
+      "linkedin_job_url": null,
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Partial technical match or location eligibility requires manual review",
+      "date_last_verified": "2026-10-20 06:47:23 UTC"
+    },
+    {
+      "company": "Value Creed",
+      "title": "Senior Consultant - DevOps",
+      "location": "Hyderabad, Telangana, India",
+      "work_arrangement": "Onsite India",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-19",
+      "date_is_verified": true,
+      "experience_requirements": "Unspecified",
+      "key_matching_technologies": [
+        "Azure",
+        "CI/CD"
+      ],
+      "missing_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_pct": 39.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 key skill domains (Azure, CI/CD)",
+        "Duties: Aligned on ",
+        "Experience Fit: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "LinkedIn Jobs",
+      "source_type": "linkedin",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-consultant-devops-at-value-creed-4472291486",
+      "linkedin_job_url": "https://in.linkedin.com/jobs/view/senior-consultant-devops-at-value-creed-4472291486",
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
+      "date_last_verified": "2026-10-20 06:47:27 UTC"
+    },
+    {
+      "company": "Arcana",
+      "title": "DevOps Engineer",
+      "location": "Coimbatore, Tamil Nadu, India",
+      "work_arrangement": "Onsite India",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-19",
+      "date_is_verified": true,
+      "experience_requirements": "Unspecified",
+      "key_matching_technologies": [
+        "Azure",
+        "CI/CD"
+      ],
+      "missing_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_pct": 39.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 key skill domains (Azure, CI/CD)",
+        "Duties: Aligned on ",
+        "Experience Fit: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "LinkedIn Jobs",
+      "source_type": "linkedin",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-arcana-4474280672",
+      "linkedin_job_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-arcana-4474280672",
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
+      "date_last_verified": "2026-10-20 06:47:27 UTC"
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "title": "Azure Devops",
+      "location": "Mumbai, Maharashtra, India",
+      "work_arrangement": "Onsite India",
+      "location_priority_group": "india_other",
+      "original_posting_date": "2026-10-19",
+      "date_is_verified": true,
+      "experience_requirements": "Unspecified",
+      "key_matching_technologies": [
+        "Azure",
+        "CI/CD"
+      ],
+      "missing_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_pct": 39.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 key skill domains (Azure, CI/CD)",
+        "Duties: Aligned on ",
+        "Experience Fit: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "source_name": "LinkedIn Jobs",
+      "source_type": "linkedin",
+      "verification_status": "UNVERIFIED",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-devops-at-tata-consultancy-services-4479960803",
+      "linkedin_job_url": "https://in.linkedin.com/jobs/view/azure-devops-at-tata-consultancy-services-4479960803",
+      "recommendation": "REVIEW",
+      "recommendation_reason": "Discovered on LinkedIn past 24h feed. Pending official career site cross-verification",
+      "date_last_verified": "2026-10-20 06:47:27 UTC"
+    }
+  ]
+}

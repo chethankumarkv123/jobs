@@ -1,0 +1,61 @@
+name: Daily Job Discovery & Email Report
+
+on:
+  schedule:
+    # 02:30 UTC = 08:00 AM Asia/Kolkata (IST) daily
+    - cron: '30 2 * * *'
+  workflow_dispatch: # Allows manual one-click trigger from GitHub web or mobile app
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  run-job-finder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Execute Daily Job Discovery Pipeline & Email Dispatch
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER || 'chethankumarkv123@gmail.com' }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SMTP_USER: ${{ secrets.SMTP_USER || 'chethankumarkv123@gmail.com' }}
+          SMTP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python main.py
+
+      - name: Upload Daily Reports Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-reports-${{ github.run_id }}
+          path: |
+            reports/latest.html
+            reports/latest.csv
+            reports/latest.json
+            reports/archive/
+          retention-days: 14
+
+      - name: Commit & Push Updated History and Reports
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/jobs_history.json reports/
+          git diff-index --quiet HEAD || (git commit -m "Auto-update: Daily job history and reports [skip ci]" && git push)
