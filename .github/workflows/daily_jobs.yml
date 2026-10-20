@@ -2,8 +2,8 @@ name: Daily Job Discovery & Email Report
 
 on:
   schedule:
-    # 02:30 UTC = 08:00 AM Asia/Kolkata (IST) daily
-    - cron: '30 2 * * *'
+    # 03:00 UTC = 08:30 AM Asia/Kolkata (IST) daily
+    - cron: '0 3 * * *'
   workflow_dispatch: # Allows manual one-click trigger from GitHub web or mobile app
   push:
     branches:
@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   run-job-finder:
@@ -33,7 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Execute Daily Job Discovery Pipeline & Email Dispatch
+      - name: Execute Daily Job Discovery Pipeline
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER || 'chethankumarkv123@gmail.com' }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
@@ -41,6 +42,17 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python main.py
+
+      - name: Send Report to chethankumarkv123@gmail.com (No Password Required)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python notify_github.py
+
+      - name: Copy latest report to index.html for instant mobile viewing
+        run: |
+          cp reports/latest.html index.html
 
       - name: Upload Daily Reports Artifact
         uses: actions/upload-artifact@v4
@@ -51,11 +63,12 @@ jobs:
             reports/latest.csv
             reports/latest.json
             reports/archive/
+            index.html
           retention-days: 14
 
       - name: Commit & Push Updated History and Reports
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/jobs_history.json reports/
+          git add data/application_history.json data/jobs_history.json reports/ index.html
           git diff-index --quiet HEAD || (git commit -m "Auto-update: Daily job history and reports [skip ci]" && git push)
