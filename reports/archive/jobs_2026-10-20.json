@@ -1,118 +1,16 @@
 {
   "metadata": {
-    "generated_at_ist": "2026-10-20 12:43:26 IST",
+    "generated_at_ist": "2026-10-20 12:44:18 IST",
     "candidate_profile": "Azure Cloud Engineer (4+ yrs total IT experience, LTIMindtree)",
     "total_jobs_evaluated": 32,
     "new_confirmed_openings": 0,
     "needs_review_count": 32,
     "already_applied_count": 0,
-    "previously_reviewed_count": 29,
+    "previously_reviewed_count": 32,
     "official_career_page_share_confirmed": "0.0% (Target >= 70%)",
     "source_coverage": "Official Career Pages, Wellfound, LinkedIn Jobs, Hacker News, RemoteOK, Jobicy, Arbeitnow"
   },
   "jobs": [
-    {
-      "company": "Albemarle Corporation",
-      "job_title": "Cloud Infrastructure Engineer",
-      "location": "Bengaluru, Karnataka, India",
-      "work_arrangement": "Hybrid Bengaluru",
-      "location_priority": "bengaluru",
-      "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:06 UTC",
-      "required_experience": "Unspecified",
-      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
-      "relevant_technical_skills": [
-        "Azure"
-      ],
-      "missing_mandatory_skills": [
-        "Kubernetes",
-        "Linux",
-        "Terraform",
-        "Ansible"
-      ],
-      "estimated_profile_match_score": 35.5,
-      "score_reasons": [
-        "Core Tech: Matched 1/10 skill domains (Azure)",
-        "Duties: Aligned on ",
-        "Experience: Unspecified in posting (Startup flexible)",
-        "Location Fit: BENGALURU (10.0/10 pts)"
-      ],
-      "recommendation": "REVIEW",
-      "reason_for_recommendation": "Discovered on LinkedIn past 24h feed. Official employer career site verification pending",
-      "source_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
-      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
-      "canonical_job_key": "albemarle::cloud,engineer,infrastructure::blr",
-      "duplicate_check_result": "Unique opening (Never seen before)",
-      "previous_application_status": "NEW"
-    },
-    {
-      "company": "Anthesis Group",
-      "job_title": "Senior Azure Cloud Engineer",
-      "location": "Pune Division, Maharashtra, India",
-      "work_arrangement": "Onsite India",
-      "location_priority": "india_other",
-      "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:07 UTC",
-      "required_experience": "Unspecified",
-      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
-      "relevant_technical_skills": [
-        "Azure"
-      ],
-      "missing_mandatory_skills": [
-        "Kubernetes",
-        "Linux",
-        "Terraform",
-        "Ansible"
-      ],
-      "estimated_profile_match_score": 35.5,
-      "score_reasons": [
-        "Core Tech: Matched 1/10 skill domains (Azure)",
-        "Duties: Aligned on ",
-        "Experience: Unspecified in posting (Startup flexible)",
-        "Location Fit: INDIA_OTHER (10.0/10 pts)"
-      ],
-      "recommendation": "REVIEW",
-      "reason_for_recommendation": "Discovered on LinkedIn past 24h feed. Official employer career site verification pending",
-      "source_url": "https://in.linkedin.com/jobs/view/senior-azure-cloud-engineer-at-anthesis-group-4480216798",
-      "official_application_url": "https://in.linkedin.com/jobs/view/senior-azure-cloud-engineer-at-anthesis-group-4480216798",
-      "canonical_job_key": "anthesisgroup::azure,cloud,engineer::india_other",
-      "duplicate_check_result": "Unique opening (Never seen before)",
-      "previous_application_status": "NEW"
-    },
-    {
-      "company": "Tieto",
-      "job_title": "Senior DevOps Engineer - Tieto Banktech",
-      "location": "Pune Division, Maharashtra, India",
-      "work_arrangement": "Onsite India",
-      "location_priority": "india_other",
-      "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:07 UTC",
-      "required_experience": "Unspecified",
-      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
-      "relevant_technical_skills": [
-        "Azure"
-      ],
-      "missing_mandatory_skills": [
-        "Kubernetes",
-        "Linux",
-        "Terraform",
-        "Ansible"
-      ],
-      "estimated_profile_match_score": 35.5,
-      "score_reasons": [
-        "Core Tech: Matched 1/10 skill domains (Azure)",
-        "Duties: Aligned on ",
-        "Experience: Unspecified in posting (Startup flexible)",
-        "Location Fit: INDIA_OTHER (10.0/10 pts)"
-      ],
-      "recommendation": "REVIEW",
-      "reason_for_recommendation": "Discovered on LinkedIn past 24h feed. Official employer career site verification pending",
-      "source_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-tieto-banktech-at-tieto-4472742275",
-      "official_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-tieto-banktech-at-tieto-4472742275",
-      "canonical_job_key": "tieto::banktech,devops,engineer,tieto::india_other",
-      "duplicate_check_result": "Unique opening (Never seen before)",
-      "previous_application_status": "NEW"
-    },
     {
       "company": "Jupiter Money",
       "job_title": "Azure Cloud & DevOps Engineer",
@@ -120,7 +18,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -159,7 +57,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -196,7 +94,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -235,7 +133,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -274,7 +172,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -311,7 +209,7 @@
       "work_arrangement": "Remote within India",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -348,7 +246,7 @@
       "work_arrangement": "Remote within India",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -386,7 +284,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -423,7 +321,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -461,7 +359,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -498,7 +396,7 @@
       "work_arrangement": "Onsite Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -535,7 +433,7 @@
       "work_arrangement": "Hybrid Bengaluru / Remote India",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -571,7 +469,7 @@
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:08 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:10 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -600,13 +498,48 @@
       "previous_application_status": "PREVIOUSLY_REVIEWED"
     },
     {
+      "company": "Burns & McDonnell India",
+      "job_title": "Senior DevOps Engineer",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-19",
+      "last_verification_timestamp": "2026-10-20 07:14:10 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "CI/CD"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 39.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (Azure, CI/CD)",
+        "Duties: Aligned on ",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy. No new application recommended unless requirements have changed.",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-at-burns-mcdonnell-india-4480233411",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-at-burns-mcdonnell-india-4480233411",
+      "canonical_job_key": "burns&mcdonnellindia::devops,engineer::blr",
+      "duplicate_check_result": "Previously discovered on 2026-10-20 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
       "company": "Purchasely",
       "job_title": "Cloud / DevOps Engineer",
       "location": "Remote / Bangalore",
       "work_arrangement": "Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-06",
-      "last_verification_timestamp": "2026-10-20 07:13:08 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:10 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [],
@@ -632,13 +565,13 @@
       "previous_application_status": "PREVIOUSLY_REVIEWED"
     },
     {
-      "company": "Burns & McDonnell India",
-      "job_title": "Senior DevOps Engineer",
+      "company": "Albemarle Corporation",
+      "job_title": "Cloud Infrastructure Engineer",
       "location": "Bengaluru, Karnataka, India",
       "work_arrangement": "Hybrid Bengaluru",
       "location_priority": "bengaluru",
       "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:06 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -659,9 +592,9 @@
       ],
       "recommendation": "REVIEW",
       "reason_for_recommendation": "Previously reviewed vacancy. No new application recommended unless requirements have changed.",
-      "source_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-at-burns-mcdonnell-india-4480233411",
-      "official_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-at-burns-mcdonnell-india-4480233411",
-      "canonical_job_key": "burns&mcdonnellindia::devops,engineer::blr",
+      "source_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
+      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-albemarle-corporation-4480240244",
+      "canonical_job_key": "albemarle::cloud,engineer,infrastructure::blr",
       "duplicate_check_result": "Previously discovered on 2026-10-20 (Duplicate cross-source merged).",
       "previous_application_status": "PREVIOUSLY_REVIEWED"
     },
@@ -672,7 +605,7 @@
       "work_arrangement": "Hybrid Hyderabad",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -710,7 +643,7 @@
       "work_arrangement": "Remote within India",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -749,7 +682,7 @@
       "work_arrangement": "Remote within India",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "4-5 years",
       "candidate_experience_fit": "Ideal Fit (4-5 years vs candidate's 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -786,7 +719,7 @@
       "work_arrangement": "Hybrid Pune",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "4-6 years",
       "candidate_experience_fit": "Ideal Fit (4-6 years vs candidate's 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -824,7 +757,7 @@
       "work_arrangement": "Remote (India Eligible)",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:07 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "0-7 years",
       "candidate_experience_fit": "Early Career Bracket (0-7 years)",
       "relevant_technical_skills": [
@@ -860,7 +793,7 @@
       "work_arrangement": "Remote within India",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "4-5 years",
       "candidate_experience_fit": "Ideal Fit (4-5 years vs candidate's 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -898,7 +831,7 @@
       "work_arrangement": "Remote within India",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -935,7 +868,7 @@
       "work_arrangement": "Onsite Chennai",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-20",
-      "last_verification_timestamp": "2026-10-20 07:13:05 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3-5 years",
       "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [
@@ -970,7 +903,7 @@
       "work_arrangement": "Remote (India Eligible)",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:06 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:09 UTC",
       "required_experience": "3+ years",
       "candidate_experience_fit": "Strong Fit (3+ years vs candidate's 4.2 yrs)",
       "relevant_technical_skills": [],
@@ -1002,7 +935,7 @@
       "work_arrangement": "Remote (India Eligible)",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-05",
-      "last_verification_timestamp": "2026-10-20 07:13:07 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:10 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -1036,7 +969,7 @@
       "work_arrangement": "Onsite India",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:10 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:11 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -1071,7 +1004,7 @@
       "work_arrangement": "Onsite India",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:10 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:11 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -1106,7 +1039,7 @@
       "work_arrangement": "Onsite India",
       "location_priority": "india_other",
       "original_posting_date": "2026-10-19",
-      "last_verification_timestamp": "2026-10-20 07:13:10 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:11 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -1141,7 +1074,7 @@
       "work_arrangement": "Remote (India Eligible)",
       "location_priority": "india_other",
       "original_posting_date": "2026-09-16",
-      "last_verification_timestamp": "2026-10-20 07:13:07 UTC",
+      "last_verification_timestamp": "2026-10-20 07:14:10 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
       "relevant_technical_skills": [
@@ -1165,6 +1098,74 @@
       "source_url": "https://remoteOK.com/remote-jobs/remote-golang-kubernetes-engineer-arango-1137400",
       "official_application_url": "https://remoteOK.com/remote-jobs/remote-golang-kubernetes-engineer-arango-1137400",
       "canonical_job_key": "arango::engineer,golang,kubernetes::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-20 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Anthesis Group",
+      "job_title": "Senior Azure Cloud Engineer",
+      "location": "Pune Division, Maharashtra, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-19",
+      "last_verification_timestamp": "2026-10-20 07:14:10 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 35.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Azure)",
+        "Duties: Aligned on ",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy. No new application recommended unless requirements have changed.",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-azure-cloud-engineer-at-anthesis-group-4480216798",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-azure-cloud-engineer-at-anthesis-group-4480216798",
+      "canonical_job_key": "anthesisgroup::azure,cloud,engineer::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-20 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Tieto",
+      "job_title": "Senior DevOps Engineer - Tieto Banktech",
+      "location": "Pune Division, Maharashtra, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-19",
+      "last_verification_timestamp": "2026-10-20 07:14:10 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 35.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Azure)",
+        "Duties: Aligned on ",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy. No new application recommended unless requirements have changed.",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-tieto-banktech-at-tieto-4472742275",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-tieto-banktech-at-tieto-4472742275",
+      "canonical_job_key": "tieto::banktech,devops,engineer,tieto::india_other",
       "duplicate_check_result": "Previously discovered on 2026-10-20 (Duplicate cross-source merged).",
       "previous_application_status": "PREVIOUSLY_REVIEWED"
     }
