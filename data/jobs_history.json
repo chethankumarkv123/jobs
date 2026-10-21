@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-20T13:01:32.539082+00:00",
-  "total_tracked": 76,
+  "last_updated": "2026-10-21T08:02:13.864524+00:00",
+  "total_tracked": 95,
   "applied_count": 0,
   "saved_count": 0,
   "jobs": {
@@ -159,7 +159,7 @@
       "estimated_match_score": 44.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:09.566243+00:00",
-      "last_seen": "2026-10-20T13:01:24.655032+00:00",
+      "last_seen": "2026-10-21T08:02:06.637729+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 39.5
     },
@@ -186,7 +186,7 @@
       "estimated_match_score": 60.3,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:09.570242+00:00",
-      "last_seen": "2026-10-20T13:01:24.658608+00:00",
+      "last_seen": "2026-10-21T08:02:06.639063+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 37.5
     },
@@ -226,7 +226,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:07.303132+00:00",
-      "last_seen": "2026-10-20T13:01:23.977169+00:00",
+      "last_seen": "2026-10-21T08:02:06.234186+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 72.0
     },
@@ -240,7 +240,7 @@
       "estimated_match_score": 94.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:08.030138+00:00",
-      "last_seen": "2026-10-20T13:01:24.394901+00:00",
+      "last_seen": "2026-10-21T08:02:06.706704+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 67.0
     },
@@ -254,7 +254,7 @@
       "estimated_match_score": 94.2,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:09.451590+00:00",
-      "last_seen": "2026-10-20T13:01:24.749600+00:00",
+      "last_seen": "2026-10-21T08:02:07.008777+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 61.0
     },
@@ -266,9 +266,9 @@
       "direct_job_url": "https://razorpay.com/jobs/",
       "direct_application_url": "https://razorpay.com/jobs/",
       "estimated_match_score": 100.0,
-      "recommendation": "REVIEW",
+      "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:34:10.238265+00:00",
-      "last_seen": "2026-10-20T13:01:24.976954+00:00",
+      "last_seen": "2026-10-21T08:02:07.354805+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 63.0
     },
@@ -282,7 +282,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:10.678500+00:00",
-      "last_seen": "2026-10-20T13:01:25.101786+00:00",
+      "last_seen": "2026-10-21T08:02:07.480193+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 53.5
     },
@@ -296,7 +296,7 @@
       "estimated_match_score": 82.3,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:11.937389+00:00",
-      "last_seen": "2026-10-20T13:01:26.503460+00:00",
+      "last_seen": "2026-10-21T08:02:08.528321+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 59.0
     },
@@ -310,7 +310,7 @@
       "estimated_match_score": 100.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:12.451455+00:00",
-      "last_seen": "2026-10-20T13:01:26.607692+00:00",
+      "last_seen": "2026-10-21T08:02:08.750344+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 67.0
     },
@@ -324,7 +324,7 @@
       "estimated_match_score": 66.2,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:14.025319+00:00",
-      "last_seen": "2026-10-20T13:01:27.771234+00:00",
+      "last_seen": "2026-10-21T08:02:10.750327+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 78.0
     },
@@ -338,7 +338,7 @@
       "estimated_match_score": 94.2,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:15.054399+00:00",
-      "last_seen": "2026-10-20T13:01:27.013387+00:00",
+      "last_seen": "2026-10-21T08:02:09.965760+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 71.5
     },
@@ -352,7 +352,7 @@
       "estimated_match_score": 100,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:34:15.642547+00:00",
-      "last_seen": "2026-10-20T13:01:26.866565+00:00",
+      "last_seen": "2026-10-21T08:02:09.821446+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 80.5
     },
@@ -379,7 +379,7 @@
       "estimated_match_score": 54.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:36:37.945526+00:00",
-      "last_seen": "2026-10-20T13:01:32.515136+00:00",
+      "last_seen": "2026-10-21T08:02:06.699397+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "score": 36.0
     },
@@ -406,7 +406,7 @@
       "score": 61.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:10.138304+00:00",
-      "last_seen": "2026-10-20T13:01:23.602375+00:00",
+      "last_seen": "2026-10-21T08:02:05.715447+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "79b3d29c2b10aabd": {
@@ -419,7 +419,7 @@
       "score": 63.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:10.138304+00:00",
-      "last_seen": "2026-10-20T13:01:23.602408+00:00",
+      "last_seen": "2026-10-21T08:02:05.715475+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "e6216de52ef64ae2": {
@@ -510,7 +510,7 @@
       "score": 70.5,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:45:21.838527+00:00",
-      "last_seen": "2026-10-20T13:01:27.890217+00:00",
+      "last_seen": "2026-10-21T08:02:10.889529+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "3f7756cfddad250c": {
@@ -523,7 +523,7 @@
       "score": 65.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:23.366363+00:00",
-      "last_seen": "2026-10-20T13:01:29.283998+00:00",
+      "last_seen": "2026-10-21T08:02:11.771572+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "840de8fe4976b75d": {
@@ -536,7 +536,7 @@
       "score": 76.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:23.931687+00:00",
-      "last_seen": "2026-10-20T13:01:29.421946+00:00",
+      "last_seen": "2026-10-21T08:02:12.512161+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "b276ce5652fa183c": {
@@ -549,7 +549,7 @@
       "score": 60.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:24.477462+00:00",
-      "last_seen": "2026-10-20T13:01:29.537557+00:00",
+      "last_seen": "2026-10-21T08:02:12.657792+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "989218e04a6585fd": {
@@ -562,7 +562,7 @@
       "score": 61.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:25.578112+00:00",
-      "last_seen": "2026-10-20T13:01:29.701681+00:00",
+      "last_seen": "2026-10-21T08:02:13.093566+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "4d85912e837810e5": {
@@ -575,7 +575,7 @@
       "score": 68.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:26.081562+00:00",
-      "last_seen": "2026-10-20T13:01:29.780183+00:00",
+      "last_seen": "2026-10-21T08:02:13.190583+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "1f625e24b33925e7": {
@@ -588,7 +588,7 @@
       "score": 75.5,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:27.780226+00:00",
-      "last_seen": "2026-10-20T13:01:30.119911+00:00",
+      "last_seen": "2026-10-21T08:02:13.583712+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "f93ffb4e9ca02ac9": {
@@ -601,7 +601,7 @@
       "score": 61.0,
       "recommendation": "REVIEW",
       "first_seen": "2026-10-20T06:45:28.376614+00:00",
-      "last_seen": "2026-10-20T13:01:30.252708+00:00",
+      "last_seen": "2026-10-21T08:02:13.854906+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "9af9e691f84fb144": {
@@ -714,7 +714,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T07:12:40.160183+00:00",
-      "last_seen": "2026-10-20T13:01:23.788519+00:00",
+      "last_seen": "2026-10-21T08:02:06.117633+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "a171a5d2200b4ff1": {
@@ -729,7 +729,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T12:51:17.331075+00:00",
-      "last_seen": "2026-10-20T13:01:24.181481+00:00",
+      "last_seen": "2026-10-21T08:02:06.297407+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "e866cd2596c9fd39": {
@@ -744,7 +744,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T12:51:17.332113+00:00",
-      "last_seen": "2026-10-20T13:01:24.181870+00:00",
+      "last_seen": "2026-10-21T08:02:06.297529+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "97cbe50640cd65cb": {
@@ -819,7 +819,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T12:51:21.938087+00:00",
-      "last_seen": "2026-10-20T13:01:25.794168+00:00",
+      "last_seen": "2026-10-21T08:02:08.622484+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "daa0f6f03a47d941": {
@@ -923,7 +923,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T12:51:25.943819+00:00",
-      "last_seen": "2026-10-20T13:01:27.370500+00:00",
+      "last_seen": "2026-10-21T08:02:10.815543+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "21ea9b880c35131f": {
@@ -938,7 +938,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-20T12:51:25.943819+00:00",
-      "last_seen": "2026-10-20T13:01:27.370656+00:00",
+      "last_seen": "2026-10-21T08:02:10.815631+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "b6da197eb8921995": {
@@ -1056,6 +1056,272 @@
       "application_status": "NEW",
       "first_seen": "2026-10-20T13:01:26.962414+00:00",
       "last_seen": "2026-10-20T13:01:26.962417+00:00"
+    },
+    "48fbf4a60f1ffb7c": {
+      "id": "48fbf4a60f1ffb7c",
+      "canonical_job_key": "quantiphi::azure,engineer,platform::blr",
+      "title": "Senior Platform Engineer - Azure",
+      "company": "Quantiphi",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-platform-engineer-azure-at-quantiphi-4478925244",
+      "score": 35.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:06.297261+00:00",
+      "last_seen": "2026-10-21T08:02:06.297280+00:00"
+    },
+    "8e54cf00f06c977b": {
+      "id": "8e54cf00f06c977b",
+      "canonical_job_key": "acuityanalytics::cloud,engineer::blr",
+      "title": "Senior Associate-Cloud Engineer",
+      "company": "Acuity Analytics",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-associate-cloud-engineer-at-acuity-analytics-4471735099",
+      "score": 35.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:06.297635+00:00",
+      "last_seen": "2026-10-21T08:02:06.297637+00:00"
+    },
+    "8fe8ce54df6d1273": {
+      "id": "8fe8ce54df6d1273",
+      "canonical_job_key": "metasys::azure,devops,engineer::blr",
+      "title": "Azure DevOps Engineer",
+      "company": "Metasys Technologies",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-devops-engineer-at-metasys-technologies-4480782139",
+      "score": 39.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:07.477984+00:00",
+      "last_seen": "2026-10-21T08:02:07.477986+00:00"
+    },
+    "ee50e31fc5b0df51": {
+      "id": "ee50e31fc5b0df51",
+      "canonical_job_key": "infosys::azure,developer::blr",
+      "title": "Azure Senior Developer",
+      "company": "Infosys",
+      "location": "Bengaluru East, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-senior-developer-at-infosys-4471378836",
+      "score": 39.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:07.478074+00:00",
+      "last_seen": "2026-10-21T08:02:07.478076+00:00"
+    },
+    "d672a1f530e41fbd": {
+      "id": "d672a1f530e41fbd",
+      "canonical_job_key": "adastra::azure,devops,engineer::india_other",
+      "title": "Azure DevOps Engineer",
+      "company": "Adastra",
+      "location": "Pune City, Maharashtra, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-devops-engineer-at-adastra-4480770096",
+      "score": 39.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:08.023144+00:00",
+      "last_seen": "2026-10-21T08:02:08.023146+00:00"
+    },
+    "baf6551afad5bafd": {
+      "id": "baf6551afad5bafd",
+      "canonical_job_key": "infosys::aws,azure,cloud,engineer,gcp,kubernates,with::blr",
+      "title": "Cloud Engineer (AWS/Azure/GCP with Kubernates)",
+      "company": "Infosys",
+      "location": "Bengaluru East, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-engineer-aws-azure-gcp-with-kubernates-at-infosys-4480458868",
+      "score": 35.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:08.622277+00:00",
+      "last_seen": "2026-10-21T08:02:08.622285+00:00"
+    },
+    "af53d455bf4b8a64": {
+      "id": "af53d455bf4b8a64",
+      "canonical_job_key": "vivanticonsulting::cloud,engineer,gcp,platform::blr",
+      "title": "Cloud Platform Engineer (GCP)",
+      "company": "Vivanti Consulting",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-platform-engineer-gcp-at-vivanti-consulting-4480786222",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:08.622389+00:00",
+      "last_seen": "2026-10-21T08:02:08.622390+00:00"
+    },
+    "7c1d7e98c6446b05": {
+      "id": "7c1d7e98c6446b05",
+      "canonical_job_key": "virtusa::&,cloud,engineer,infrastructure::india_other",
+      "title": "Cloud & Infrastructure Engineer",
+      "company": "Virtusa",
+      "location": "Hyderabad, Telangana, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-infrastructure-engineer-at-virtusa-4478903100",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:09.265959+00:00",
+      "last_seen": "2026-10-21T08:02:09.265961+00:00"
+    },
+    "0daa113b57a7ee09": {
+      "id": "0daa113b57a7ee09",
+      "canonical_job_key": "infosys::cloud,engineer,gemfire,platform,redis::india_other",
+      "title": "Cloud Platform Engineer (Redis/GemFire)",
+      "company": "Infosys",
+      "location": "Hyderabad, Telangana, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-platform-engineer-redis-gemfire-at-infosys-4471906392",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:09.266051+00:00",
+      "last_seen": "2026-10-21T08:02:09.266053+00:00"
+    },
+    "96c0d08505fef473": {
+      "id": "96c0d08505fef473",
+      "canonical_job_key": "populaceworld::engineer,infrastructure::india_other",
+      "title": "Senior Infrastructure Engineer",
+      "company": "Populace World Solutions",
+      "location": "Pune City, Maharashtra, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-infrastructure-engineer-at-populace-world-solutions-4482044386",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:09.266136+00:00",
+      "last_seen": "2026-10-21T08:02:09.266138+00:00"
+    },
+    "95e885975b976561": {
+      "id": "95e885975b976561",
+      "canonical_job_key": "lseg::engineer,reliability,site::blr",
+      "title": "Senior Site Reliability Engineer",
+      "company": "LSEG",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-at-lseg-4454242826",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:09.816718+00:00",
+      "last_seen": "2026-10-21T08:02:09.816728+00:00"
+    },
+    "6fed85e2bf9c5fc8": {
+      "id": "6fed85e2bf9c5fc8",
+      "canonical_job_key": "verve::devops,engineer,gcp::blr",
+      "title": "Senior DevOps Engineer - GCP",
+      "company": "Verve",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-gcp-at-verve-4472742447",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:09.816827+00:00",
+      "last_seen": "2026-10-21T08:02:09.816829+00:00"
+    },
+    "97df943a63c81255": {
+      "id": "97df943a63c81255",
+      "canonical_job_key": "wellsfargo::engineer,software::blr",
+      "title": "Senior Software Engineer",
+      "company": "Wells Fargo",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-wells-fargo-4472097271",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:09.816936+00:00",
+      "last_seen": "2026-10-21T08:02:09.816938+00:00"
+    },
+    "52d98e80266761c6": {
+      "id": "52d98e80266761c6",
+      "canonical_job_key": "contentstack::ai,engineer,first,ii,sre::india_other",
+      "title": "Senior Engineer II - SRE (AI-First)",
+      "company": "Contentstack",
+      "location": "Chennai, Tamil Nadu, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-engineer-ii-sre-ai-first-at-contentstack-4481599317",
+      "score": 36.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:10.229598+00:00",
+      "last_seen": "2026-10-21T08:02:10.229610+00:00"
+    },
+    "9eb275ca3d87b08d": {
+      "id": "9eb275ca3d87b08d",
+      "canonical_job_key": "fis::cloud,engineer,platform,reliability,site,sre::india_other",
+      "title": "Site Reliability Engineer (SRE) – Cloud Platform",
+      "company": "FIS",
+      "location": "Pune/Pimpri-Chinchwad Area",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-sre-%E2%80%93-cloud-platform-at-fis-4473233321",
+      "score": 36.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:10.229712+00:00",
+      "last_seen": "2026-10-21T08:02:10.229714+00:00"
+    },
+    "a7c3465fa3d8cb30": {
+      "id": "a7c3465fa3d8cb30",
+      "canonical_job_key": "assetmarkglobalwealth::engineer,reliability,site::india_other",
+      "title": "Site Reliability Engineer",
+      "company": "AssetMark Global Wealth",
+      "location": "Hyderabad, Telangana, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-at-assetmark-global-wealth-4472158183",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:10.229801+00:00",
+      "last_seen": "2026-10-21T08:02:10.229803+00:00"
+    },
+    "f4b1f1a8269cb96b": {
+      "id": "f4b1f1a8269cb96b",
+      "canonical_job_key": "sciplay::engineer,platform::blr",
+      "title": "Senior Platform Engineer",
+      "company": "SciPlay",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-platform-engineer-at-sciplay-4471719173",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:10.815427+00:00",
+      "last_seen": "2026-10-21T08:02:10.815439+00:00"
+    },
+    "b33d2d6757dd8cd4": {
+      "id": "b33d2d6757dd8cd4",
+      "canonical_job_key": "microsoft::2,engineer,software::blr",
+      "title": "Software Engineer 2",
+      "company": "Microsoft",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/software-engineer-2-at-microsoft-4472002347",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:10.815715+00:00",
+      "last_seen": "2026-10-21T08:02:10.815717+00:00"
+    },
+    "b920c483143a6b70": {
+      "id": "b920c483143a6b70",
+      "canonical_job_key": "trading::architect,engineer,platform::india_other",
+      "title": "Senior Platform Engineer (Architect)",
+      "company": "Trading Technologies",
+      "location": "Greater Ahmedabad Area",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-platform-engineer-architect-at-trading-technologies-4426620925",
+      "score": 32.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-21T08:02:11.195497+00:00",
+      "last_seen": "2026-10-21T08:02:11.195498+00:00"
     }
   }
 }
