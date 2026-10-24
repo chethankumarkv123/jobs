@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-10-24T07:38:59.875665+00:00",
-  "total_tracked": 178,
+  "last_updated": "2026-10-24T08:00:22.147591+00:00",
+  "total_tracked": 208,
   "applied_count": 0,
   "saved_count": 0,
   "jobs": {
@@ -510,7 +510,7 @@
       "score": 74.5,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:45:21.838527+00:00",
-      "last_seen": "2026-10-24T07:38:56.482383+00:00",
+      "last_seen": "2026-10-24T08:00:07.305849+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "3f7756cfddad250c": {
@@ -1976,11 +1976,11 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/senior-engineer-site-reliability-engineering-at-lseg-4481657319",
-      "score": 32.0,
+      "score": 43.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-23T07:59:18.209636+00:00",
-      "last_seen": "2026-10-24T07:38:54.722223+00:00",
+      "last_seen": "2026-10-24T08:00:05.695054+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "164fa1f2a4264a03": {
@@ -2104,10 +2104,11 @@
       "source_name": "Jobicy",
       "official_application_url": "https://jobicy.com/jobs/149523-cloud-field-engineer",
       "score": 58.0,
-      "recommendation": "REVIEW",
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:51.836279+00:00",
-      "last_seen": "2026-10-24T07:38:51.836288+00:00"
+      "last_seen": "2026-10-24T08:00:06.206379+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "565967d813989ad6": {
       "id": "565967d813989ad6",
@@ -2117,11 +2118,12 @@
       "location": "Anywhere",
       "source_name": "Jobicy",
       "official_application_url": "https://jobicy.com/jobs/149532-sustaining-operations-engineer",
-      "score": 48.5,
-      "recommendation": "REVIEW",
+      "score": 52.5,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:51.849536+00:00",
-      "last_seen": "2026-10-24T07:38:51.849539+00:00"
+      "last_seen": "2026-10-24T08:00:06.228339+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "8d3132423493d989": {
       "id": "8d3132423493d989",
@@ -2131,11 +2133,12 @@
       "location": "Anywhere",
       "source_name": "Jobicy",
       "official_application_url": "https://jobicy.com/jobs/149527-web-frontend-engineer-js-css-react-flutter",
-      "score": 43.0,
+      "score": 47.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:51.859094+00:00",
-      "last_seen": "2026-10-24T07:38:51.859097+00:00"
+      "last_seen": "2026-10-24T08:00:06.245078+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "f4d461b3bdfad8d3": {
       "id": "f4d461b3bdfad8d3",
@@ -2145,11 +2148,12 @@
       "location": "Anywhere",
       "source_name": "Jobicy",
       "official_application_url": "https://jobicy.com/jobs/149533-ubuntu-linux-kernel-engineer-silicon-enablement",
-      "score": 39.5,
-      "recommendation": "SKIP",
+      "score": 43.5,
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:51.860400+00:00",
-      "last_seen": "2026-10-24T07:38:51.860404+00:00"
+      "last_seen": "2026-10-24T08:00:06.248774+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "ce971422817d6043": {
       "id": "ce971422817d6043",
@@ -2159,11 +2163,12 @@
       "location": "Anywhere",
       "source_name": "Jobicy",
       "official_application_url": "https://jobicy.com/jobs/156581-performance-engineer-performance-analysis-tuning",
-      "score": 44.5,
+      "score": 48.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:51.889843+00:00",
-      "last_seen": "2026-10-24T07:38:51.889852+00:00"
+      "last_seen": "2026-10-24T08:00:06.312260+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "6549d7d2757dca87": {
       "id": "6549d7d2757dca87",
@@ -2173,11 +2178,12 @@
       "location": "Anywhere",
       "source_name": "Jobicy",
       "official_application_url": "https://jobicy.com/jobs/156582-performance-engineer-benchmarking",
-      "score": 35.5,
+      "score": 39.5,
       "recommendation": "SKIP",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:51.892776+00:00",
-      "last_seen": "2026-10-24T07:38:51.892782+00:00"
+      "last_seen": "2026-10-24T08:00:06.315503+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "68f91e00a6564ab3": {
       "id": "68f91e00a6564ab3",
@@ -2191,7 +2197,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:51.895322+00:00",
-      "last_seen": "2026-10-24T07:38:51.895327+00:00"
+      "last_seen": "2026-10-24T08:00:06.319114+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "7ac074bd788a4719": {
       "id": "7ac074bd788a4719",
@@ -2201,11 +2208,12 @@
       "location": "Worldwide / Remote",
       "source_name": "RemoteOK",
       "official_application_url": "https://remoteOK.com/remote-jobs/remote-senior-devops-engineer-lemon-io-1137557",
-      "score": 48.5,
-      "recommendation": "REVIEW",
+      "score": 59.5,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:52.419015+00:00",
-      "last_seen": "2026-10-24T07:38:52.419024+00:00"
+      "last_seen": "2026-10-24T08:00:06.071181+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "879b37d943443888": {
       "id": "879b37d943443888",
@@ -2215,11 +2223,12 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/azure-devops-engineer-at-tata-consultancy-services-4482858674",
-      "score": 39.0,
-      "recommendation": "REVIEW",
+      "score": 50.5,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:52.059485+00:00",
-      "last_seen": "2026-10-24T07:38:52.059494+00:00"
+      "last_seen": "2026-10-24T08:00:03.967454+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "bae51d10774d872c": {
       "id": "bae51d10774d872c",
@@ -2229,11 +2238,12 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-kaufman-rossin-4456372263",
-      "score": 35.5,
-      "recommendation": "REVIEW",
+      "score": 50.5,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:52.059707+00:00",
-      "last_seen": "2026-10-24T07:38:52.059710+00:00"
+      "last_seen": "2026-10-24T08:00:03.967786+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "d892d1e5d05c4f60": {
       "id": "d892d1e5d05c4f60",
@@ -2243,11 +2253,12 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/in-senior-associate-sre-devops-engineer-azure-gcc-advisory-bangalore-at-pwc-india-4482062038",
-      "score": 39.5,
-      "recommendation": "REVIEW",
+      "score": 58.0,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:52.059828+00:00",
-      "last_seen": "2026-10-24T07:38:52.059830+00:00"
+      "last_seen": "2026-10-24T08:00:03.967983+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "c1dbc8b1e201d992": {
       "id": "c1dbc8b1e201d992",
@@ -2257,11 +2268,12 @@
       "location": "Vadodara, Gujarat, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-%E2%80%93-azure-windows-server-terraform-at-asian-hires-4482380471",
-      "score": 43.0,
+      "score": 47.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:52.501024+00:00",
-      "last_seen": "2026-10-24T07:38:52.501033+00:00"
+      "last_seen": "2026-10-24T08:00:04.326549+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "ab0d33c56c41f427": {
       "id": "ab0d33c56c41f427",
@@ -2271,11 +2283,12 @@
       "location": "Hyderabad, Telangana, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/cloud-platform-engineer-%E2%80%93-devops-iac-officer-at-state-street-4482855606",
-      "score": 43.0,
-      "recommendation": "REVIEW",
+      "score": 54.0,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:52.501142+00:00",
-      "last_seen": "2026-10-24T07:38:52.501144+00:00"
+      "last_seen": "2026-10-24T08:00:04.326729+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "e70866d75123db04": {
       "id": "e70866d75123db04",
@@ -2299,11 +2312,12 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-tata-consultancy-services-4482859751",
-      "score": 39.0,
-      "recommendation": "REVIEW",
+      "score": 50.5,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:52.991673+00:00",
-      "last_seen": "2026-10-24T07:38:52.991682+00:00"
+      "last_seen": "2026-10-24T08:00:04.803573+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "abf6eda0226cc74c": {
       "id": "abf6eda0226cc74c",
@@ -2383,11 +2397,12 @@
       "location": "Bengaluru East, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/sr-engineer-managed-kubernetes-at-target-4472383259",
-      "score": 35.5,
+      "score": 43.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:53.935276+00:00",
-      "last_seen": "2026-10-24T07:38:53.935277+00:00"
+      "last_seen": "2026-10-24T08:00:06.421377+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "c1633d7fb7737e36": {
       "id": "c1633d7fb7737e36",
@@ -2397,11 +2412,12 @@
       "location": "Hyderabad, Telangana, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/infrastructure-engineer-ii-hims-cloud-engineer-hyderabad-at-deloitte-4481696827",
-      "score": 32.0,
+      "score": 40.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:54.284299+00:00",
-      "last_seen": "2026-10-24T07:38:54.284308+00:00"
+      "last_seen": "2026-10-24T08:00:05.302093+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "36f0f7a29985cda8": {
       "id": "36f0f7a29985cda8",
@@ -2411,11 +2427,12 @@
       "location": "Mumbai Metropolitan Region",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-virtusa-4480660888",
-      "score": 32.0,
-      "recommendation": "REVIEW",
+      "score": 36.0,
+      "recommendation": "SKIP",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:54.284618+00:00",
-      "last_seen": "2026-10-24T07:38:54.284620+00:00"
+      "last_seen": "2026-10-24T08:00:05.302574+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "2bda9f69bbf6945d": {
       "id": "2bda9f69bbf6945d",
@@ -2425,11 +2442,12 @@
       "location": "Bengaluru East, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-india-at-jumpcloud-4473121141",
-      "score": 32.0,
+      "score": 43.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:54.722007+00:00",
-      "last_seen": "2026-10-24T07:38:54.722016+00:00"
+      "last_seen": "2026-10-24T08:00:05.694617+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "0296d87e6ef4f9c7": {
       "id": "0296d87e6ef4f9c7",
@@ -2439,11 +2457,12 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-sre-at-mcafee-4482614319",
-      "score": 36.0,
+      "score": 43.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:54.722314+00:00",
-      "last_seen": "2026-10-24T07:38:54.722315+00:00"
+      "last_seen": "2026-10-24T08:00:05.695208+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "e217b9145970f785": {
       "id": "e217b9145970f785",
@@ -2453,11 +2472,12 @@
       "location": "Hyderabad, Telangana, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-at-seismic-4472810962",
-      "score": 32.0,
+      "score": 43.5,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:55.068444+00:00",
-      "last_seen": "2026-10-24T07:38:55.068446+00:00"
+      "last_seen": "2026-10-24T08:00:05.998258+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "d6e640e82ca7ae4c": {
       "id": "d6e640e82ca7ae4c",
@@ -2467,11 +2487,12 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-teradata-4472530812",
-      "score": 32.0,
-      "recommendation": "REVIEW",
+      "score": 36.0,
+      "recommendation": "SKIP",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:55.576047+00:00",
-      "last_seen": "2026-10-24T07:38:55.576059+00:00"
+      "last_seen": "2026-10-24T08:00:06.420884+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "e69ae720b242e188": {
       "id": "e69ae720b242e188",
@@ -2481,11 +2502,432 @@
       "location": "Bengaluru, Karnataka, India",
       "source_name": "LinkedIn Jobs",
       "official_application_url": "https://in.linkedin.com/jobs/view/senior-platform-engineer-sap-integration-suite-integration-cell-at-sap-4444562338",
-      "score": 32.0,
+      "score": 40.0,
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-10-24T07:38:55.576172+00:00",
-      "last_seen": "2026-10-24T07:38:55.576174+00:00"
+      "last_seen": "2026-10-24T08:00:06.421067+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
+    },
+    "6e939303a382c05f": {
+      "id": "6e939303a382c05f",
+      "canonical_job_key": "exavalu::azure,devops,engineer::india_other",
+      "title": "Senior Azure Devops Engineer",
+      "company": "Exavalu",
+      "location": "India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-azure-devops-engineer-at-exavalu-4481680203",
+      "score": 50.5,
+      "recommendation": "APPLY",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.327082+00:00",
+      "last_seen": "2026-10-24T08:00:04.327085+00:00"
+    },
+    "c3e70420ad0df3aa": {
+      "id": "c3e70420ad0df3aa",
+      "canonical_job_key": "nvidia::automation,cloud,developer,engineer,geforce,now,productivity,software,systems::india_other",
+      "title": "Senior Systems Software Engineer, Developer Productivity and Cloud Automation - GeForce NOW",
+      "company": "NVIDIA",
+      "location": "Pune City, Maharashtra, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-systems-software-engineer-developer-productivity-and-cloud-automation-geforce-now-at-nvidia-4446885455",
+      "score": 51.0,
+      "recommendation": "APPLY",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:06.947629+00:00",
+      "last_seen": "2026-10-24T08:00:06.947639+00:00"
+    },
+    "34e6c2f08d16d65c": {
+      "id": "34e6c2f08d16d65c",
+      "canonical_job_key": "discord::devops,engineer,qa::india_other",
+      "title": "QA/DevOps Engineer",
+      "company": "Discord",
+      "location": "Worldwide Remote",
+      "source_name": "WeWorkRemotely",
+      "official_application_url": "https://weworkremotely.com/remote-jobs/discord-qa-devops-engineer",
+      "score": 59.0,
+      "recommendation": "APPLY",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:07.220924+00:00",
+      "last_seen": "2026-10-24T08:00:07.220934+00:00"
+    },
+    "a1c8143570b0cabe": {
+      "id": "a1c8143570b0cabe",
+      "canonical_job_key": "discord::engineering,manager,platform,security::india_other",
+      "title": "Engineering Manager, Platform Security",
+      "company": "Discord",
+      "location": "Worldwide Remote",
+      "source_name": "WeWorkRemotely",
+      "official_application_url": "https://weworkremotely.com/remote-jobs/discord-engineering-manager-platform-security",
+      "score": 51.5,
+      "recommendation": "APPLY",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:07.228614+00:00",
+      "last_seen": "2026-10-24T08:00:07.228622+00:00"
+    },
+    "dc1d1c69af6f199c": {
+      "id": "dc1d1c69af6f199c",
+      "canonical_job_key": "beyondtrust::cloud,engineer,network::india_other",
+      "title": "Cloud Network Engineer",
+      "company": "BeyondTrust",
+      "location": "Worldwide Remote",
+      "source_name": "WeWorkRemotely",
+      "official_application_url": "https://weworkremotely.com/remote-jobs/beyondtrust-cloud-network-engineer",
+      "score": 49.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:07.251175+00:00",
+      "last_seen": "2026-10-24T08:00:07.251183+00:00"
+    },
+    "515ec79efa74d1e5": {
+      "id": "515ec79efa74d1e5",
+      "canonical_job_key": "zepto::backend,engineer,golang::blr",
+      "title": "Backend Engineer - Golang",
+      "company": "Zepto",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-447960-backend-engineer-golang-at-zepto-bangalore",
+      "score": 41.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263386+00:00",
+      "last_seen": "2026-10-24T08:00:04.263390+00:00"
+    },
+    "d16f7d59237e6fbe": {
+      "id": "d16f7d59237e6fbe",
+      "canonical_job_key": "komprise::designer,ux::blr",
+      "title": "UX Designer",
+      "company": "Komprise",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-439857-ux-designer-at-komprise-bangalore",
+      "score": 32.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263425+00:00",
+      "last_seen": "2026-10-24T08:00:04.263428+00:00"
+    },
+    "4eb50fd408262959": {
+      "id": "4eb50fd408262959",
+      "canonical_job_key": "accenture::custom,engineer,software::blr",
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-442600-custom-software-engineer-at-accenture-2-bangalore",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263466+00:00",
+      "last_seen": "2026-10-24T08:00:04.263468+00:00"
+    },
+    "12cd229752d1e323": {
+      "id": "12cd229752d1e323",
+      "canonical_job_key": "articoregroup::engineering,manager::india_other",
+      "title": "Engineering Manager",
+      "company": "Articore Group",
+      "location": "Gurgaon",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-444366-engineering-manager-at-articore-group-gurgaon",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263501+00:00",
+      "last_seen": "2026-10-24T08:00:04.263504+00:00"
+    },
+    "51a50d1852769367": {
+      "id": "51a50d1852769367",
+      "canonical_job_key": "zepto::2,development,engineer,software::blr",
+      "title": "Software Development Engineer 2",
+      "company": "Zepto",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-437842-software-development-engineer-2-at-zepto-bangalore",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263537+00:00",
+      "last_seen": "2026-10-24T08:00:04.263539+00:00"
+    },
+    "681e4aa7b30bc897": {
+      "id": "681e4aa7b30bc897",
+      "canonical_job_key": "prudentialhealthindia::developer::india_other",
+      "title": "Senior Developer",
+      "company": "Prudential Health India",
+      "location": "Mumbai",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-445335-senior-developer-at-prudential-health-india-mumbai",
+      "score": 32.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263568+00:00",
+      "last_seen": "2026-10-24T08:00:04.263570+00:00"
+    },
+    "c9ffd429670bd4bf": {
+      "id": "c9ffd429670bd4bf",
+      "canonical_job_key": "apollo24|7::ai,engineer::blr",
+      "title": "AI Engineer",
+      "company": "Apollo 24|7",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-428744-ai-engineer-at-apollo-247-bangalore",
+      "score": 49.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263610+00:00",
+      "last_seen": "2026-10-24T08:00:04.263613+00:00"
+    },
+    "373faed600db2a32": {
+      "id": "373faed600db2a32",
+      "canonical_job_key": "aitainment::backend,engineer,founding,golang::blr",
+      "title": "Founding Backend Engineer - Golang",
+      "company": "Aitainment",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-436828-founding-backend-engineer-golang-at-aitainment-bangalore",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263645+00:00",
+      "last_seen": "2026-10-24T08:00:04.263647+00:00"
+    },
+    "0f5620c9e6ec993d": {
+      "id": "0f5620c9e6ec993d",
+      "canonical_job_key": "upgrad::admissions,counsellor::blr",
+      "title": "Senior Admissions Counsellor",
+      "company": "upGrad",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-447174-senior-admissions-counsellor-at-upgrad-bangalore",
+      "score": 32.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263679+00:00",
+      "last_seen": "2026-10-24T08:00:04.263682+00:00"
+    },
+    "5bfb904ba8bb322b": {
+      "id": "5bfb904ba8bb322b",
+      "canonical_job_key": "dittoinsurance::backend,developer::blr",
+      "title": "Backend Developer",
+      "company": "Ditto Insurance",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-446230-backend-developer-at-ditto-insurance-bangalore",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263711+00:00",
+      "last_seen": "2026-10-24T08:00:04.263714+00:00"
+    },
+    "ecef9d9da17ed0d8": {
+      "id": "ecef9d9da17ed0d8",
+      "canonical_job_key": "shortlistdesign::backend,engineer::india_other",
+      "title": "Backend Engineer",
+      "company": "Shortlist Design",
+      "location": "Gurgaon",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-411090-backend-engineer-at-shortlist-design-gurgaon",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.263842+00:00",
+      "last_seen": "2026-10-24T08:00:04.263847+00:00"
+    },
+    "d6c3236b948ff223": {
+      "id": "d6c3236b948ff223",
+      "canonical_job_key": "komprise::sdet::blr",
+      "title": "SDET",
+      "company": "Komprise",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-444770-sdet-at-komprise-bangalore",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264074+00:00",
+      "last_seen": "2026-10-24T08:00:04.264077+00:00"
+    },
+    "b45e0feddb6c5e88": {
+      "id": "b45e0feddb6c5e88",
+      "canonical_job_key": "accenture::architect,cloud,enterprise,microsoft::blr",
+      "title": "Microsoft Cloud Enterprise Architect",
+      "company": "Accenture",
+      "location": "Bangalore,Delhi,Gurgaon",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-447890-microsoft-cloud-enterprise-architect-at-accenture-2-bangalore-delhi-gurgaon",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264113+00:00",
+      "last_seen": "2026-10-24T08:00:04.264116+00:00"
+    },
+    "f9cb9f6d9b4b2c7a": {
+      "id": "f9cb9f6d9b4b2c7a",
+      "canonical_job_key": "publicissapient::big,data::blr",
+      "title": "Senior Big Data Associate",
+      "company": "Publicis Sapient",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-313014-senior-big-data-associate-at-publicis-sapient-4-bangalore",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264174+00:00",
+      "last_seen": "2026-10-24T08:00:04.264176+00:00"
+    },
+    "749bce93206ee570": {
+      "id": "749bce93206ee570",
+      "canonical_job_key": "accenture::architecture,cloud,enterprise,microsoft::blr",
+      "title": "Microsoft Cloud Enterprise Architecture",
+      "company": "Accenture",
+      "location": "Bangalore,Gurgaon,Hyderabad",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-447386-microsoft-cloud-enterprise-architecture-at-accenture-2-bangalore-gurgaon-hyderabad",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264245+00:00",
+      "last_seen": "2026-10-24T08:00:04.264247+00:00"
+    },
+    "e967d355a5d4eeff": {
+      "id": "e967d355a5d4eeff",
+      "canonical_job_key": "arintra::ai,engineer,iii::blr",
+      "title": "AI Engineer III",
+      "company": "Arintra",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-433898-ai-engineer-iii-at-arintra-bangalore",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264280+00:00",
+      "last_seen": "2026-10-24T08:00:04.264283+00:00"
+    },
+    "84828d67e17c43d1": {
+      "id": "84828d67e17c43d1",
+      "canonical_job_key": "targetindia::backend,engineer::blr",
+      "title": "Senior Backend Engineer",
+      "company": "Target in India",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-446734-senior-backend-engineer-at-target-in-india-bangalore",
+      "score": 45.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264312+00:00",
+      "last_seen": "2026-10-24T08:00:04.264314+00:00"
+    },
+    "bf02c7db944fc9f2": {
+      "id": "bf02c7db944fc9f2",
+      "canonical_job_key": "arintra::data,scientist::blr",
+      "title": "Data Scientist",
+      "company": "Arintra",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-446942-data-scientist-at-arintra-bangalore",
+      "score": 32.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264345+00:00",
+      "last_seen": "2026-10-24T08:00:04.264348+00:00"
+    },
+    "4e303a6259192c6d": {
+      "id": "4e303a6259192c6d",
+      "canonical_job_key": "tredence::data,scientist::blr",
+      "title": "Data Scientist",
+      "company": "Tredence Inc",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-442846-data-scientist-at-tredence-inc-bangalore",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264405+00:00",
+      "last_seen": "2026-10-24T08:00:04.264407+00:00"
+    },
+    "0c64ac154ac85039": {
+      "id": "0c64ac154ac85039",
+      "canonical_job_key": "highradius::application,engineer,support::india_other",
+      "title": "Application Support Engineer",
+      "company": "Highradius",
+      "location": "Hyderabad",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-439006-application-support-engineer-at-highradius-hyderabad",
+      "score": 42.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264435+00:00",
+      "last_seen": "2026-10-24T08:00:04.264437+00:00"
+    },
+    "e40a8f11ec068456": {
+      "id": "e40a8f11ec068456",
+      "canonical_job_key": "logixhealth::director,information,product,security::blr",
+      "title": "Director - Product and Information Security",
+      "company": "LogixHealth",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-447868-director-product-and-information-security-at-logixhealth-bangalore",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264495+00:00",
+      "last_seen": "2026-10-24T08:00:04.264497+00:00"
+    },
+    "a177a564dbb39271": {
+      "id": "a177a564dbb39271",
+      "canonical_job_key": "xeboai::engineering,vp::india_other",
+      "title": "VP Technology and Engineering",
+      "company": "XEBO.ai",
+      "location": "Noida",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-447746-vp-technology-and-engineering-at-xebo-noida",
+      "score": 38.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264527+00:00",
+      "last_seen": "2026-10-24T08:00:04.264529+00:00"
+    },
+    "2ef7f032437d1e35": {
+      "id": "2ef7f032437d1e35",
+      "canonical_job_key": "tesco::backend,engineer,hardcore::india_other",
+      "title": "Hardcore Backend Engineer",
+      "company": "Tesco",
+      "location": "Work From Home",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-446424-hardcore-backend-engineer-at-tesco-work-from-home",
+      "score": 47.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:04.264558+00:00",
+      "last_seen": "2026-10-24T08:00:04.264560+00:00"
+    },
+    "e4bc79c73c557006": {
+      "id": "e4bc79c73c557006",
+      "canonical_job_key": "inmobi::application,manager,security::blr",
+      "title": "Manager- Application Security",
+      "company": "InMobi",
+      "location": "Bengaluru",
+      "source_name": "Official Startup ATS Portals",
+      "official_application_url": "https://job-boards.greenhouse.io/inmobi/jobs/7116456",
+      "score": 42.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:03.784481+00:00",
+      "last_seen": "2026-10-24T08:00:03.784490+00:00"
+    },
+    "e7491f98bc0746df": {
+      "id": "e7491f98bc0746df",
+      "canonical_job_key": "inmobi::devops,iii,sde::blr",
+      "title": "SDE III - Devops",
+      "company": "InMobi",
+      "location": "Bangalore",
+      "source_name": "Official Startup ATS Portals",
+      "official_application_url": "https://job-boards.greenhouse.io/inmobi/jobs/7393433",
+      "score": 50.0,
+      "recommendation": "APPLY",
+      "application_status": "NEW",
+      "first_seen": "2026-10-24T08:00:03.784568+00:00",
+      "last_seen": "2026-10-24T08:00:03.784571+00:00"
     }
   }
 }
