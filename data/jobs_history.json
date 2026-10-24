@@ -270,7 +270,7 @@
       "first_seen": "2026-10-20T06:34:10.238265+00:00",
       "last_seen": "2026-10-23T07:59:16.948060+00:00",
       "status": "PREVIOUSLY_REVIEWED",
-      "score": 63.0
+      "score": 67.0
     },
     "b188683d0b86453b": {
       "id": "b188683d0b86453b",
@@ -507,7 +507,7 @@
       "location": "Chennai, Tamil Nadu, India",
       "source_name": "Official Company Career Pages",
       "official_application_url": "https://www.freshworks.com/company/careers/",
-      "score": 70.5,
+      "score": 74.5,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:45:21.838527+00:00",
       "last_seen": "2026-10-24T07:38:56.482383+00:00",
@@ -651,11 +651,11 @@
       "location": "Bengaluru",
       "source_name": "Official Careers",
       "official_application_url": "https://fintech.io/careers/infra",
-      "score": 53.0,
+      "score": 57.0,
       "recommendation": "SKIP",
       "application_status": "APPLIED",
       "first_seen": "2026-10-20T07:12:01.119560+00:00",
-      "last_seen": "2026-10-20T13:00:36.216979+00:00",
+      "last_seen": "2026-10-24T07:58:25.737942+00:00",
       "status": "APPLIED"
     },
     "rev_job_1": {
@@ -666,11 +666,11 @@
       "location": "Bengaluru",
       "source_name": "Official Careers",
       "official_application_url": "https://globalsaas.com/jobs/cloud-ops",
-      "score": 53.5,
-      "recommendation": "REVIEW",
+      "score": 57.5,
+      "recommendation": "APPLY",
       "application_status": "PREVIOUSLY_REVIEWED",
       "first_seen": "2026-10-20T07:12:01.214584+00:00",
-      "last_seen": "2026-10-20T13:00:36.343330+00:00",
+      "last_seen": "2026-10-24T07:58:25.877346+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "startup_1": {
@@ -681,11 +681,11 @@
       "location": "Bengaluru",
       "source_name": "Wellfound",
       "official_application_url": "https://wellfound.com/jobs/ai-devops",
-      "score": 55.5,
-      "recommendation": "REVIEW",
+      "score": 63.0,
+      "recommendation": "APPLY",
       "application_status": "NEW",
       "first_seen": "2026-10-20T07:12:01.261961+00:00",
-      "last_seen": "2026-10-20T13:00:36.393015+00:00",
+      "last_seen": "2026-10-24T07:58:25.932402+00:00",
       "status": "NEW"
     },
     "s1": {
@@ -1009,7 +1009,7 @@
       "location": "Bengaluru",
       "source_name": "Official Careers",
       "official_application_url": "https://startupa.io/jobs/1",
-      "score": 49.5,
+      "score": 53.5,
       "recommendation": "REVIEW",
       "application_status": "PREVIOUSLY_REVIEWED",
       "first_seen": "2026-10-20T13:00:36.308415+00:00",

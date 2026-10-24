@@ -110,7 +110,8 @@ class ReportGenerator:
                     ])
 
     def generate_json(self, jobs: List[JobPosting], filepaths: List[str], run_time: datetime):
-        new_count = sum(1 for j in jobs if j.application_status == "NEW" and j.recommendation == "APPLY")
+        today_str = run_time.strftime("%Y-%m-%d")
+        new_count = sum(1 for j in jobs if j.recommendation == "APPLY" and j.application_status != "APPLIED" and (j.application_status == "NEW" or (j.first_seen and j.first_seen[:10] == today_str)))
         review_count = sum(1 for j in jobs if j.recommendation == "REVIEW")
         applied_count = sum(1 for j in jobs if j.application_status == "APPLIED")
         previously_reviewed_count = sum(1 for j in jobs if j.application_status == "PREVIOUSLY_REVIEWED")
@@ -170,10 +171,19 @@ class ReportGenerator:
         # 6. Possible duplicates requiring review
         # 7. Summary of excluded jobs and reasons
 
-        sec_1 = [j for j in jobs if j.location_category == "bengaluru" and j.recommendation == "APPLY" and j.application_status == "NEW"]
-        sec_2 = [j for j in jobs if j.location_category == "india_other" and j.recommendation == "APPLY" and j.application_status == "NEW"]
-        sec_3 = [j for j in jobs if j.location_category == "worldwide_remote" and j.recommendation == "APPLY" and j.application_status == "NEW"]
-        sec_4 = [j for j in jobs if j.application_status == "PREVIOUSLY_REVIEWED" or j.application_status == "APPLIED"]
+        today_date_str = run_time.strftime("%Y-%m-%d")
+
+        def is_discovered_today(j: JobPosting) -> bool:
+            if j.application_status == "NEW":
+                return True
+            if j.first_seen and j.first_seen[:10] == today_date_str:
+                return True
+            return False
+
+        sec_1 = [j for j in jobs if j.location_category == "bengaluru" and j.recommendation == "APPLY" and j.application_status != "APPLIED" and is_discovered_today(j)]
+        sec_2 = [j for j in jobs if j.location_category == "india_other" and j.recommendation == "APPLY" and j.application_status != "APPLIED" and is_discovered_today(j)]
+        sec_3 = [j for j in jobs if j.location_category == "worldwide_remote" and j.recommendation == "APPLY" and j.application_status != "APPLIED" and is_discovered_today(j)]
+        sec_4 = [j for j in jobs if j.application_status == "APPLIED" or (j.application_status == "PREVIOUSLY_REVIEWED" and not is_discovered_today(j))]
         sec_5 = [j for j in jobs if j.recommendation == "REVIEW" and j not in sec_4]
         sec_6 = [j for j in jobs if "possible duplicate" in j.duplicate_check_result.lower()]
 

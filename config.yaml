@@ -177,7 +177,7 @@ scoring_weights:
   total: 100
 
 thresholds:
-  apply_min_score: 65
+  apply_min_score: 50
   review_min_score: 40
 
 storage:

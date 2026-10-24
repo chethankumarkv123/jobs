@@ -40,10 +40,20 @@ def build_markdown_body(data: dict) -> str:
     today_str = datetime.now(IST_OFFSET).strftime("%Y-%m-%d")
 
     # Categories
-    sec_1 = [j for j in jobs if j.get("location_priority") == "bengaluru" and j.get("recommendation") == "APPLY" and j.get("previous_application_status") == "NEW"]
-    sec_2 = [j for j in jobs if j.get("location_priority") == "india_other" and j.get("recommendation") == "APPLY" and j.get("previous_application_status") == "NEW"]
-    sec_3 = [j for j in jobs if j.get("location_priority") == "worldwide_remote" and j.get("recommendation") == "APPLY" and j.get("previous_application_status") == "NEW"]
-    sec_4 = [j for j in jobs if j.get("previous_application_status") in ("PREVIOUSLY_REVIEWED", "APPLIED")]
+    today_str = datetime.now(IST_OFFSET).strftime("%Y-%m-%d")
+
+    def is_discovered_today(j) -> bool:
+        if j.get("previous_application_status") == "NEW":
+            return True
+        first_s = j.get("first_seen") or j.get("original_posting_date")
+        if first_s and str(first_s)[:10] == today_str:
+            return True
+        return False
+
+    sec_1 = [j for j in jobs if j.get("location_priority") == "bengaluru" and j.get("recommendation") == "APPLY" and j.get("previous_application_status") != "APPLIED" and is_discovered_today(j)]
+    sec_2 = [j for j in jobs if j.get("location_priority") == "india_other" and j.get("recommendation") == "APPLY" and j.get("previous_application_status") != "APPLIED" and is_discovered_today(j)]
+    sec_3 = [j for j in jobs if j.get("location_priority") == "worldwide_remote" and j.get("recommendation") == "APPLY" and j.get("previous_application_status") != "APPLIED" and is_discovered_today(j)]
+    sec_4 = [j for j in jobs if j.get("previous_application_status") == "APPLIED" or (j.get("previous_application_status") == "PREVIOUSLY_REVIEWED" and not is_discovered_today(j))]
     sec_5 = [j for j in jobs if j.get("recommendation") == "REVIEW" and j not in sec_4]
 
     new_apply_count = len(sec_1) + len(sec_2) + len(sec_3)

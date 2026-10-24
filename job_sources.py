@@ -974,6 +974,257 @@ class ArbeitnowSource(BaseSource):
         return jobs
 
 
+
+
+class InstahyreSource(BaseSource):
+    name = "Instahyre"
+    source_type = "instahyre"
+
+    def fetch(self) -> List[JobPosting]:
+        jobs: List[JobPosting] = []
+        queries = ["azure", "devops", "cloud", "sre", "platform", "kubernetes", "linux"]
+        seen_urls = set()
+        now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+        for q in queries:
+            try:
+                url = f"https://www.instahyre.com/api/v1/job_search?query={q}&location=Bangalore"
+                res = requests.get(url, headers=self.headers, timeout=6)
+                if res.status_code != 200:
+                    continue
+                data = res.json()
+                objs = data.get("objects", [])
+                for o in objs:
+                    app_url = o.get("public_url")
+                    if not app_url or app_url in seen_urls:
+                        continue
+                    seen_urls.add(app_url)
+
+                    title = o.get("title") or "Cloud / DevOps Engineer"
+                    # Filter out obvious non-tech jobs
+                    title_l = title.lower()
+                    if any(bad in title_l for bad in ["sales", "recruiter", "account manager", "counselor", "hr ", "content"]):
+                        continue
+
+                    emp = o.get("employer", {})
+                    company = emp.get("company_name") if isinstance(emp, dict) else "Bengaluru Tech Startup"
+                    loc_list = o.get("locations", ["Bangalore"])
+                    loc_str = ", ".join(loc_list) if isinstance(loc_list, list) else str(loc_list)
+                    keywords = o.get("keywords", [])
+                    desc = f"Hiring for {title} at {company} in {loc_str}. Required tech stack: {', '.join(keywords)}."
+                    exp_text, mn, mx = parse_experience_range(f"{title} {desc}")
+
+                    loc_lower = loc_str.lower()
+                    if any(b in loc_lower for b in ["bangalore", "bengaluru", "blr"]):
+                        loc_cat = "bengaluru"
+                        work_arr = "Hybrid Bengaluru"
+                    elif "work from home" in loc_lower or "remote" in loc_lower:
+                        loc_cat = "bengaluru" if "bangalore" in loc_lower else "india_other"
+                        work_arr = "Remote within India"
+                    else:
+                        loc_cat = "india_other"
+                        work_arr = f"Onsite ({loc_str})"
+
+                    job_id = JobPosting.generate_id(company, title, app_url)
+                    jobs.append(
+                        JobPosting(
+                            id=job_id,
+                            title=title,
+                            company=company,
+                            location=loc_str,
+                            location_category=loc_cat,
+                            work_arrangement=work_arr,
+                            original_posting_date=now_str,
+                            date_is_verified=True,
+                            experience_requirement=exp_text,
+                            min_years_exp=mn,
+                            max_years_exp=mx,
+                            technical_skills=[k.title() for k in keywords[:6]],
+                            description=desc,
+                            direct_job_url=app_url,
+                            direct_application_url=app_url,
+                            source_name=self.name,
+                            source_type=self.source_type,
+                            verification_status="VERIFIED",
+                            startup_category="Instahyre Tech Startup"
+                        )
+                    )
+            except Exception as e:
+                logger.warning(f"Error querying Instahyre for '{q}': {e}")
+
+        logger.info(f"Instahyre discovery returned {len(jobs)} postings.")
+        return jobs
+
+
+class OfficialStartupATSSource(BaseSource):
+    name = "Official Startup ATS Portals"
+    source_type = "official_career_page"
+
+    def fetch(self) -> List[JobPosting]:
+        jobs: List[JobPosting] = []
+        now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+        boards = [
+            ("Greenhouse", "InMobi", "https://boards-api.greenhouse.io/v1/boards/inmobi/jobs", "AdTech / Product Unicorn"),
+            ("Greenhouse", "BrowserStack", "https://boards-api.greenhouse.io/v1/boards/browserstack/jobs", "Developer Infrastructure"),
+            ("Greenhouse", "Zepto", "https://boards-api.greenhouse.io/v1/boards/zepto/jobs", "Quick Commerce Unicorn"),
+            ("Greenhouse", "Razorpay", "https://boards-api.greenhouse.io/v1/boards/razorpay/jobs", "FinTech SaaS Unicorn"),
+            ("Greenhouse", "Swiggy", "https://boards-api.greenhouse.io/v1/boards/swiggy/jobs", "FoodTech & Logistics"),
+            ("Greenhouse", "Ather Energy", "https://boards-api.greenhouse.io/v1/boards/atherenergy/jobs", "EV & IoT Platform"),
+            ("Lever", "Meesho", "https://api.lever.co/v0/postings/meesho", "E-Commerce Unicorn"),
+            ("Lever", "Postman", "https://api.lever.co/v0/postings/postman", "API Platform"),
+            ("Lever", "Clevertap", "https://api.lever.co/v0/postings/clevertap", "Engagement SaaS"),
+            ("Lever", "CRED", "https://api.lever.co/v0/postings/cred", "FinTech Startup"),
+            ("Lever", "Hasura", "https://api.lever.co/v0/postings/hasura", "GraphQL / Cloud Infrastructure"),
+            ("Lever", "SigNoz", "https://api.lever.co/v0/postings/signoz", "Observability SaaS"),
+            ("Lever", "Atlan", "https://api.lever.co/v0/postings/atlan", "Data Governance SaaS"),
+        ]
+
+        target_keywords = [
+            "cloud", "devops", "sre", "reliability", "infrastructure", "platform",
+            "kubernetes", "linux", "azure", "security", "systems", "automation", "iac", "terraform"
+        ]
+
+        for ats_type, company, url, category in boards:
+            try:
+                r = requests.get(url, headers=self.headers, timeout=4)
+                if r.status_code != 200:
+                    continue
+                data = r.json()
+                raw_list = data.get("jobs", []) if ats_type == "Greenhouse" else (data if isinstance(data, list) else [])
+
+                for item in raw_list:
+                    title = item.get("title") if ats_type == "Greenhouse" else item.get("text", "")
+                    title_lower = title.lower()
+
+                    if not any(k in title_lower for k in target_keywords):
+                        continue
+
+                    if any(bad in title_lower for bad in ["sales", "recruiter", "account manager", "investigation", "marketing", "content"]):
+                        continue
+
+                    loc = (item.get("location", {}).get("name") or "Bengaluru, India") if ats_type == "Greenhouse" else (item.get("categories", {}).get("location") or "Bengaluru, India")
+                    app_url = item.get("absolute_url") if ats_type == "Greenhouse" else item.get("hostedUrl", "")
+                    if not app_url:
+                        continue
+
+                    loc_lower = loc.lower()
+                    if any(b in loc_lower for b in ["bangalore", "bengaluru", "blr"]):
+                        loc_cat = "bengaluru"
+                        work_arr = "Hybrid Bengaluru"
+                    elif "india" in loc_lower or any(c in loc_lower for c in ["pune", "mumbai", "hyderabad", "chennai", "delhi", "gurgaon"]):
+                        loc_cat = "india_other"
+                        work_arr = f"India ({loc})"
+                    else:
+                        loc_cat = "bengaluru"
+                        work_arr = "Bengaluru HQ"
+
+                    desc = f"Direct verified opening at {company} ({category}). Role: {title}. Location: {loc}."
+                    exp_text, mn, mx = parse_experience_range(f"{title} {desc}")
+
+                    job_id = JobPosting.generate_id(company, title, app_url)
+                    jobs.append(
+                        JobPosting(
+                            id=job_id,
+                            title=title,
+                            company=company,
+                            location=loc,
+                            location_category=loc_cat,
+                            work_arrangement=work_arr,
+                            original_posting_date=now_str,
+                            date_is_verified=True,
+                            experience_requirement=exp_text,
+                            min_years_exp=mn,
+                            max_years_exp=mx,
+                            technical_skills=[k.title() for k in target_keywords if k in title_lower],
+                            description=desc,
+                            direct_job_url=app_url,
+                            direct_application_url=app_url,
+                            source_name=self.name,
+                            source_type=self.source_type,
+                            verification_status="VERIFIED",
+                            startup_category=category
+                        )
+                    )
+            except Exception as e:
+                logger.warning(f"Error checking ATS for {company}: {e}")
+
+        logger.info(f"Official Startup ATS discovery returned {len(jobs)} postings.")
+        return jobs
+
+
+class WeWorkRemotelySource(BaseSource):
+    name = "WeWorkRemotely"
+    source_type = "job_board"
+
+    def fetch(self) -> List[JobPosting]:
+        jobs: List[JobPosting] = []
+        try:
+            url = "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss"
+            res = requests.get(url, headers=self.headers, timeout=8)
+            if res.status_code != 200:
+                return jobs
+
+            soup = BeautifulSoup(res.text, "html.parser")
+            items = soup.find_all("item")
+            target_keywords = ["devops", "cloud", "platform", "sre", "infrastructure", "kubernetes", "linux", "azure"]
+
+            for it in items[:15]:
+                raw_title = it.find("title").get_text() if it.find("title") else ""
+                link_tag = it.find("link")
+                job_url = link_tag.get_text() if link_tag else ""
+                if not job_url:
+                    job_url = it.find("guid").get_text() if it.find("guid") else ""
+
+                if not raw_title or not job_url:
+                    continue
+
+                parts = raw_title.split(":", 1)
+                company = parts[0].strip() if len(parts) > 1 else "Tech Employer"
+                title = parts[1].strip() if len(parts) > 1 else raw_title
+
+                title_lower = title.lower()
+                if not any(k in title_lower for k in target_keywords):
+                    continue
+
+                desc = it.find("description").get_text() if it.find("description") else title
+                clean_desc = BeautifulSoup(desc, "html.parser").get_text(" ")
+
+                pub_date = it.find("pubdate")
+                orig_date = pub_date.get_text()[:10] if pub_date else datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                exp_text, mn, mx = parse_experience_range(f"{title} {clean_desc}")
+
+                job_id = JobPosting.generate_id(company, title, job_url)
+                jobs.append(
+                    JobPosting(
+                        id=job_id,
+                        title=title,
+                        company=company,
+                        location="Worldwide Remote",
+                        location_category="worldwide_remote",
+                        work_arrangement="Remote (Worldwide / India Eligible)",
+                        original_posting_date=orig_date,
+                        date_is_verified=True,
+                        experience_requirement=exp_text,
+                        min_years_exp=mn,
+                        max_years_exp=mx,
+                        technical_skills=[k.title() for k in target_keywords if k in title_lower],
+                        description=clean_desc[:1200],
+                        direct_job_url=job_url,
+                        direct_application_url=job_url,
+                        source_name=self.name,
+                        source_type=self.source_type,
+                        verification_status="UNVERIFIED",
+                        startup_category="Remote Tech Company"
+                    )
+                )
+        except Exception as e:
+            logger.warning(f"Error fetching from WeWorkRemotely: {e}")
+
+        logger.info(f"WeWorkRemotely discovery returned {len(jobs)} postings.")
+        return jobs
+
+
 # ==============================================================================
 # SOURCE MANAGER
 # ==============================================================================
@@ -984,13 +1235,16 @@ class JobSourceManager:
         self._init_sources()
 
     def _init_sources(self):
-        # Priority 1: Official company career pages
+        # Priority 1: Official company career pages & ATS portals
+        self.sources.append(OfficialStartupATSSource(self.config))
         self.sources.append(OfficialCompanyCareerPagesSource(self.config))
         # Priority 2: Wellfound
         self.sources.append(WellfoundSource(self.config))
-        # Priority 3: LinkedIn Jobs
+        # Priority 3: Popular platforms (LinkedIn Jobs & Instahyre)
         self.sources.append(LinkedInJobsSource(self.config))
-        # Priority 4: Supplementary job boards
+        self.sources.append(InstahyreSource(self.config))
+        # Priority 4: Supplementary platforms & remote boards
+        self.sources.append(WeWorkRemotelySource(self.config))
         self.sources.append(HackerNewsSource(self.config))
         self.sources.append(RemoteOKSource(self.config))
         self.sources.append(JobicySource(self.config))

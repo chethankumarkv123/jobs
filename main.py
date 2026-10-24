@@ -61,11 +61,19 @@ def load_config(config_path: str = "config.yaml") -> dict:
 def print_cli_summary(jobs: list, outputs: dict, source_stats: dict):
     now_ist = datetime.now(IST_OFFSET).strftime("%Y-%m-%d %H:%M:%S IST")
 
-    # Mirror exact 7 sections from report_generator.py & AGENTS.md
-    sec_1 = [j for j in jobs if j.location_category == "bengaluru" and j.recommendation == "APPLY" and j.application_status == "NEW"]
-    sec_2 = [j for j in jobs if j.location_category == "india_other" and j.recommendation == "APPLY" and j.application_status == "NEW"]
-    sec_3 = [j for j in jobs if j.location_category == "worldwide_remote" and j.recommendation == "APPLY" and j.application_status == "NEW"]
-    sec_4 = [j for j in jobs if j.application_status in ("PREVIOUSLY_REVIEWED", "APPLIED")]
+    today_date_str = datetime.now(IST_OFFSET).strftime("%Y-%m-%d")
+
+    def is_discovered_today(j) -> bool:
+        if j.application_status == "NEW":
+            return True
+        if getattr(j, "first_seen", None) and str(j.first_seen)[:10] == today_date_str:
+            return True
+        return False
+
+    sec_1 = [j for j in jobs if j.location_category == "bengaluru" and j.recommendation == "APPLY" and j.application_status != "APPLIED" and is_discovered_today(j)]
+    sec_2 = [j for j in jobs if j.location_category == "india_other" and j.recommendation == "APPLY" and j.application_status != "APPLIED" and is_discovered_today(j)]
+    sec_3 = [j for j in jobs if j.location_category == "worldwide_remote" and j.recommendation == "APPLY" and j.application_status != "APPLIED" and is_discovered_today(j)]
+    sec_4 = [j for j in jobs if j.application_status == "APPLIED" or (j.application_status == "PREVIOUSLY_REVIEWED" and not is_discovered_today(j))]
     sec_5 = [j for j in jobs if j.recommendation == "REVIEW" and j not in sec_4]
     sec_6 = [j for j in jobs if "possible duplicate" in (j.duplicate_check_result or "").lower()]
 

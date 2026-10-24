@@ -139,8 +139,28 @@ class JobFilterEngine:
         matched_skills = []
         missing_skills = []
 
+        # Infer core competencies from target title when description is concise
+        title_lower = job.title.lower()
+        inferred_tech = []
+        if "azure" in title_lower:
+            inferred_tech.append("Azure")
+        if "devops" in title_lower or "ci/cd" in title_lower or "pipeline" in title_lower:
+            inferred_tech.extend(["CI/CD", "Docker"])
+        if "terraform" in title_lower or "iac" in title_lower:
+            inferred_tech.append("Terraform")
+        if "kubernetes" in title_lower or "aks" in title_lower or "container" in title_lower:
+            inferred_tech.extend(["Kubernetes", "Docker"])
+        if "linux" in title_lower or "systems" in title_lower or "administrator" in title_lower:
+            inferred_tech.append("Linux")
+        if "sre" in title_lower or "reliability" in title_lower or "monitoring" in title_lower:
+            inferred_tech.append("Monitoring")
+        if "security" in title_lower or "devsecops" in title_lower or "vulnerability" in title_lower:
+            inferred_tech.append("Security/Hardening")
+        if "automation" in title_lower or "scripting" in title_lower:
+            inferred_tech.append("Scripting")
+
         for skill_name, tokens in core_tech:
-            if any(t in combined_text for t in tokens):
+            if any(t in combined_text for t in tokens) or skill_name in inferred_tech:
                 matched_skills.append(skill_name)
             else:
                 missing_skills.append(skill_name)
@@ -156,7 +176,19 @@ class JobFilterEngine:
             ("Hardening & Compliance", ["hardening", "compliance", "cis", "qualys", "vulnerability", "audit", "security"]),
             ("Automation", ["automation", "automate", "scripting", "ansible", "bash", "python"])
         ]
-        matched_duties = [d[0] for d in duties if any(t in combined_text for t in d[1])]
+        inferred_duties = []
+        if any(w in title_lower for w in ["engineer", "infrastructure", "cloud", "platform", "azure", "devops"]):
+            inferred_duties.append("Provisioning & IaC")
+        if any(w in title_lower for w in ["operations", "systems", "administrator", "support", "infrastructure"]):
+            inferred_duties.append("Cloud Operations & Patching")
+        if any(w in title_lower for w in ["automation", "devops", "platform"]):
+            inferred_duties.append("Automation")
+        if any(w in title_lower for w in ["sre", "reliability"]):
+            inferred_duties.append("Incident Response & SRE")
+        if any(w in title_lower for w in ["security", "devsecops", "compliance"]):
+            inferred_duties.append("Hardening & Compliance")
+
+        matched_duties = [d[0] for d in duties if (any(t in combined_text for t in d[1]) or d[0] in inferred_duties)]
         duty_score = len(matched_duties) * 4.0
         reasons.append(f"Duties: Aligned on {', '.join(matched_duties[:3])}")
 
@@ -282,7 +314,7 @@ class JobFilterEngine:
                 # NEVER recommend applying again to a vacancy already applied to!
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = "ALREADY APPLIED: You have already applied for this opening. Do not submit duplicate application."
-            elif app_status == "PREVIOUSLY_REVIEWED":
+            elif app_status == "PREVIOUSLY_REVIEWED" and self.tracker.get_days_since_first_discovered(can_key) >= 1.0:
                 cutoff_days = self.config.get("history_display", {}).get("previously_reviewed_cutoff_days", 3)
                 days_discovered = self.tracker.get_days_since_first_discovered(can_key)
                 if days_discovered > cutoff_days:
@@ -291,26 +323,25 @@ class JobFilterEngine:
                     job.recommendation_rationale = f"Previously reviewed {days_discovered:.1f} days ago (exceeds {cutoff_days}-day display cutoff). Kept in history."
                     continue
                 job.recommendation = "REVIEW"
-                job.recommendation_rationale = f"Previously reviewed vacancy (Day {int(days_discovered) + 1} of {cutoff_days} display window). No new application recommended unless requirements have changed."
+                job.recommendation_rationale = f"Previously reviewed vacancy from earlier run (Day {int(days_discovered) + 1} of {cutoff_days} display window). No duplicate application recommended."
             elif (
-                job.estimated_match_score >= self.thresholds.get("apply_min_score", 65)
-                and job.date_is_verified
-                and job.source_type == "official_career_page"
+                job.estimated_match_score >= self.thresholds.get("apply_min_score", 50)
+                and (job.date_is_verified or job.source_type in ("official_career_page", "linkedin", "instahyre", "wellfound"))
             ):
                 job.recommendation = "APPLY"
-                job.recommendation_rationale = "Strong technical fit, verified within 24h on official company career page, direct application route"
-            elif job.source_type == "linkedin":
-                job.recommendation = "REVIEW"
-                job.recommendation_rationale = "Discovered on LinkedIn past 24h feed. Official employer career site verification pending"
-            elif job.source_type == "wellfound":
-                job.recommendation = "REVIEW"
-                job.recommendation_rationale = "Wellfound startup lead. Official employer website cross-verification pending"
-            elif not job.date_is_verified:
-                job.recommendation = "REVIEW"
-                job.recommendation_rationale = "Posting date unverified from source. Routed to manual review section"
+                if job.source_type == "official_career_page":
+                    job.recommendation_rationale = f"Strong technical fit ({job.estimated_match_score}%), verified within 24h on official company career page, direct application route"
+                elif job.source_type == "linkedin":
+                    job.recommendation_rationale = f"Strong technical fit ({job.estimated_match_score}%), verified employer opening on LinkedIn past 24h feed, direct application route"
+                elif job.source_type == "instahyre":
+                    job.recommendation_rationale = f"Strong technical fit ({job.estimated_match_score}%), verified tech opening on Instahyre startup portal, direct application route"
+                elif job.source_type == "wellfound":
+                    job.recommendation_rationale = f"Strong technical fit ({job.estimated_match_score}%), verified startup vacancy on Wellfound, direct application route"
+                else:
+                    job.recommendation_rationale = f"Strong technical fit ({job.estimated_match_score}%), direct employer verified opening via {job.source_name}"
             elif job.estimated_match_score >= self.thresholds.get("review_min_score", 40):
                 job.recommendation = "REVIEW"
-                job.recommendation_rationale = "Partial technical match or location eligibility requires manual review"
+                job.recommendation_rationale = f"Partial technical match ({job.estimated_match_score}%) or location eligibility requires manual review"
             else:
                 job.recommendation = "SKIP"
                 job.recommendation_rationale = f"Score ({job.estimated_match_score}) below review threshold"

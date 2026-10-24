@@ -223,19 +223,17 @@
       "last_verification_timestamp": "2026-10-24 07:38:53 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
-      "relevant_technical_skills": [
-        "Kubernetes"
-      ],
+      "relevant_technical_skills": [],
       "missing_mandatory_skills": [
         "Azure",
+        "Kubernetes",
         "Linux",
-        "Terraform",
-        "Ansible"
+        "Terraform"
       ],
       "estimated_profile_match_score": 35.5,
       "score_reasons": [
-        "Core Tech: Matched 1/10 skill domains (Kubernetes)",
-        "Duties: Aligned on ",
+        "Core Tech: Matched 0/10 skill domains ()",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance",
         "Experience: Unspecified in posting (Startup flexible)",
         "Location Fit: BENGALURU (10.0/10 pts)"
       ],
@@ -896,19 +894,17 @@
       "last_verification_timestamp": "2026-10-24 07:38:52 UTC",
       "required_experience": "Unspecified",
       "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
-      "relevant_technical_skills": [
-        "Azure"
-      ],
+      "relevant_technical_skills": [],
       "missing_mandatory_skills": [
+        "Azure",
         "Kubernetes",
         "Linux",
-        "Terraform",
-        "Ansible"
+        "Terraform"
       ],
-      "estimated_profile_match_score": 35.5,
+      "estimated_profile_match_score": 42.0,
       "score_reasons": [
-        "Core Tech: Matched 1/10 skill domains (Azure)",
-        "Duties: Aligned on ",
+        "Core Tech: Matched 0/10 skill domains ()",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching",
         "Experience: Unspecified in posting (Startup flexible)",
         "Location Fit: INDIA_OTHER (10.0/10 pts)"
       ],
