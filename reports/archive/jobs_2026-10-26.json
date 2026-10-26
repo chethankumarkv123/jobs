@@ -1,0 +1,1474 @@
+{
+  "metadata": {
+    "generated_at_ist": "2026-10-26 13:40:39 IST",
+    "candidate_profile": "Azure Cloud Engineer (4+ yrs total IT experience, LTIMindtree)",
+    "total_jobs_evaluated": 42,
+    "new_confirmed_openings": 17,
+    "needs_review_count": 25,
+    "already_applied_count": 0,
+    "previously_reviewed_count": 13,
+    "official_career_page_share_confirmed": "35.3% (Target >= 70%)",
+    "source_coverage": "Official Career Pages, Wellfound, LinkedIn Jobs, Hacker News, RemoteOK, Jobicy, Arbeitnow"
+  },
+  "jobs": [
+    {
+      "company": "Tekion",
+      "job_title": "Engineering Manager - DevSecOps",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "Kubernetes",
+        "Docker",
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Linux",
+        "Terraform",
+        "Ansible",
+        "CI/CD"
+      ],
+      "estimated_profile_match_score": 54.0,
+      "score_reasons": [
+        "Core Tech: Matched 4/10 skill domains (Azure, Kubernetes, Docker, Security/Hardening)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (54.0%), verified tech opening on Instahyre startup portal, direct application route",
+      "source_url": "https://www.instahyre.com/job-447872-engineering-manager-devsecops-at-tekion-bangalore",
+      "official_application_url": "https://www.instahyre.com/job-447872-engineering-manager-devsecops-at-tekion-bangalore",
+      "canonical_job_key": "tekion::devsecops,engineering,manager::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Tekion",
+      "job_title": "DevSecOps Manager",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "Kubernetes",
+        "CI/CD",
+        "Docker",
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Linux",
+        "Terraform",
+        "Ansible",
+        "Monitoring"
+      ],
+      "estimated_profile_match_score": 53.5,
+      "score_reasons": [
+        "Core Tech: Matched 5/10 skill domains (Azure, Kubernetes, CI/CD, Docker)",
+        "Duties: Aligned on Hardening & Compliance",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (53.5%), verified tech opening on Instahyre startup portal, direct application route",
+      "source_url": "https://www.instahyre.com/job-447567-devsecops-manager-at-tekion-bangalore",
+      "official_application_url": "https://www.instahyre.com/job-447567-devsecops-manager-at-tekion-bangalore",
+      "canonical_job_key": "tekion::devsecops,manager::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Tieto",
+      "job_title": "Sr Devops Engineer- Tieto Tech Consulting (m/f/d)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route",
+      "source_url": "https://in.linkedin.com/jobs/view/sr-devops-engineer-tieto-tech-consulting-m-f-d-at-tieto-4466312301",
+      "official_application_url": "https://in.linkedin.com/jobs/view/sr-devops-engineer-tieto-tech-consulting-m-f-d-at-tieto-4466312301",
+      "canonical_job_key": "tieto::consulting,d,devops,engineer,f,m,tech,tieto::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "ACROSSTEK™",
+      "job_title": "DevOps Engineer | Hybrid & Multi-Cloud",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route",
+      "source_url": "https://in.linkedin.com/jobs/view/devops-engineer-hybrid-multi-cloud-at-acrosstek%E2%84%A2-4481406961",
+      "official_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-hybrid-multi-cloud-at-acrosstek%E2%84%A2-4481406961",
+      "canonical_job_key": "acrosstek™::&,cloud,devops,engineer,hybrid,multi,|::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "My Next IT Career",
+      "job_title": "Oracle Hiring For Senior DevOps Engineer – Autonomous Database",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route",
+      "source_url": "https://in.linkedin.com/jobs/view/oracle-hiring-for-senior-devops-engineer-%E2%80%93-autonomous-database-at-my-next-it-career-4483525668",
+      "official_application_url": "https://in.linkedin.com/jobs/view/oracle-hiring-for-senior-devops-engineer-%E2%80%93-autonomous-database-at-my-next-it-career-4483525668",
+      "canonical_job_key": "mynextitcareer::autonomous,database,devops,engineer,hiring,oracle::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "VergeCloud",
+      "job_title": "Senior Site Reliability Engineer — CDN Infrastructure",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Monitoring"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 47.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Monitoring)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Incident Response & SRE",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (47.5%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-%E2%80%94-cdn-infrastructure-at-vergecloud-4483515835",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-%E2%80%94-cdn-infrastructure-at-vergecloud-4483515835",
+      "canonical_job_key": "vergecloud::cdn,engineer,infrastructure,reliability,site::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "SIXT Research & Development India",
+      "job_title": "Site Reliability Engineer II (Platform Engineer)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Monitoring"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 47.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Monitoring)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (47.5%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-ii-platform-engineer-at-sixt-research-development-india-4482919636",
+      "official_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-ii-platform-engineer-at-sixt-research-development-india-4482919636",
+      "canonical_job_key": "sixtresearch&developmentindia::engineer,ii,platform,reliability,site::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Oracle",
+      "job_title": "Senior Software Developer – Cloud Platform Engineering (OCI / Kubernetes / Java)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:31 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Kubernetes",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 47.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (Kubernetes, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (47.0%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-software-developer-%E2%80%93-cloud-platform-engineering-oci-kubernetes-java-at-oracle-4481401384",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-software-developer-%E2%80%93-cloud-platform-engineering-oci-kubernetes-java-at-oracle-4481401384",
+      "canonical_job_key": "oracle::cloud,developer,engineering,java,kubernetes,oci,platform,software::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Axiamatic",
+      "job_title": "Software Engineer - Discovery",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Scripting"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 45.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Scripting)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (45.5%) or location eligibility requires manual review",
+      "source_url": "https://www.instahyre.com/job-446555-software-engineer-discovery-at-axiamatic-2-bangalore",
+      "official_application_url": "https://www.instahyre.com/job-446555-software-engineer-discovery-at-axiamatic-2-bangalore",
+      "canonical_job_key": "axiamatic::discovery,engineer,software::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Amazon",
+      "job_title": "Product Software Engineer - 1047 - 1059",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Scripting"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 43.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Scripting)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (43.5%) or location eligibility requires manual review",
+      "source_url": "https://www.instahyre.com/job-444072-product-software-engineer-1047-1059-at-amazon-bangalore",
+      "official_application_url": "https://www.instahyre.com/job-444072-product-software-engineer-1047-1059-at-amazon-bangalore",
+      "canonical_job_key": "amazon::1047,1059,engineer,product,software::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Amagi",
+      "job_title": "Platform Engineer Il",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:29 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 40.0,
+      "score_reasons": [
+        "Core Tech: Matched 0/10 skill domains ()",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (40.0%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/platform-engineer-il-at-amagi-4478859567",
+      "official_application_url": "https://in.linkedin.com/jobs/view/platform-engineer-il-at-amagi-4478859567",
+      "canonical_job_key": "amagi::engineer,il,platform::blr",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Swarmaero",
+      "job_title": "DevOps Engineer",
+      "location": "Remote (Remote)",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "4-8 years",
+      "candidate_experience_fit": "Ideal Fit (4-8 years vs candidate's 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "CI/CD",
+        "Docker",
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 61.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (CI/CD, Docker, Security/Hardening)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Automation",
+        "Experience: Ideal Fit (4-8 years vs candidate's 4.2 yrs total IT)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (61.5%), direct employer verified opening via Arbeitnow",
+      "source_url": "https://www.arbeitnow.com/jobs/companies/swarmaero/remote-devops-engineer-242127",
+      "official_application_url": "https://www.arbeitnow.com/jobs/companies/swarmaero/remote-devops-engineer-242127",
+      "canonical_job_key": "swarmaero::devops,engineer::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Supabase",
+      "job_title": "Software Engineer - Branching",
+      "location": "Anywhere",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:29 UTC",
+      "required_experience": "3+ years",
+      "candidate_experience_fit": "Strong Fit (3+ years vs candidate's 4.2 yrs)",
+      "relevant_technical_skills": [
+        "CI/CD"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 56.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (CI/CD)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Automation",
+        "Experience: Strong Fit (3+ years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (56.5%), direct employer verified opening via Jobicy",
+      "source_url": "https://jobicy.com/jobs/156947-software-engineer-branching",
+      "official_application_url": "https://jobicy.com/jobs/156947-software-engineer-branching",
+      "canonical_job_key": "supabase::branching,engineer,software::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Upstart",
+      "job_title": "DevOps Engineer II, Cloud Platform",
+      "location": "Worldwide Remote",
+      "work_arrangement": "Remote (Worldwide / India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "Mon, 26 Oc",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "3+ years",
+      "candidate_experience_fit": "Strong Fit (3+ years vs candidate's 4.2 yrs)",
+      "relevant_technical_skills": [
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 55.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation",
+        "Experience: Strong Fit (3+ years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (55.0%), direct employer verified opening via WeWorkRemotely",
+      "source_url": "https://weworkremotely.com/remote-jobs/upstart-devops-engineer-ii-cloud-platform",
+      "official_application_url": "https://weworkremotely.com/remote-jobs/upstart-devops-engineer-ii-cloud-platform",
+      "canonical_job_key": "upstart::cloud,devops,engineer,ii,platform::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "MoneySmart Group",
+      "job_title": "Sr. DevOps Engineer",
+      "location": "Work From Home",
+      "work_arrangement": "Remote within India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Kubernetes",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 54.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Kubernetes, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (54.5%), verified tech opening on Instahyre startup portal, direct application route",
+      "source_url": "https://www.instahyre.com/job-438952-sr-devops-engineer-at-moneysmart-group-work-from-home",
+      "official_application_url": "https://www.instahyre.com/job-438952-sr-devops-engineer-at-moneysmart-group-work-from-home",
+      "canonical_job_key": "moneysmartgroup::devops,engineer::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Canonical",
+      "job_title": "Distributed Systems Engineer",
+      "location": "Anywhere",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:29 UTC",
+      "required_experience": "0-2 years",
+      "candidate_experience_fit": "Early Career Bracket (0-2 years)",
+      "relevant_technical_skills": [
+        "Linux",
+        "Monitoring"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 54.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (Linux, Monitoring)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching",
+        "Experience: Early Career Bracket (0-2 years)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (54.0%), direct employer verified opening via Jobicy",
+      "source_url": "https://jobicy.com/jobs/156945-distributed-systems-engineer-3",
+      "official_application_url": "https://jobicy.com/jobs/156945-distributed-systems-engineer-3",
+      "canonical_job_key": "canonical::distributed,engineer,systems::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Supabase",
+      "job_title": "Data API Engineer",
+      "location": "Anywhere",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:29 UTC",
+      "required_experience": "3+ years",
+      "candidate_experience_fit": "Strong Fit (3+ years vs candidate's 4.2 yrs)",
+      "relevant_technical_skills": [
+        "Linux"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 53.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Linux)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Incident Response & SRE",
+        "Experience: Strong Fit (3+ years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (53.5%), direct employer verified opening via Jobicy",
+      "source_url": "https://jobicy.com/jobs/156939-data-api-engineer",
+      "official_application_url": "https://jobicy.com/jobs/156939-data-api-engineer",
+      "canonical_job_key": "supabase::api,data,engineer::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Supabase",
+      "job_title": "Software Engineer - Storage",
+      "location": "Anywhere",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:29 UTC",
+      "required_experience": "5+ years",
+      "candidate_experience_fit": "Ideal Fit (5+ years vs candidate's 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "Kubernetes"
+      ],
+      "missing_mandatory_skills": [
+        "Linux",
+        "Terraform",
+        "Ansible",
+        "CI/CD"
+      ],
+      "estimated_profile_match_score": 52.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (Azure, Kubernetes)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance",
+        "Experience: Ideal Fit (5+ years vs candidate's 4.2 yrs total IT)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (52.0%), direct employer verified opening via Jobicy",
+      "source_url": "https://jobicy.com/jobs/156940-software-engineer-storage",
+      "official_application_url": "https://jobicy.com/jobs/156940-software-engineer-storage",
+      "canonical_job_key": "supabase::engineer,software,storage::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Vish Gyana Technology Solutions",
+      "job_title": "DevOps Engineer (Azure)",
+      "location": "Chennai, Tamil Nadu, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route",
+      "source_url": "https://in.linkedin.com/jobs/view/devops-engineer-azure-at-vish-gyana-technology-solutions-4482933505",
+      "official_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-azure-at-vish-gyana-technology-solutions-4482933505",
+      "canonical_job_key": "vishgyana::azure,devops,engineer::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Luxoft India",
+      "job_title": "Senior DevOps - Cloud (Azure) - Immeidate Joiner",
+      "location": "Pune District, Maharashtra, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-devops-cloud-azure-immeidate-joiner-at-luxoft-india-4483536229",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-devops-cloud-azure-immeidate-joiner-at-luxoft-india-4483536229",
+      "canonical_job_key": "luxoftindia::azure,cloud,devops,immeidate,joiner::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "GlobalLogic",
+      "job_title": "Azure Devops Engineer IRC306974",
+      "location": "Chennai, Tamil Nadu, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:29 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route",
+      "source_url": "https://in.linkedin.com/jobs/view/azure-devops-engineer-irc306974-at-globallogic-4482692357",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-devops-engineer-irc306974-at-globallogic-4482692357",
+      "canonical_job_key": "globallogic::azure,devops,engineer,irc306974::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "CARPL",
+      "job_title": "Implementation Engineer - DevOps",
+      "location": "Delhi",
+      "work_arrangement": "Onsite (Delhi)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Kubernetes",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Kubernetes, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified tech opening on Instahyre startup portal, direct application route",
+      "source_url": "https://www.instahyre.com/job-447924-implementation-engineer-devops-at-carpl-delhi",
+      "official_application_url": "https://www.instahyre.com/job-447924-implementation-engineer-devops-at-carpl-delhi",
+      "canonical_job_key": "carpl::devops,engineer,implementation::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Amazon",
+      "job_title": "Senior DevOps Engineer",
+      "location": "Work From Home",
+      "work_arrangement": "Remote within India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Kubernetes",
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 50.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Kubernetes, CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "APPLY",
+      "reason_for_recommendation": "Strong technical fit (50.5%), verified tech opening on Instahyre startup portal, direct application route",
+      "source_url": "https://www.instahyre.com/job-435823-senior-devops-engineer-at-amazon-work-from-home",
+      "official_application_url": "https://www.instahyre.com/job-435823-senior-devops-engineer-at-amazon-work-from-home",
+      "canonical_job_key": "amazon::devops,engineer::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Helfie.AI",
+      "job_title": "V&V Engineer",
+      "location": "Hyderabad",
+      "work_arrangement": "Onsite (Hyderabad)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Scripting"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 49.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Scripting)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (49.5%) or location eligibility requires manual review",
+      "source_url": "https://www.instahyre.com/job-447668-vv-engineer-at-helfie-hyderabad",
+      "official_application_url": "https://www.instahyre.com/job-447668-vv-engineer-at-helfie-hyderabad",
+      "canonical_job_key": "helfieai::engineer,v&v::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Oracle",
+      "job_title": "Senior Software Developer – Cloud Platform Engineering (OCI / Kubernetes / Java)",
+      "location": "Trivandrum, Kerala, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:31 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Kubernetes",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 47.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (Kubernetes, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (47.0%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-software-developer-%E2%80%93-cloud-platform-engineering-oci-kubernetes-java-at-oracle-4481093751",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-software-developer-%E2%80%93-cloud-platform-engineering-oci-kubernetes-java-at-oracle-4481093751",
+      "canonical_job_key": "oracle::cloud,developer,engineering,java,kubernetes,oci,platform,software::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Toro Technology Center - India",
+      "job_title": "Azure Cloud Platform Engineer",
+      "location": "Pune Division, Maharashtra, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 43.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Azure)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (43.5%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/azure-cloud-platform-engineer-at-toro-technology-center-india-4483375935",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-cloud-platform-engineer-at-toro-technology-center-india-4483375935",
+      "canonical_job_key": "torocenterindia::azure,cloud,engineer,platform::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "PayPal",
+      "job_title": "Sr. Site Reliability Engineer",
+      "location": "Chennai, Tamil Nadu, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Monitoring"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 43.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Monitoring)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (43.5%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/sr-site-reliability-engineer-at-paypal-4466066016",
+      "official_application_url": "https://in.linkedin.com/jobs/view/sr-site-reliability-engineer-at-paypal-4466066016",
+      "canonical_job_key": "paypal::engineer,reliability,site::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Trading Technologies",
+      "job_title": "Senior Site Reliability Engineer (US Hours)",
+      "location": "Greater Ahmedabad Area",
+      "work_arrangement": "Remote",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Monitoring"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 43.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Monitoring)",
+        "Duties: Aligned on Provisioning & IaC, Incident Response & SRE",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (43.5%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-us-hours-at-trading-technologies-4410439699",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-us-hours-at-trading-technologies-4410439699",
+      "canonical_job_key": "trading::engineer,hours,reliability,site,us::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "Office Beacon LLC",
+      "job_title": "Senior AI Infrastructure Engineer",
+      "location": "Vadodara, Gujarat, India",
+      "work_arrangement": "Onsite India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:31 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 40.0,
+      "score_reasons": [
+        "Core Tech: Matched 0/10 skill domains ()",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Partial technical match (40.0%) or location eligibility requires manual review",
+      "source_url": "https://in.linkedin.com/jobs/view/senior-ai-infrastructure-engineer-at-office-beacon-llc-4438675846",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-ai-infrastructure-engineer-at-office-beacon-llc-4438675846",
+      "canonical_job_key": "officebeaconllc::ai,engineer,infrastructure::india_other",
+      "duplicate_check_result": "Unique opening (Never seen before)",
+      "previous_application_status": "NEW"
+    },
+    {
+      "company": "InMobi",
+      "job_title": "SDE III - Devops",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 50.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://job-boards.greenhouse.io/inmobi/jobs/7393433",
+      "official_application_url": "https://job-boards.greenhouse.io/inmobi/jobs/7393433",
+      "canonical_job_key": "inmobi::devops,iii,sde::blr",
+      "duplicate_check_result": "Previously discovered on 2026-10-24 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Meesho",
+      "job_title": "Security Architect - AI-Powered Security Engineering",
+      "location": "Bangalore, Karnataka",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 46.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Security/Hardening)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://jobs.lever.co/meesho/f2de8c5f-1636-428d-aaea-af1400142975",
+      "official_application_url": "https://jobs.lever.co/meesho/f2de8c5f-1636-428d-aaea-af1400142975",
+      "canonical_job_key": "meesho::ai,architect,engineering,powered,security::blr",
+      "duplicate_check_result": "Previously discovered on 2026-10-25 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Meesho",
+      "job_title": "Security Engineer III",
+      "location": "Bangalore, Karnataka",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 46.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Security/Hardening)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://jobs.lever.co/meesho/d2f50690-efbf-45c6-8985-1494901725e6",
+      "official_application_url": "https://jobs.lever.co/meesho/d2f50690-efbf-45c6-8985-1494901725e6",
+      "canonical_job_key": "meesho::engineer,iii,security::blr",
+      "duplicate_check_result": "Previously discovered on 2026-10-25 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Meesho",
+      "job_title": "Security Engineer IV",
+      "location": "Bangalore, Karnataka",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 46.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Security/Hardening)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://jobs.lever.co/meesho/f4e2e8e1-6863-4fe0-85fb-7840189cad3f",
+      "official_application_url": "https://jobs.lever.co/meesho/f4e2e8e1-6863-4fe0-85fb-7840189cad3f",
+      "canonical_job_key": "meesho::engineer,iv,security::blr",
+      "duplicate_check_result": "Previously discovered on 2026-10-25 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Meesho",
+      "job_title": "Engineering Manager- Platform",
+      "location": "Bangalore, Karnataka",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:30 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 43.0,
+      "score_reasons": [
+        "Core Tech: Matched 0/10 skill domains ()",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://jobs.lever.co/meesho/c428c9f1-d06c-47a3-aa61-7bd445401816",
+      "official_application_url": "https://jobs.lever.co/meesho/c428c9f1-d06c-47a3-aa61-7bd445401816",
+      "canonical_job_key": "meesho::engineering,manager,platform::blr",
+      "duplicate_check_result": "Previously discovered on 2026-10-25 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "InMobi",
+      "job_title": "Manager- Application Security",
+      "location": "Bengaluru",
+      "work_arrangement": "Hybrid Bengaluru",
+      "location_priority": "bengaluru",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 42.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Security/Hardening)",
+        "Duties: Aligned on Hardening & Compliance",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: BENGALURU (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://job-boards.greenhouse.io/inmobi/jobs/7116456",
+      "official_application_url": "https://job-boards.greenhouse.io/inmobi/jobs/7116456",
+      "canonical_job_key": "inmobi::application,manager,security::blr",
+      "duplicate_check_result": "Previously discovered on 2026-10-24 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Onebrief",
+      "job_title": "Solutions Engineer",
+      "location": "Worldwide / Remote",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-24",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "4+ years",
+      "candidate_experience_fit": "Ideal Fit (4+ years vs candidate's 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Ansible",
+        "Monitoring",
+        "Scripting"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 64.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (Ansible, Monitoring, Scripting)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation",
+        "Experience: Ideal Fit (4+ years vs candidate's 4.2 yrs total IT)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://remoteOK.com/remote-jobs/remote-solutions-engineer-onebrief-1137568",
+      "official_application_url": "https://remoteOK.com/remote-jobs/remote-solutions-engineer-onebrief-1137568",
+      "canonical_job_key": "onebrief::engineer::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-25 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Lemon.io",
+      "job_title": "Senior DevOps Engineer",
+      "location": "Worldwide / Remote",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-22",
+      "last_verification_timestamp": "2026-10-26 08:10:28 UTC",
+      "required_experience": "4+ years",
+      "candidate_experience_fit": "Ideal Fit (4+ years vs candidate's 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "CI/CD",
+        "Docker",
+        "Scripting"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 59.5,
+      "score_reasons": [
+        "Core Tech: Matched 3/10 skill domains (CI/CD, Docker, Scripting)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Automation",
+        "Experience: Ideal Fit (4+ years vs candidate's 4.2 yrs total IT)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://remoteOK.com/remote-jobs/remote-senior-devops-engineer-lemon-io-1137557",
+      "official_application_url": "https://remoteOK.com/remote-jobs/remote-senior-devops-engineer-lemon-io-1137557",
+      "canonical_job_key": "lemonio::devops,engineer::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-24 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Discord",
+      "job_title": "QA/DevOps Engineer",
+      "location": "Worldwide Remote",
+      "work_arrangement": "Remote (Worldwide / India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "Fri, 23 Oc",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "3-5 years",
+      "candidate_experience_fit": "Strong Fit (3-5 years vs candidate's 4.2 yrs)",
+      "relevant_technical_skills": [
+        "CI/CD",
+        "Docker"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 59.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (CI/CD, Docker)",
+        "Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Hardening & Compliance",
+        "Experience: Strong Fit (3-5 years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://weworkremotely.com/remote-jobs/discord-qa-devops-engineer",
+      "official_application_url": "https://weworkremotely.com/remote-jobs/discord-qa-devops-engineer",
+      "canonical_job_key": "discord::devops,engineer,qa::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-24 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Discord",
+      "job_title": "Engineering Manager, Platform Security",
+      "location": "Worldwide Remote",
+      "work_arrangement": "Remote (Worldwide / India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "Fri, 23 Oc",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "3+ years",
+      "candidate_experience_fit": "Strong Fit (3+ years vs candidate's 4.2 yrs)",
+      "relevant_technical_skills": [
+        "Security/Hardening"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 51.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Security/Hardening)",
+        "Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation",
+        "Experience: Strong Fit (3+ years vs candidate's 4.2 yrs)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://weworkremotely.com/remote-jobs/discord-engineering-manager-platform-security",
+      "official_application_url": "https://weworkremotely.com/remote-jobs/discord-engineering-manager-platform-security",
+      "canonical_job_key": "discord::engineering,manager,platform,security::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-24 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Tesco",
+      "job_title": "Hardcore Backend Engineer",
+      "location": "Work From Home",
+      "work_arrangement": "Remote within India",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [
+        "Azure",
+        "Scripting"
+      ],
+      "missing_mandatory_skills": [
+        "Kubernetes",
+        "Linux",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 47.0,
+      "score_reasons": [
+        "Core Tech: Matched 2/10 skill domains (Azure, Scripting)",
+        "Duties: Aligned on Provisioning & IaC, Automation",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://www.instahyre.com/job-446424-hardcore-backend-engineer-at-tesco-work-from-home",
+      "official_application_url": "https://www.instahyre.com/job-446424-hardcore-backend-engineer-at-tesco-work-from-home",
+      "canonical_job_key": "tesco::backend,engineer,hardcore::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-24 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Canonical",
+      "job_title": "Junior Linux Kernel Engineer - Ubuntu",
+      "location": "Anywhere",
+      "work_arrangement": "Remote (India Eligible)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-25",
+      "last_verification_timestamp": "2026-10-26 08:10:29 UTC",
+      "required_experience": "0-2 years",
+      "candidate_experience_fit": "Early Career Bracket (0-2 years)",
+      "relevant_technical_skills": [
+        "Linux"
+      ],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "Ansible"
+      ],
+      "estimated_profile_match_score": 43.5,
+      "score_reasons": [
+        "Core Tech: Matched 1/10 skill domains (Linux)",
+        "Duties: Aligned on Provisioning & IaC",
+        "Experience: Early Career Bracket (0-2 years)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://jobicy.com/jobs/149520-junior-linux-kernel-engineer-ubuntu",
+      "official_application_url": "https://jobicy.com/jobs/149520-junior-linux-kernel-engineer-ubuntu",
+      "canonical_job_key": "canonical::engineer,kernel,linux,ubuntu::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-25 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    },
+    {
+      "company": "Articore Group",
+      "job_title": "Engineering Manager",
+      "location": "Gurgaon",
+      "work_arrangement": "Onsite (Gurgaon)",
+      "location_priority": "india_other",
+      "original_posting_date": "2026-10-26",
+      "last_verification_timestamp": "2026-10-26 08:10:27 UTC",
+      "required_experience": "Unspecified",
+      "candidate_experience_fit": "Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)",
+      "relevant_technical_skills": [],
+      "missing_mandatory_skills": [
+        "Azure",
+        "Kubernetes",
+        "Linux",
+        "Terraform"
+      ],
+      "estimated_profile_match_score": 36.0,
+      "score_reasons": [
+        "Core Tech: Matched 0/10 skill domains ()",
+        "Duties: Aligned on Provisioning & IaC",
+        "Experience: Unspecified in posting (Startup flexible)",
+        "Location Fit: INDIA_OTHER (10.0/10 pts)"
+      ],
+      "recommendation": "REVIEW",
+      "reason_for_recommendation": "Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.",
+      "source_url": "https://www.instahyre.com/job-444366-engineering-manager-at-articore-group-gurgaon",
+      "official_application_url": "https://www.instahyre.com/job-444366-engineering-manager-at-articore-group-gurgaon",
+      "canonical_job_key": "articoregroup::engineering,manager::india_other",
+      "duplicate_check_result": "Previously discovered on 2026-10-24 (Duplicate cross-source merged).",
+      "previous_application_status": "PREVIOUSLY_REVIEWED"
+    }
+  ]
+}
