@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Daily Job Finder & Application Tracker</title>
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --surface: #151e2e;
+            --border: #223048;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --accent: #38bdf8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --radius: 10px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background: var(--bg); color: var(--text-main); line-height: 1.5; padding: 24px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* Top Header */
+        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+        .header-title h1 { font-size: 24px; font-weight: 700; color: #fff; }
+        .header-title p { color: var(--text-dim); font-size: 14px; margin-top: 4px; }
+        .profile-badge { background: #0284c7; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; }
+        .header-meta { text-align: right; font-size: 13px; color: var(--text-dim); }
+
+        /* Anti-Duplicate Banner */
+        .anti-spam-banner { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 24px; font-size: 13px; color: #a7f3d0; }
+        .anti-spam-banner strong { color: #34d399; }
+
+        /* KPI Metric Cards */
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+        .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+        .kpi-val { font-size: 28px; font-weight: 700; color: #fff; }
+        .kpi-label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+        .kpi-highlight { border-color: var(--accent); background: linear-gradient(180deg, var(--surface) 0%, rgba(56, 189, 248, 0.1) 100%); }
+
+        /* Sections */
+        .section-wrap { margin-bottom: 36px; }
+        .sec-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+        .sec-header h2 { font-size: 18px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+        .badge-count { background: var(--border); font-size: 12px; padding: 2px 8px; border-radius: 999px; color: var(--text-main); }
+        .loc-priority { font-size: 12px; color: var(--accent); font-weight: 600; text-transform: uppercase; }
+
+        /* Job Card */
+        .cards-list { display: flex; flex-direction: column; gap: 14px; }
+        .job-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+        .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 12px; }
+        .source-tag { font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+        .job-title { font-size: 18px; font-weight: 600; color: #fff; }
+        .company-name { font-size: 14px; color: var(--text-dim); }
+        .loc-text { color: #cbd5e1; }
+
+        .score-display { border: 2px solid; border-radius: 8px; padding: 6px 12px; text-align: center; min-width: 85px; }
+        .score-num { font-size: 20px; font-weight: 700; }
+        .score-lbl { font-size: 9px; text-transform: uppercase; }
+
+        .card-meta { display: flex; flex-wrap: wrap; gap: 16px; padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--text-dim); margin-bottom: 12px; }
+        .badge-verified { color: var(--success); font-weight: 600; }
+        .badge-unverified { color: var(--warning); font-weight: 600; }
+        .badge-status { background: #0369a1; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; }
+
+        .card-body { font-size: 13px; margin-bottom: 14px; }
+        .skills-block { margin-bottom: 8px; }
+        .block-title { font-weight: 600; color: var(--text-dim); font-size: 12px; }
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+        .skill-tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
+        .skill-tag.matched { background: rgba(56, 189, 248, 0.15); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .skill-tag.missing { background: rgba(239, 68, 68, 0.1); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.2); }
+
+        .rationale-block { background: rgba(11, 15, 25, 0.6); padding: 10px 14px; border-radius: 6px; margin-top: 10px; font-size: 12px; color: #cbd5e1; }
+        .score-reasons { margin: 6px 0 0 16px; color: var(--text-dim); }
+        .dup-box { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 6px; margin-top: 8px; font-size: 11px; color: #94a3b8; }
+
+        .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; flex-wrap: wrap; gap: 10px; }
+        .rec-badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 6px; }
+        .badge-apply { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+        .badge-applied { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); }
+        .badge-review { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+        .card-buttons { display: flex; gap: 8px; }
+        .btn { padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; transition: all 0.2s; }
+        .btn-primary { background: #0284c7; color: #fff; }
+        .btn-primary:hover { background: #0369a1; }
+        .btn-linkedin { background: #0a66c2; color: #fff; }
+        .btn-linkedin:hover { background: #084e96; }
+
+        .empty-box { background: var(--surface); border: 1px dashed var(--border); padding: 24px; text-align: center; color: var(--text-dim); border-radius: var(--radius); font-size: 14px; }
+        .excluded-box { background: var(--surface); border: 1px solid var(--border); padding: 18px; border-radius: var(--radius); }
+        .excluded-box ul { margin-left: 20px; font-size: 13px; color: var(--text-dim); }
+        .excluded-box li { margin-bottom: 4px; }
+
+        footer { text-align: center; font-size: 12px; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <h1>
+                    <span>Personalized Job Finder & Application Tracker</span>
+                    <span class="profile-badge">Azure Cloud Engineer (4+ Yrs IT)</span>
+                </h1>
+                <p>Strict Anti-Spam / Anti-Duplicate Architecture &bull; Official Career Pages Preferred &bull; Past 24h Verified</p>
+            </div>
+            <div class="header-meta">
+                <div><strong>Schedule:</strong> 08:30 IST Daily</div>
+                <div><strong>Run Timestamp:</strong> 28 Oct 2026, 02:32 PM IST</div>
+                <div><strong>Current Role:</strong> Azure Cloud Engineer at LTIMindtree</div>
+            </div>
+        </header>
+
+        <div class="anti-spam-banner">
+            <strong>🛡️ Mandatory Anti-Duplicate Protection Active:</strong> Canonical keying ensures one vacancy has one canonical record across LinkedIn, Wellfound, and official career portals. If you have already applied for a vacancy, the system permanently prevents duplicate application recommendations.
+        </div>
+
+        <div class="kpi-grid">
+            <div class="kpi-card kpi-highlight">
+                <div class="kpi-val">10</div>
+                <div class="kpi-label">1. Bengaluru New Confirmed</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val">4</div>
+                <div class="kpi-label">2. Other India Confirmed</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val">0</div>
+                <div class="kpi-label">3. Worldwide Remote (India)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val">4</div>
+                <div class="kpi-label">4. Previously Reviewed / Applied</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-val">0.0%</div>
+                <div class="kpi-label">Official Page Share (Confirmed)</div>
+            </div>
+        </div>
+
+        <!-- 1. BENGALURU — NEW CONFIRMED JOBS -->
+        <div class="section-wrap" id="sec-1">
+            <div class="sec-header">
+                <h2>🏢 1. Bengaluru — New Confirmed Jobs <span class="badge-count">10</span></h2>
+                <span class="loc-priority">Priority 1 (Highest Ranking)</span>
+            </div>
+            <div class="cards-list">
+                
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Cloud Engineer - 5+yrs - SRE, Cloud Operations, DevOps / Platform Engineering</h3>
+                        <div class="company-name">Cisco &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">63.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> 5+ years</div>
+                    <div><strong>Candidate Fit:</strong> Ideal Fit (5+ years vs candidate's 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span><span class="skill-tag matched">Monitoring</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (63.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (CI/CD, Docker, Monitoring)</li><li>Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Incident Response & SRE</li><li>Experience: Ideal Fit (5+ years vs candidate's 4.2 yrs total IT)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>cisco::5+yrs,cloud,devops,engineer,engineering,operations,platform,sre::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/cloud-engineer-5%2Byrs-sre-cloud-operations-devops-platform-engineering-at-cisco-4484031932" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/cloud-engineer-5%2Byrs-sre-cloud-operations-devops-platform-engineering-at-cisco-4484031932" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Azure Devops ,GitHub Actions, Docker, Kubernetes, Powershell/Scripting</h3>
+                        <div class="company-name">Cognizant &bull; <span class="loc-text">Bangalore Urban, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">61.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">Kubernetes</span><span class="skill-tag matched">Linux</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span><span class="skill-tag matched">Scripting</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span><span class="skill-tag missing">Monitoring</span><span class="skill-tag missing">Security/Hardening</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (61.0%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 6/10 skill domains (Azure, Kubernetes, Linux, CI/CD)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>cognizant::actions,azure,devops,docker,github,kubernetes,powershell,scripting::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-github-actions-docker-kubernetes-powershell-scripting-at-cognizant-4483662836" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-github-actions-docker-kubernetes-powershell-scripting-at-cognizant-4483662836" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Azure DevOps & Cloud Infrastructure Engineer</h3>
+                        <div class="company-name">CGI &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">54.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (54.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>cgi::&,azure,cloud,devops,engineer,infrastructure::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-cloud-infrastructure-engineer-at-cgi-4484090694" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-cloud-infrastructure-engineer-at-cgi-4484090694" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Platform Engineer II</h3>
+                        <div class="company-name">Increff &bull; <span class="loc-text">Bangalore (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">51.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Kubernetes</span><span class="skill-tag matched">Terraform</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Ansible</span><span class="skill-tag missing">CI/CD</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (51.0%), verified tech opening on Instahyre startup portal, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 2/10 skill domains (Kubernetes, Terraform)</li><li>Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>increff::engineer,ii,platform::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-446606-platform-engineer-ii-at-increff-bangalore" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Senior Systems Reliability Engineer (P3)</h3>
+                        <div class="company-name">OP &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">51.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Linux</span><span class="skill-tag matched">Monitoring</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (51.0%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 2/10 skill domains (Linux, Monitoring)</li><li>Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching, Incident Response & SRE</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>op::engineer,p3,reliability,systems::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/senior-systems-reliability-engineer-p3-at-op-4481879997" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/senior-systems-reliability-engineer-p3-at-op-4481879997" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Cloud Engineer – Azure / DevOps</h3>
+                        <div class="company-name">Synechron &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>synechron::azure,cloud,devops,engineer::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/cloud-engineer-%E2%80%93-azure-devops-at-synechron-4483620426" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/cloud-engineer-%E2%80%93-azure-devops-at-synechron-4483620426" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Azure DevOps Engineer</h3>
+                        <div class="company-name">UST &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>ust::azure,devops,engineer::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-at-ust-4473653561" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-at-ust-4473653561" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Azure Devops Engineer</h3>
+                        <div class="company-name">Epiroc &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>epiroc::azure,devops,engineer::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-at-epiroc-4474291967" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-at-epiroc-4474291967" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">DevOps Engineer</h3>
+                        <div class="company-name">Visara Partners &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>visarapartners::devops,engineer::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/devops-engineer-at-visara-partners-4481895274" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/devops-engineer-at-visara-partners-4481895274" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">AWS Platform Engineer – Terraform | Kubernetes | AI/ML Cloud Services</h3>
+                        <div class="company-name">Synechron &bull; <span class="loc-text">Greater Bengaluru Area (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Kubernetes</span><span class="skill-tag matched">Terraform</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Ansible</span><span class="skill-tag missing">CI/CD</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Kubernetes, Terraform, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>synechron::ai,aws,cloud,engineer,kubernetes,ml,platform,terraform,|::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/aws-platform-engineer-%E2%80%93-terraform-kubernetes-ai-ml-cloud-services-at-synechron-4474681364" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/aws-platform-engineer-%E2%80%93-terraform-kubernetes-ai-ml-cloud-services-at-synechron-4474681364" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- 2. OTHER INDIA LOCATIONS — NEW CONFIRMED JOBS -->
+        <div class="section-wrap" id="sec-2">
+            <div class="sec-header">
+                <h2>🇮🇳 2. Other India Locations — New Confirmed Jobs <span class="badge-count">4</span></h2>
+                <span class="loc-priority">Priority 2 (Chennai, Pune, Hyderabad, NCR)</span>
+            </div>
+            <div class="cards-list">
+                
+            <div class="job-card" data-location="india_other" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">DevOps Engineer</h3>
+                        <div class="company-name">Highradius &bull; <span class="loc-text">Hyderabad (Onsite (Hyderabad))</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">57.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">Kubernetes</span><span class="skill-tag matched">Terraform</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Ansible</span><span class="skill-tag missing">Monitoring</span><span class="skill-tag missing">Security/Hardening</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (57.5%), verified tech opening on Instahyre startup portal, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 5/10 skill domains (Azure, Kubernetes, Terraform, CI/CD)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>highradius::devops,engineer::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-439890-devops-engineer-at-highradius-hyderabad" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Developer III - DevOps Engineering - SRE</h3>
+                        <div class="company-name">UST &bull; <span class="loc-text">Trivandrum, Kerala, India (Onsite India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">54.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span><span class="skill-tag matched">Monitoring</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (54.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (CI/CD, Docker, Monitoring)</li><li>Duties: Aligned on Provisioning & IaC, Incident Response & SRE, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>ust::developer,devops,engineering,iii,sre::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/developer-iii-devops-engineering-sre-at-ust-4481878305" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/developer-iii-devops-engineering-sre-at-ust-4481878305" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">AES - DE - DevOps - Azure DevOps</h3>
+                        <div class="company-name">Zensar Technologies &bull; <span class="loc-text">Pune Division, Maharashtra, India (Onsite India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>zensar::aes,azure,de,devops::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/aes-de-devops-azure-devops-at-zensar-technologies-4483803964" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/aes-de-devops-azure-devops-at-zensar-technologies-4483803964" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="APPLY" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Azure DevOps Engineer</h3>
+                        <div class="company-name">Luxoft &bull; <span class="loc-text">Pune District, Maharashtra, India (Onsite India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Strong technical fit (50.5%), verified employer opening on LinkedIn past 24h feed, direct application route
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>luxoft::azure,devops,engineer::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-apply">Recommendation: APPLY (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-at-luxoft-4484023601" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-at-luxoft-4484023601" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- 3. WORLDWIDE REMOTE — CONFIRMED JOBS ELIGIBLE FOR INDIA -->
+        <div class="section-wrap" id="sec-3">
+            <div class="sec-header">
+                <h2>🌐 3. Worldwide Remote — Confirmed Jobs Eligible for India-Based Applicants <span class="badge-count">0</span></h2>
+                <span class="loc-priority">Priority 3 (Explicitly Verified India Remote)</span>
+            </div>
+            <div class="cards-list">
+                <div class="empty-box">No new worldwide remote openings with verified India eligibility.</div>
+            </div>
+        </div>
+
+        <!-- 4. PREVIOUSLY REVIEWED JOBS -->
+        <div class="section-wrap" id="sec-4">
+            <div class="sec-header">
+                <h2>📋 4. Previously Reviewed & Applied Jobs (3-Day Display Window) <span class="badge-count">4</span></h2>
+                <span class="loc-priority">Historical Audit &bull; Anti-Spam Lock</span>
+            </div>
+            <div class="cards-list">
+                
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="PREVIOUSLY_REVIEWED">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">PREVIOUSLY_REVIEWED</span></div>
+                        <h3 class="job-title">Senior Data Migration Engineer</h3>
+                        <div class="company-name">Klimb.io &bull; <span class="loc-text">Bangalore,Pune (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">36.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Previously discovered on 2026-10-27 (Duplicate cross-source merged). &bull; <code>klimbio::data,engineer,migration::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (PREVIOUSLY_REVIEWED)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-447588-senior-data-migration-engineer-at-klimb-bangalore-pune" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="PREVIOUSLY_REVIEWED">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">WeWorkRemotely &bull; <span class="badge-status">PREVIOUSLY_REVIEWED</span></div>
+                        <h3 class="job-title">DevOps Engineer II, Cloud Platform</h3>
+                        <div class="company-name">Upstart &bull; <span class="loc-text">Worldwide Remote (Remote (Worldwide / India Eligible))</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">55.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> 3+ years</div>
+                    <div><strong>Candidate Fit:</strong> Strong Fit (3+ years vs candidate's 4.2 yrs)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: Mon, 26 Oc</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.
+                        <ul class="score-reasons"><li>Core Tech: Matched 2/10 skill domains (CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation</li><li>Experience: Strong Fit (3+ years vs candidate's 4.2 yrs)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Previously discovered on 2026-10-26 (Duplicate cross-source merged). &bull; <code>upstart::cloud,devops,engineer,ii,platform::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (PREVIOUSLY_REVIEWED)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://weworkremotely.com/remote-jobs/upstart-devops-engineer-ii-cloud-platform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="PREVIOUSLY_REVIEWED">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">PREVIOUSLY_REVIEWED</span></div>
+                        <h3 class="job-title">Senior Software Engineer (MTS)</h3>
+                        <div class="company-name">Quantum Capital Group &bull; <span class="loc-text">Work From Home (Remote within India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">38.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Previously reviewed vacancy from earlier run (Day 2 of 3 display window). No duplicate application recommended.
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Previously discovered on 2026-10-27 (Duplicate cross-source merged). &bull; <code>quantumcapitalgroup::engineer,mts,software::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (PREVIOUSLY_REVIEWED)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-446423-senior-software-engineer-mts-at-quantum-capital-group-work-from-home" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="PREVIOUSLY_REVIEWED">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">PREVIOUSLY_REVIEWED</span></div>
+                        <h3 class="job-title">Senior Fullstack Engineer</h3>
+                        <div class="company-name">GoGuardian &bull; <span class="loc-text">Work From Home (Remote within India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">36.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Previously discovered on 2026-10-26 (Duplicate cross-source merged). &bull; <code>goguardian::engineer,fullstack::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (PREVIOUSLY_REVIEWED)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-407670-senior-fullstack-engineer-at-goguardian-work-from-home" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- 5. DATE-UNVERIFIED OR EMPLOYER-VERIFICATION-PENDING LEADS -->
+        <div class="section-wrap" id="sec-5">
+            <div class="sec-header">
+                <h2>🔍 5. Date-Unverified or Verification-Pending Leads (LinkedIn / Wellfound) <span class="badge-count">15</span></h2>
+                <span class="loc-priority">Review Manually Before Applying</span>
+            </div>
+            <div class="cards-list">
+                
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Backend Engineer</h3>
+                        <div class="company-name">Consuma &bull; <span class="loc-text">Bangalore (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">45.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Scripting</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (45.5%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 1/10 skill domains (Scripting)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>consuma::backend,engineer::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-448159-backend-engineer-at-consuma-bangalore" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Sr. Cloud Engineer - Databricks/AI focus ( 5-9 years) Bangalore</h3>
+                        <div class="company-name">Sandisk &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">44.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> 5-9 years</div>
+                    <div><strong>Candidate Fit:</strong> Ideal Fit (5-9 years vs candidate's 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (44.5%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 1/10 skill domains (Azure)</li><li>Duties: Aligned on Provisioning & IaC</li><li>Experience: Ideal Fit (5-9 years vs candidate's 4.2 yrs total IT)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>sandisk::5,9,ai,bangalore,cloud,databricks,engineer,focus,years::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/sr-cloud-engineer-databricks-ai-focus-5-9-years-bangalore-at-sandisk-4478354025" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/sr-cloud-engineer-databricks-ai-focus-5-9-years-bangalore-at-sandisk-4478354025" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">AI Engineer</h3>
+                        <div class="company-name">Flipkart &bull; <span class="loc-text">Bangalore (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">43.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Scripting</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (43.5%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 1/10 skill domains (Scripting)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>flipkart::ai,engineer::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-425985-ai-engineer-at-flipkart-bangalore" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Site Reliability Engineer - JL6</h3>
+                        <div class="company-name">Infosys &bull; <span class="loc-text">Bengaluru East, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">43.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Monitoring</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (43.5%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 1/10 skill domains (Monitoring)</li><li>Duties: Aligned on Provisioning & IaC, Incident Response & SRE</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>infosys::engineer,jl6,reliability,site::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/site-reliability-engineer-jl6-at-infosys-4474652646" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/site-reliability-engineer-jl6-at-infosys-4474652646" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Sr. Product Software Engineer II</h3>
+                        <div class="company-name">The Walt Disney Company &bull; <span class="loc-text">Bangalore (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">41.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (41.0%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>waltdisneycompany::engineer,ii,product,software::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-446487-sr-product-software-engineer-ii-at-the-walt-disney-company-bangalore" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Senior Platform Engineer - GCP</h3>
+                        <div class="company-name">Candescent &bull; <span class="loc-text">Greater Bengaluru Area (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">40.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (40.0%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>candescent::engineer,gcp,platform::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/senior-platform-engineer-gcp-at-candescent-4482203307" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/senior-platform-engineer-gcp-at-candescent-4482203307" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="bengaluru" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Senior Cloud Platform Engineer</h3>
+                        <div class="company-name">MOZN &bull; <span class="loc-text">Bengaluru, Karnataka, India (Hybrid Bengaluru)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">40.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (40.0%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>mozn::cloud,engineer,platform::blr</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/senior-cloud-platform-engineer-at-mozn-4483614740" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/senior-cloud-platform-engineer-at-mozn-4483614740" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Software Engineer</h3>
+                        <div class="company-name">Juleo &bull; <span class="loc-text">Gurgaon (Onsite (Gurgaon))</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">47.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Scripting</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (47.5%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 1/10 skill domains (Scripting)</li><li>Duties: Aligned on Provisioning & IaC, Hardening & Compliance, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>juleo::engineer,software::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-408964-software-engineer-at-juleo-gurgaon" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Backend Engineer</h3>
+                        <div class="company-name">Knowl &bull; <span class="loc-text">Mumbai (Onsite (Mumbai))</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">47.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">Scripting</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (47.0%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 2/10 skill domains (Azure, Scripting)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>knowl::backend,engineer::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-443839-backend-engineer-at-knowl-mumbai" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Azure Cloud Engineer - 4-7 yrs Immediate Joiner (Night Shift)</h3>
+                        <div class="company-name">Euphoric Thought Technologies Pvt. Ltd. &bull; <span class="loc-text">Noida, Uttar Pradesh, India (Onsite India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">44.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> 4-7 years</div>
+                    <div><strong>Candidate Fit:</strong> Ideal Fit (4-7 years vs candidate's 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (44.5%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 1/10 skill domains (Azure)</li><li>Duties: Aligned on Provisioning & IaC</li><li>Experience: Ideal Fit (4-7 years vs candidate's 4.2 yrs total IT)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>euphoricthoughtpvt::4,7,azure,cloud,engineer,immediate,joiner,night,shift,yrs::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/azure-cloud-engineer-4-7-yrs-immediate-joiner-night-shift-at-euphoric-thought-technologies-pvt-ltd-4481891728" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/azure-cloud-engineer-4-7-yrs-immediate-joiner-night-shift-at-euphoric-thought-technologies-pvt-ltd-4481891728" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Senior Cloud & Infrastructure Engineer-PL</h3>
+                        <div class="company-name">IAssess Consultants LLP &bull; <span class="loc-text">Vadodara, Gujarat, India (Onsite India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">43.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (43.5%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 1/10 skill domains (Azure)</li><li>Duties: Aligned on Provisioning & IaC, Cloud Operations & Patching</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>iassessconsultantsllp::&,cloud,engineer,infrastructure,pl::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-pl-at-iassess-consultants-llp-4483836977" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-pl-at-iassess-consultants-llp-4483836977" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">Instahyre &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Backend Engineer</h3>
+                        <div class="company-name">Optifye &bull; <span class="loc-text">Work From Home (Remote within India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">43.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Kubernetes</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (43.0%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 2/10 skill domains (Kubernetes, Docker)</li><li>Duties: Aligned on Provisioning & IaC</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>optifye::backend,engineer::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        
+                        <a href="https://www.instahyre.com/job-379100-backend-engineer-at-optifye-work-from-home" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Senior Cloud Engineer – AWS Platform</h3>
+                        <div class="company-name">FIS &bull; <span class="loc-text">Pune/Pimpri-Chinchwad Area (Remote)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">40.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (40.0%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>fis::aws,cloud,engineer,platform::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/senior-cloud-engineer-%E2%80%93-aws-platform-at-fis-4484064030" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/senior-cloud-engineer-%E2%80%93-aws-platform-at-fis-4484064030" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="NEW">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">NEW</span></div>
+                        <h3 class="job-title">Platform Engineer</h3>
+                        <div class="company-name">Jobgether &bull; <span class="loc-text">India (Onsite India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">40.0%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-28</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="dim">Fundamentals aligned</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Azure</span><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Partial technical match (40.0%) or location eligibility requires manual review
+                        <ul class="score-reasons"><li>Core Tech: Matched 0/10 skill domains ()</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Unique opening (Never seen before) &bull; <code>jobgether::engineer,platform::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (NEW)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/platform-engineer-at-jobgether-4483840108" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/platform-engineer-at-jobgether-4483840108" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="job-card" data-location="india_other" data-rec="REVIEW" data-status="PREVIOUSLY_REVIEWED">
+                <div class="card-top">
+                    <div>
+                        <div class="source-tag">LinkedIn Jobs &bull; <span class="badge-status">PREVIOUSLY_REVIEWED</span></div>
+                        <h3 class="job-title">Azure Devops Engineer IRC306974</h3>
+                        <div class="company-name">GlobalLogic &bull; <span class="loc-text">Chennai, Tamil Nadu, India (Onsite India)</span></div>
+                    </div>
+                    <div class="score-display" style="border-color: #f59e0b; color: #f59e0b;">
+                        <div class="score-num">50.5%</div>
+                        <div class="score-lbl">Profile Match</div>
+                    </div>
+                </div>
+
+                <div class="card-meta">
+                    <div><strong>Exp Required:</strong> Unspecified</div>
+                    <div><strong>Candidate Fit:</strong> Unspecified Experience (Startup Flexible - Candidate has 4.2 yrs total IT)</div>
+                    <div><strong>Posting Date:</strong> <span class="badge-verified">Verified 24h: 2026-10-27</span></div>
+                    <div><strong>Last Verified:</strong> 2026-10-28</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="skills-block">
+                        <span class="block-title">Key Matching Technologies:</span>
+                        <div class="tag-cloud"><span class="skill-tag matched">Azure</span><span class="skill-tag matched">CI/CD</span><span class="skill-tag matched">Docker</span></div>
+                    </div>
+                    
+                    <div class="skills-block">
+                        <span class="block-title">Missing / Clarify Skills:</span>
+                        <div class="tag-cloud"><span class="skill-tag missing">Kubernetes</span><span class="skill-tag missing">Linux</span><span class="skill-tag missing">Terraform</span><span class="skill-tag missing">Ansible</span></div>
+                    </div>
+                    
+
+                    <div class="rationale-block">
+                        <strong>Evaluation Rationale:</strong> Previously reviewed vacancy from earlier run (Day 3 of 3 display window). No duplicate application recommended.
+                        <ul class="score-reasons"><li>Core Tech: Matched 3/10 skill domains (Azure, CI/CD, Docker)</li><li>Duties: Aligned on Provisioning & IaC, Automation</li><li>Experience: Unspecified in posting (Startup flexible)</li></ul>
+                    </div>
+                    <div class="dup-box"><strong>Anti-Duplicate Check:</strong> Previously discovered on 2026-10-26 (Duplicate cross-source merged). &bull; <code>globallogic::azure,devops,engineer,irc306974::india_other</code></div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="rec-badge badge-review">Recommendation: REVIEW (PREVIOUSLY_REVIEWED)</span>
+                    <div class="card-buttons">
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-irc306974-at-globallogic-4483678120" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">LinkedIn Job Link ↗</a>
+                        <a href="https://in.linkedin.com/jobs/view/azure-devops-engineer-irc306974-at-globallogic-4483678120" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Application URL ➔</a>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- 6. POSSIBLE DUPLICATES REQUIRING REVIEW -->
+        <div class="section-wrap" id="sec-6">
+            <div class="sec-header">
+                <h2>⚠️ 6. Possible Duplicates Requiring Review <span class="badge-count">0</span></h2>
+            </div>
+            <div class="cards-list">
+                <div class="empty-box">Zero duplicate ambiguities detected. All vacancies cleanly resolved.</div>
+            </div>
+        </div>
+
+        <!-- 7. SUMMARY OF EXCLUDED JOBS AND REASONS -->
+        <div class="section-wrap" id="sec-7">
+            <div class="sec-header">
+                <h2>⛔ 7. Summary of Excluded Jobs and Audit Reasons</h2>
+            </div>
+            <div class="excluded-box">
+                <ul>
+                    <li>Roles requiring 7+ years hard minimum were excluded (candidate has 4.2 yrs total IT experience)</li><li>Third-party staffing agencies (e.g. Recruise, Randstad, Michael Page) without identified direct employer were rejected</li><li>Non-infrastructure roles (Sales, Marketing, HR, Business Development) were excluded</li><li>Timezone-restricted postings (US Only, CET/Europe Only) were filtered out</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>Antigravity Daily Job Finder &bull; Anti-Spam Canonical Keying Active &bull; Automated 08:30 IST Schedule</p>
+        </footer>
+    </div>
+</body>
+</html>
