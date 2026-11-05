@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-11-04T09:59:53.868273+00:00",
-  "total_records": 668,
+  "last_updated": "2026-11-05T09:57:26.608230+00:00",
+  "total_records": 704,
   "applied_count": 0,
   "records": {
     "devzero::&,cloud,engineer,infrastructure,platform::blr": {
@@ -20,7 +20,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.361511+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.836543+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.575926+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Wellfound on 2026-10-20"
@@ -41,7 +41,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.361511+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.837047+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.576429+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Wellfound on 2026-10-20"
@@ -104,7 +104,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.364101+00:00",
       "original_posting_date": "2026-10-05",
-      "last_verified_at": "2026-11-04T09:59:53.839085+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.578700+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via RemoteOK on 2026-10-20"
@@ -273,7 +273,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.367587+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.857025+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.596948+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -294,7 +294,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368179+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.857177+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.597107+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -315,7 +315,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368179+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.857317+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.597245+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -336,7 +336,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.857498+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.597384+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -357,7 +357,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368487+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.857651+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.597525+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -378,7 +378,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.857795+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.597663+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -399,7 +399,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.857932+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.597795+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -420,7 +420,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.858086+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.597968+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -441,7 +441,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.368997+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.858233+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.598106+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -462,7 +462,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.858366+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.598235+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -483,7 +483,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.858536+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.598375+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -504,7 +504,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.369737+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.858677+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.598511+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -525,7 +525,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.858818+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.598640+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -546,7 +546,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.858959+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.598780+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -567,7 +567,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.370749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.859105+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.598946+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -588,7 +588,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.371749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.859250+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.599088+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -609,7 +609,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.371749+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.859416+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.599230+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -630,7 +630,7 @@
       ],
       "first_discovered_at": "2026-10-20T07:12:57.372748+00:00",
       "original_posting_date": "2026-10-20",
-      "last_verified_at": "2026-11-04T09:59:53.859556+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.599373+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Company Career Pages on 2026-10-20"
@@ -2355,7 +2355,7 @@
       ],
       "first_discovered_at": "2026-10-23T07:59:23.878065+00:00",
       "original_posting_date": "2026-10-22",
-      "last_verified_at": "2026-10-23T07:59:23.878181+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.588665+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-23"
@@ -2940,7 +2940,7 @@
       ],
       "first_discovered_at": "2026-10-24T07:38:59.868953+00:00",
       "original_posting_date": "2026-10-22",
-      "last_verified_at": "2026-11-04T09:59:53.838652+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.578368+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via RemoteOK on 2026-10-24"
@@ -3973,7 +3973,7 @@
       ],
       "first_discovered_at": "2026-10-24T08:00:22.147290+00:00",
       "original_posting_date": "2026-10-24",
-      "last_verified_at": "2026-11-04T09:59:53.855921+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.595762+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Startup ATS Portals on 2026-10-24"
@@ -3994,7 +3994,7 @@
       ],
       "first_discovered_at": "2026-10-24T08:00:22.147443+00:00",
       "original_posting_date": "2026-10-24",
-      "last_verified_at": "2026-11-04T09:59:53.856060+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.595930+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Startup ATS Portals on 2026-10-24"
@@ -4015,7 +4015,7 @@
       ],
       "first_discovered_at": "2026-10-25T07:51:02.522110+00:00",
       "original_posting_date": "2026-10-24",
-      "last_verified_at": "2026-11-04T09:59:53.838332+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.578118+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via RemoteOK on 2026-10-25"
@@ -4555,7 +4555,7 @@
       ],
       "first_discovered_at": "2026-10-25T07:51:02.528873+00:00",
       "original_posting_date": "2026-10-25",
-      "last_verified_at": "2026-11-04T09:59:53.856192+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.596068+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Startup ATS Portals on 2026-10-25"
@@ -4576,7 +4576,7 @@
       ],
       "first_discovered_at": "2026-10-25T07:51:02.528965+00:00",
       "original_posting_date": "2026-10-25",
-      "last_verified_at": "2026-11-04T09:59:53.856328+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.596199+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Startup ATS Portals on 2026-10-25"
@@ -4618,7 +4618,7 @@
       ],
       "first_discovered_at": "2026-10-25T07:51:02.529129+00:00",
       "original_posting_date": "2026-10-25",
-      "last_verified_at": "2026-11-04T09:59:53.856641+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.596456+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Startup ATS Portals on 2026-10-25"
@@ -4947,7 +4947,7 @@
       ],
       "first_discovered_at": "2026-10-25T07:51:02.530764+00:00",
       "original_posting_date": "2026-10-25",
-      "last_verified_at": "2026-11-04T09:59:53.842200+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.586659+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Instahyre on 2026-10-25"
@@ -5121,7 +5121,7 @@
       ],
       "first_discovered_at": "2026-10-26T08:10:39.189820+00:00",
       "original_posting_date": "Mon, 26 Oc",
-      "last_verified_at": "2026-11-04T09:59:53.837705+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.577016+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via WeWorkRemotely on 2026-10-26"
@@ -6073,11 +6073,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-azure-at-lseg-4474266581",
       "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-azure-devops-engineer-at-lseg-4468795269",
         "https://in.linkedin.com/jobs/view/senior-devops-engineer-azure-at-lseg-4474266581"
       ],
       "first_discovered_at": "2026-10-27T08:25:34.034485+00:00",
       "original_posting_date": "2026-10-26",
-      "last_verified_at": "2026-10-27T08:25:34.035885+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.590083+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-27"
@@ -6749,13 +6750,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://www.instahyre.com/job-448217-data-scientist-at-arya-mumbai",
       "all_source_urls": [
-        "https://www.instahyre.com/job-448217-data-scientist-at-arya-mumbai",
         "https://www.instahyre.com/job-448217-data-scientist-at-arya-mumbai"
       ],
       "first_discovered_at": "2026-10-27T08:25:34.043430+00:00",
       "original_posting_date": "2026-10-27",
-      "last_verified_at": "2026-10-27T08:25:34.043430+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.582210+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Instahyre on 2026-10-27"
     },
@@ -6885,7 +6885,7 @@
       ],
       "first_discovered_at": "2026-10-27T08:25:34.046507+00:00",
       "original_posting_date": "2026-10-27",
-      "last_verified_at": "2026-11-04T09:59:53.856876+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.596710+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Startup ATS Portals on 2026-10-27"
@@ -7579,13 +7579,13 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/specialist-cloud-engineering-at-ltm-4484026996",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/specialist-cloud-engineering-at-ltm-4484026996",
+        "https://in.linkedin.com/jobs/view/senior-specialist-cloud-engineering-at-ltm-4487714982",
         "https://in.linkedin.com/jobs/view/specialist-cloud-engineering-at-ltm-4484026996"
       ],
       "first_discovered_at": "2026-10-28T09:02:39.212366+00:00",
       "original_posting_date": "2026-10-27",
-      "last_verified_at": "2026-10-28T09:02:39.212366+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.588794+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-10-28"
     },
@@ -8232,12 +8232,12 @@
       "canonical_application_url": "https://www.instahyre.com/job-448174-sr-sde-at-highlevel-work-from-home",
       "all_source_urls": [
         "https://www.instahyre.com/job-448174-sr-sde-at-highlevel-work-from-home",
-        "https://www.instahyre.com/job-448174-sr-sde-at-highlevel-work-from-home"
+        "https://www.instahyre.com/job-449244-senior-sde-at-highlevel-work-from-home"
       ],
       "first_discovered_at": "2026-10-29T09:00:15.472209+00:00",
       "original_posting_date": "2026-10-29",
-      "last_verified_at": "2026-10-29T09:00:15.472209+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.583684+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Instahyre on 2026-10-29"
     },
@@ -12400,13 +12400,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://www.instahyre.com/job-448606-sde-2-at-birla-pivot-bangalore",
       "all_source_urls": [
-        "https://www.instahyre.com/job-448606-sde-2-at-birla-pivot-bangalore",
         "https://www.instahyre.com/job-448606-sde-2-at-birla-pivot-bangalore"
       ],
       "first_discovered_at": "2026-11-02T10:08:43.530172+00:00",
       "original_posting_date": "2026-11-02",
-      "last_verified_at": "2026-11-02T10:08:43.530172+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.583906+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Instahyre on 2026-11-02"
     },
@@ -12663,13 +12662,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://www.instahyre.com/job-448796-sdet-ii-automation-at-workongrid-bangalore",
       "all_source_urls": [
-        "https://www.instahyre.com/job-448796-sdet-ii-automation-at-workongrid-bangalore",
         "https://www.instahyre.com/job-448796-sdet-ii-automation-at-workongrid-bangalore"
       ],
       "first_discovered_at": "2026-11-03T10:10:42.029297+00:00",
       "original_posting_date": "2026-11-03",
-      "last_verified_at": "2026-11-03T10:10:42.029297+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.582975+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Instahyre on 2026-11-03"
     },
@@ -13563,7 +13561,7 @@
       ],
       "first_discovered_at": "2026-11-03T10:10:42.049015+00:00",
       "original_posting_date": "2026-11-03",
-      "last_verified_at": "2026-11-04T09:59:53.856504+00:00",
+      "last_verified_at": "2026-11-05T09:57:26.596330+00:00",
       "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Official Startup ATS Portals on 2026-11-03"
@@ -13580,13 +13578,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://jobicy.com/jobs/150052-1775-rpg-as400-jd-edwards-enterpriseone-developer",
       "all_source_urls": [
-        "https://jobicy.com/jobs/150052-1775-rpg-as400-jd-edwards-enterpriseone-developer",
         "https://jobicy.com/jobs/150052-1775-rpg-as400-jd-edwards-enterpriseone-developer"
       ],
       "first_discovered_at": "2026-11-04T09:59:53.839662+00:00",
       "original_posting_date": "2026-11-04",
-      "last_verified_at": "2026-11-04T09:59:53.839662+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.580299+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Jobicy on 2026-11-04"
     },
@@ -13646,13 +13643,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://www.arbeitnow.nl/jobs/companies/almaviva-de-belgique/power-platform-and-azure-devops-expert-remote-from-eu-amsterdam-110494",
       "all_source_urls": [
-        "https://www.arbeitnow.nl/jobs/companies/almaviva-de-belgique/power-platform-and-azure-devops-expert-remote-from-eu-amsterdam-110494",
         "https://www.arbeitnow.nl/jobs/companies/almaviva-de-belgique/power-platform-and-azure-devops-expert-remote-from-eu-amsterdam-110494"
       ],
       "first_discovered_at": "2026-11-04T09:59:53.840969+00:00",
       "original_posting_date": "2026-11-04",
-      "last_verified_at": "2026-11-04T09:59:53.840969+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.579249+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Arbeitnow on 2026-11-04"
     },
@@ -13756,13 +13752,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://www.instahyre.com/job-437720-full-stack-engineer-java-at-wissen-technology-bangalore",
       "all_source_urls": [
-        "https://www.instahyre.com/job-437720-full-stack-engineer-java-at-wissen-technology-bangalore",
         "https://www.instahyre.com/job-437720-full-stack-engineer-java-at-wissen-technology-bangalore"
       ],
       "first_discovered_at": "2026-11-04T09:59:53.842643+00:00",
       "original_posting_date": "2026-11-04",
-      "last_verified_at": "2026-11-04T09:59:53.842643+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.587553+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Instahyre on 2026-11-04"
     },
@@ -13954,13 +13949,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://www.instahyre.com/job-449081-full-stack-engineer-at-fundapps-bangalore",
       "all_source_urls": [
-        "https://www.instahyre.com/job-449081-full-stack-engineer-at-fundapps-bangalore",
         "https://www.instahyre.com/job-449081-full-stack-engineer-at-fundapps-bangalore"
       ],
       "first_discovered_at": "2026-11-04T09:59:53.845876+00:00",
       "original_posting_date": "2026-11-04",
-      "last_verified_at": "2026-11-04T09:59:53.845876+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.582764+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via Instahyre on 2026-11-04"
     },
@@ -14477,13 +14471,12 @@
       "other_source_job_ids": [],
       "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-platform-infrastructure-engineer-at-fnz-4411557135",
       "all_source_urls": [
-        "https://in.linkedin.com/jobs/view/senior-platform-infrastructure-engineer-at-fnz-4411557135",
         "https://in.linkedin.com/jobs/view/senior-platform-infrastructure-engineer-at-fnz-4411557135"
       ],
       "first_discovered_at": "2026-11-04T09:59:53.855144+00:00",
       "original_posting_date": "2026-11-04",
-      "last_verified_at": "2026-11-04T09:59:53.855144+00:00",
-      "status": "NEW",
+      "last_verified_at": "2026-11-05T09:57:26.595631+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-11-04"
     },
@@ -14508,6 +14501,790 @@
       "status": "NEW",
       "application_date": null,
       "notes": "Discovered via LinkedIn Jobs on 2026-11-04"
+    },
+    "searchatlas::engineer,pm,product::india_other": {
+      "canonical_job_key": "searchatlas::engineer,pm,product::india_other",
+      "company": "Search Atlas",
+      "job_title": "Product Engineer (PM)",
+      "location": "REMOTE (anywhere, EST hours)",
+      "work_arrangement": "Remote (Worldwide / India Eligible)",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://careers.searchatlas.com/jobs/599248-product-engineer-pm",
+      "all_source_urls": [
+        "https://careers.searchatlas.com/jobs/599248-product-engineer-pm",
+        "https://careers.searchatlas.com/jobs/599248-product-engineer-pm"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.577474+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.577474+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Hacker News (Who is Hiring) on 2026-11-05"
+    },
+    "testlio::future,qa,roles,tester::india_other": {
+      "canonical_job_key": "testlio::future,qa,roles,tester::india_other",
+      "company": "Testlio",
+      "job_title": "QA Tester (Future Roles)",
+      "location": "Anywhere",
+      "work_arrangement": "Remote (India Eligible)",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://jobicy.com/jobs/152401-qa-tester-future-roles",
+      "all_source_urls": [
+        "https://jobicy.com/jobs/152401-qa-tester-future-roles",
+        "https://jobicy.com/jobs/152401-qa-tester-future-roles"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.579514+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.579514+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Jobicy on 2026-11-05"
+    },
+    "digitinsurance::engineer,python,software::blr": {
+      "canonical_job_key": "digitinsurance::engineer,python,software::blr",
+      "company": "Digit Insurance",
+      "job_title": "Senior Software Engineer - Python",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-446463-senior-software-engineer-python-at-digit-insurance-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-446463-senior-software-engineer-python-at-digit-insurance-bangalore",
+        "https://www.instahyre.com/job-446463-senior-software-engineer-python-at-digit-insurance-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.580605+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.580605+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "credflowai::backend,engineer::india_other": {
+      "canonical_job_key": "credflowai::backend,engineer::india_other",
+      "company": "CredFlow AI",
+      "job_title": "Backend Engineer",
+      "location": "Delhi,Gurgaon",
+      "work_arrangement": "Onsite (Delhi,Gurgaon)",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-444763-backend-engineer-at-credflow-ai-delhi-gurgaon",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-444763-backend-engineer-at-credflow-ai-delhi-gurgaon",
+        "https://www.instahyre.com/job-444763-backend-engineer-at-credflow-ai-delhi-gurgaon"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.580923+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.580923+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "studioarunisha::editor,video::india_other": {
+      "canonical_job_key": "studioarunisha::editor,video::india_other",
+      "company": "Studio Arunisha",
+      "job_title": "Video Editor",
+      "location": "Gurgaon",
+      "work_arrangement": "Onsite (Gurgaon)",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-447913-video-editor-at-studio-arunisha-gurgaon",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-447913-video-editor-at-studio-arunisha-gurgaon",
+        "https://www.instahyre.com/job-447913-video-editor-at-studio-arunisha-gurgaon"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.581327+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.581327+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "miq::analyst,data::blr": {
+      "canonical_job_key": "miq::analyst,data::blr",
+      "company": "MiQ",
+      "job_title": "Senior Data Analyst",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-421015-senior-data-analyst-at-miq-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-421015-senior-data-analyst-at-miq-bangalore",
+        "https://www.instahyre.com/job-421015-senior-data-analyst-at-miq-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.581756+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.581756+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "tatagroup::engineering,manager::blr": {
+      "canonical_job_key": "tatagroup::engineering,manager::blr",
+      "company": "Tata Group",
+      "job_title": "Senior Engineering Manager",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-432410-senior-engineering-manager-at-tata-group-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-432410-senior-engineering-manager-at-tata-group-bangalore",
+        "https://www.instahyre.com/job-432410-senior-engineering-manager-at-tata-group-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.582366+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.582366+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "anairaai::engineer,full,stack::blr": {
+      "canonical_job_key": "anairaai::engineer,full,stack::blr",
+      "company": "Anaira AI",
+      "job_title": "Full - Stack Engineer",
+      "location": "Bangalore,Mumbai",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-448983-full-stack-engineer-at-anaira-ai-bangalore-mumbai",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-448983-full-stack-engineer-at-anaira-ai-bangalore-mumbai",
+        "https://www.instahyre.com/job-448983-full-stack-engineer-at-anaira-ai-bangalore-mumbai"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.583253+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.583253+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "aspora::3,4,backend,sde::blr": {
+      "canonical_job_key": "aspora::3,4,backend,sde::blr",
+      "company": "Aspora",
+      "job_title": "SDE 3 / 4 (Backend)",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-400690-sde-3-4-backend-at-aspora-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-400690-sde-3-4-backend-at-aspora-bangalore",
+        "https://www.instahyre.com/job-400690-sde-3-4-backend-at-aspora-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.584196+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.584196+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "amazon::backend,engineer::blr": {
+      "canonical_job_key": "amazon::backend,engineer::blr",
+      "company": "Amazon",
+      "job_title": "Backend Engineer",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-447326-backend-engineer-at-amazon-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-447326-backend-engineer-at-amazon-bangalore",
+        "https://www.instahyre.com/job-447326-backend-engineer-at-amazon-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.584513+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.584513+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "anairaai::engineering,manager::india_other": {
+      "canonical_job_key": "anairaai::engineering,manager::india_other",
+      "company": "Anaira AI",
+      "job_title": "Engineering Manager",
+      "location": "Mumbai",
+      "work_arrangement": "Onsite (Mumbai)",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-446761-engineering-manager-at-anaira-ai-mumbai",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-446761-engineering-manager-at-anaira-ai-mumbai",
+        "https://www.instahyre.com/job-446761-engineering-manager-at-anaira-ai-mumbai"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.584781+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.584781+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "flipkart::engineer,learning,machine::blr": {
+      "canonical_job_key": "flipkart::engineer,learning,machine::blr",
+      "company": "Flipkart",
+      "job_title": "Machine Learning Engineer",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-444778-machine-learning-engineer-at-flipkart-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-444778-machine-learning-engineer-at-flipkart-bangalore",
+        "https://www.instahyre.com/job-444778-machine-learning-engineer-at-flipkart-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.585209+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.585209+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "valo::ai,engineer,founding::india_other": {
+      "canonical_job_key": "valo::ai,engineer,founding::india_other",
+      "company": "Valo",
+      "job_title": "Founding AI Engineer",
+      "location": "Gurgaon",
+      "work_arrangement": "Onsite (Gurgaon)",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-448457-founding-ai-engineer-at-valo-gurgaon",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-448457-founding-ai-engineer-at-valo-gurgaon",
+        "https://www.instahyre.com/job-448457-founding-ai-engineer-at-valo-gurgaon"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.585536+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.585536+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "netspring::devops,engineer::blr": {
+      "canonical_job_key": "netspring::devops,engineer::blr",
+      "company": "NetSpring",
+      "job_title": "DevOps Engineer",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-433817-devops-engineer-at-netspring-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-433817-devops-engineer-at-netspring-bangalore",
+        "https://www.instahyre.com/job-433817-devops-engineer-at-netspring-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.585957+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.585957+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "purplle::3,development,engineer,fullstack,software::india_other": {
+      "canonical_job_key": "purplle::3,development,engineer,fullstack,software::india_other",
+      "company": "Purplle",
+      "job_title": "Software Development Engineer 3 - Fullstack",
+      "location": "Pune",
+      "work_arrangement": "Onsite (Pune)",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-441392-software-development-engineer-3-fullstack-at-purplle-pune",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-441392-software-development-engineer-3-fullstack-at-purplle-pune",
+        "https://www.instahyre.com/job-441392-software-development-engineer-3-fullstack-at-purplle-pune"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.586259+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.586259+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "akrysai::engineer,fullstack::blr": {
+      "canonical_job_key": "akrysai::engineer,fullstack::blr",
+      "company": "Akrys.ai",
+      "job_title": "Fullstack Engineer",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-449336-fullstack-engineer-at-akrys-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-449336-fullstack-engineer-at-akrys-bangalore",
+        "https://www.instahyre.com/job-449336-fullstack-engineer-at-akrys-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.586881+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.586881+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "supermoney::data,engineer::blr": {
+      "canonical_job_key": "supermoney::data,engineer::blr",
+      "company": "super.money",
+      "job_title": "Senior Data Engineer",
+      "location": "Bangalore",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://www.instahyre.com/job-449062-senior-data-engineer-at-super-bangalore",
+      "all_source_urls": [
+        "https://www.instahyre.com/job-449062-senior-data-engineer-at-super-bangalore",
+        "https://www.instahyre.com/job-449062-senior-data-engineer-at-super-bangalore"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.587155+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.587155+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via Instahyre on 2026-11-05"
+    },
+    "unisys::&,azure,cloud,databricks,devops,engineer,operations::blr": {
+      "canonical_job_key": "unisys::&,azure,cloud,databricks,devops,engineer,operations::blr",
+      "company": "Unisys",
+      "job_title": "DevOps Engineer - Azure Databricks & Azure Cloud Operations",
+      "location": "Bengaluru East, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-azure-databricks-azure-cloud-operations-at-unisys-4479525173",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/devops-engineer-azure-databricks-azure-cloud-operations-at-unisys-4479525173"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.587910+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.589968+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "fulfillmentiq::azure,devops,engineer,gcp::blr": {
+      "canonical_job_key": "fulfillmentiq::azure,devops,engineer,gcp::blr",
+      "company": "Fulfillment IQ",
+      "job_title": "DevOps Engineer (Azure / GCP)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-azure-gcp-at-fulfillment-iq-4485084146",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/devops-engineer-azure-gcp-at-fulfillment-iq-4485084146"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.588169+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.592245+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "lseg::azure,engineer,platform,reliability::blr": {
+      "canonical_job_key": "lseg::azure,engineer,platform,reliability::blr",
+      "company": "LSEG",
+      "job_title": "Senior Platform Reliability Engineer - Azure",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-platform-reliability-engineer-azure-at-lseg-4486368947",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-platform-reliability-engineer-azure-at-lseg-4486368947"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.588418+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.589838+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "trintech::&,azure,cloud,db,dev,engineer,noida,ops::india_other": {
+      "canonical_job_key": "trintech::&,azure,cloud,db,dev,engineer,noida,ops::india_other",
+      "company": "Trintech",
+      "job_title": "Senior Azure Engineer (Dev Ops & DB)/Cloud, Noida",
+      "location": "Noida, Uttar Pradesh, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-azure-engineer-dev-ops-db-cloud-noida-at-trintech-4486354697",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-azure-engineer-dev-ops-db-cloud-noida-at-trintech-4486354697",
+        "https://in.linkedin.com/jobs/view/senior-azure-engineer-dev-ops-db-cloud-noida-at-trintech-4486354697"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.588946+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.588946+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "celebal::devops,engineer::india_other": {
+      "canonical_job_key": "celebal::devops,engineer::india_other",
+      "company": "Celebal Technologies",
+      "job_title": "DevOps Engineer",
+      "location": "Jaipur, Rajasthan, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-at-celebal-technologies-4486584272",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/devops-engineer-at-celebal-technologies-4486584272",
+        "https://in.linkedin.com/jobs/view/devops-engineer-at-celebal-technologies-4486584272"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.589197+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.589197+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "neev::20,azure,days,devops,engineer,immediate,notice,period,to::blr": {
+      "canonical_job_key": "neev::20,azure,days,devops,engineer,immediate,notice,period,to::blr",
+      "company": "Neev",
+      "job_title": "Azure Devops Engineer (Immediate to 20 Days Notice Period)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/azure-devops-engineer-immediate-to-20-days-notice-period-at-neev-4486571712",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/azure-devops-engineer-immediate-to-20-days-notice-period-at-neev-4486571712",
+        "https://in.linkedin.com/jobs/view/azure-devops-engineer-immediate-to-20-days-notice-period-at-neev-4486571712"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.589574+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.589574+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "crisil::devops,engineer,flx::india_other": {
+      "canonical_job_key": "crisil::devops,engineer,flx::india_other",
+      "company": "Crisil",
+      "job_title": "Senior DevOps Engineer-FLX",
+      "location": "Gurgaon, Haryana, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-devops-engineer-flx-at-crisil-4486372598",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-devops-engineer-flx-at-crisil-4486361844",
+        "https://in.linkedin.com/jobs/view/senior-devops-engineer-flx-at-crisil-4486372598"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.590206+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.590453+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "oaktree::azure,devops,engineer,fabric,microsoft,terraform::india_other": {
+      "canonical_job_key": "oaktree::azure,devops,engineer,fabric,microsoft,terraform::india_other",
+      "company": "Oaktree",
+      "job_title": "Senior Associate - DevOps Engineer – Azure / Microsoft Fabric - Terraform",
+      "location": "Hyderabad, Telangana, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-associate-devops-engineer-%E2%80%93-azure-microsoft-fabric-terraform-at-oaktree-4477571849",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-associate-devops-engineer-%E2%80%93-azure-microsoft-fabric-terraform-at-oaktree-4477571849",
+        "https://in.linkedin.com/jobs/view/senior-associate-devops-engineer-%E2%80%93-azure-microsoft-fabric-terraform-at-oaktree-4477571849"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.590594+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.590594+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "reorbit::&,cloud,control,engineer,ground,infrastructure,mission,segment::blr": {
+      "canonical_job_key": "reorbit::&,cloud,control,engineer,ground,infrastructure,mission,segment::blr",
+      "company": "ReOrbit",
+      "job_title": "Senior Cloud Infrastructure Engineer (Mission Control & Ground Segment)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-mission-control-ground-segment-at-reorbit-4476669726",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-cloud-infrastructure-engineer-mission-control-ground-segment-at-reorbit-4476669726"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.590869+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.591702+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "nttdatanorthamerica::aiml,cloud,eng,integration,platform,specialist,systems::blr": {
+      "canonical_job_key": "nttdatanorthamerica::aiml,cloud,eng,integration,platform,specialist,systems::blr",
+      "company": "NTT DATA North America",
+      "job_title": "Systems Integration Senior Specialist_Cloud-AIML Platform eng",
+      "location": "Bangalore Urban, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/systems-integration-senior-specialist-cloud-aiml-platform-eng-at-ntt-data-north-america-4487235599",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/systems-integration-senior-specialist-cloud-aiml-platform-eng-at-ntt-data-north-america-4487235599"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.591446+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.594899+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "intraedge::engineer,infrastructure::india_other": {
+      "canonical_job_key": "intraedge::engineer,infrastructure::india_other",
+      "company": "IntraEdge",
+      "job_title": "Senior Infrastructure Engineer",
+      "location": "Pune District, Maharashtra, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-infrastructure-engineer-at-intraedge-4485597598",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-infrastructure-engineer-at-intraedge-4485597598",
+        "https://in.linkedin.com/jobs/view/senior-infrastructure-engineer-at-intraedge-4485597598"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.591869+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.591869+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "atlassian::engineer,reliability,site::blr": {
+      "canonical_job_key": "atlassian::engineer,reliability,site::blr",
+      "company": "Atlassian",
+      "job_title": "Senior Site Reliability Engineer",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-at-atlassian-4487234978",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-at-atlassian-4487234978"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.592448+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.593518+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "cisco::&,4,8years,cloud,docker,engineer,kubernetes,platform,reliability,site,sre,to::blr": {
+      "canonical_job_key": "cisco::&,4,8years,cloud,docker,engineer,kubernetes,platform,reliability,site,sre,to::blr",
+      "company": "Cisco",
+      "job_title": "Site Reliability Engineer (SRE) – Cloud Platform & Kubernetes , Docker (4 to 8Years)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-sre-%E2%80%93-cloud-platform-kubernetes-docker-4-to-8years-at-cisco-4478559092",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/site-reliability-engineer-sre-%E2%80%93-cloud-platform-kubernetes-docker-4-to-8years-at-cisco-4478559092"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.592718+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.593922+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "responsive::engineer,reliability,site::blr": {
+      "canonical_job_key": "responsive::engineer,reliability,site::blr",
+      "company": "Responsive",
+      "job_title": "Senior Site Reliability Engineer",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-at-responsive-4485097573",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-at-responsive-4485097573",
+        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-at-responsive-4485097573"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.593018+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.593018+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "akamai::compute,engineer,platform,reliability,site,team::blr": {
+      "canonical_job_key": "akamai::compute,engineer,platform,reliability,site,team::blr",
+      "company": "Akamai Technologies",
+      "job_title": "Senior Site Reliability Engineer (Compute Platform Services Team)",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-compute-platform-services-team-at-akamai-technologies-4479530568",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-compute-platform-services-team-at-akamai-technologies-4479530568",
+        "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-compute-platform-services-team-at-akamai-technologies-4479530568"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.593269+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.593269+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "ust::&,engineer,gcp,gke,reliability,site::india_other": {
+      "canonical_job_key": "ust::&,engineer,gcp,gke,reliability,site::india_other",
+      "company": "UST",
+      "job_title": "Site Reliability Engineer (GCP & GKE)",
+      "location": "Trivandrum, Kerala, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-gcp-gke-at-ust-4485593156",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/site-reliability-engineer-gcp-gke-at-ust-4485593156",
+        "https://in.linkedin.com/jobs/view/site-reliability-engineer-gcp-gke-at-ust-4485593156"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.593647+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.593647+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "lseg::azure,engineer,platform,reliability::india_other": {
+      "canonical_job_key": "lseg::azure,engineer,platform,reliability::india_other",
+      "company": "LSEG",
+      "job_title": "Senior Platform Reliability Engineer - Azure",
+      "location": "Hyderabad, Telangana, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/senior-platform-reliability-engineer-azure-at-lseg-4486364965",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/senior-platform-reliability-engineer-azure-at-lseg-4486364965",
+        "https://in.linkedin.com/jobs/view/senior-platform-reliability-engineer-azure-at-lseg-4486364965"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.594058+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.594058+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "wisdomai::engineer,platforms,software::blr": {
+      "canonical_job_key": "wisdomai::engineer,platforms,software::blr",
+      "company": "WisdomAI",
+      "job_title": "Software Engineer, Platforms",
+      "location": "Bengaluru, Karnataka, India",
+      "work_arrangement": "Hybrid Bengaluru",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/software-engineer-platforms-at-wisdomai-4467386651",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/software-engineer-platforms-at-wisdomai-4467386651"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.594444+00:00",
+      "original_posting_date": "2026-11-04",
+      "last_verified_at": "2026-11-05T09:57:26.595189+00:00",
+      "status": "PREVIOUSLY_REVIEWED",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
+    },
+    "anaplan::engineer,enginner,ii,infrastructure,platform::india_other": {
+      "canonical_job_key": "anaplan::engineer,enginner,ii,infrastructure,platform::india_other",
+      "company": "Anaplan",
+      "job_title": "Enginner II, Infrastructure (Platform Engineer)",
+      "location": "Gurugram, Haryana, India",
+      "work_arrangement": "Onsite India",
+      "official_requisition_id": null,
+      "LinkedIn_job_id": null,
+      "Wellfound_job_id": null,
+      "other_source_job_ids": [],
+      "canonical_application_url": "https://in.linkedin.com/jobs/view/enginner-ii-infrastructure-platform-engineer-at-anaplan-4487724440",
+      "all_source_urls": [
+        "https://in.linkedin.com/jobs/view/enginner-ii-infrastructure-platform-engineer-at-anaplan-4487724440",
+        "https://in.linkedin.com/jobs/view/enginner-ii-infrastructure-platform-engineer-at-anaplan-4487724440"
+      ],
+      "first_discovered_at": "2026-11-05T09:57:26.595373+00:00",
+      "original_posting_date": "2026-11-05",
+      "last_verified_at": "2026-11-05T09:57:26.595373+00:00",
+      "status": "NEW",
+      "application_date": null,
+      "notes": "Discovered via LinkedIn Jobs on 2026-11-05"
     }
   }
 }
