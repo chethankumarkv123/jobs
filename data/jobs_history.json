@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-11-07T09:19:53.407130+00:00",
-  "total_tracked": 819,
+  "last_updated": "2026-11-08T09:37:21.686309+00:00",
+  "total_tracked": 838,
   "applied_count": 0,
   "saved_count": 0,
   "jobs": {
@@ -510,7 +510,7 @@
       "score": 74.5,
       "recommendation": "SKIP",
       "first_seen": "2026-10-20T06:45:21.838527+00:00",
-      "last_seen": "2026-11-07T09:19:50.637563+00:00",
+      "last_seen": "2026-11-08T09:37:18.704008+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "3f7756cfddad250c": {
@@ -9819,7 +9819,7 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-05T09:57:19.698557+00:00",
-      "last_seen": "2026-11-07T09:19:46.312004+00:00",
+      "last_seen": "2026-11-08T09:37:15.981981+00:00",
       "status": "PREVIOUSLY_REVIEWED"
     },
     "0f7834996e233475": {
@@ -10968,7 +10968,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:46.240908+00:00",
-      "last_seen": "2026-11-07T09:19:46.240915+00:00"
+      "last_seen": "2026-11-08T09:37:16.187629+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "c4bf213af4c6a995": {
       "id": "c4bf213af4c6a995",
@@ -11024,7 +11025,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.978918+00:00",
-      "last_seen": "2026-11-07T09:19:45.978928+00:00"
+      "last_seen": "2026-11-08T09:37:15.721604+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "6af0e5d06f8fdfe8": {
       "id": "6af0e5d06f8fdfe8",
@@ -11038,7 +11040,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.978957+00:00",
-      "last_seen": "2026-11-07T09:19:45.978959+00:00"
+      "last_seen": "2026-11-08T09:37:15.721667+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "ab3b82799a0a6f04": {
       "id": "ab3b82799a0a6f04",
@@ -11049,10 +11052,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-445593-customs-software-engineer-aep-at-accenture-2-ahmedabad-hyderabad-pune",
       "score": 36.0,
-      "recommendation": "SKIP",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.978979+00:00",
-      "last_seen": "2026-11-07T09:19:45.978980+00:00"
+      "last_seen": "2026-11-08T09:37:15.721726+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "b7b3de29037758aa": {
       "id": "b7b3de29037758aa",
@@ -11063,10 +11067,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-442570-custom-software-engineer-amazon-connect-at-accenture-2-bangalore-delhi-gurgaon",
       "score": 36.0,
-      "recommendation": "SKIP",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.978998+00:00",
-      "last_seen": "2026-11-07T09:19:45.978999+00:00"
+      "last_seen": "2026-11-08T09:37:15.721788+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "6a17c04539ede885": {
       "id": "6a17c04539ede885",
@@ -11077,10 +11082,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-445585-pega-developer-at-accenture-2-bangalore-gurgaon-hyderabad",
       "score": 32.0,
-      "recommendation": "SKIP",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979015+00:00",
-      "last_seen": "2026-11-07T09:19:45.979016+00:00"
+      "last_seen": "2026-11-08T09:37:15.721845+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "c3178c4b65ba2027": {
       "id": "c3178c4b65ba2027",
@@ -11094,7 +11100,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979034+00:00",
-      "last_seen": "2026-11-07T09:19:45.979035+00:00"
+      "last_seen": "2026-11-08T09:37:15.721905+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "2bede4b3ca0c8532": {
       "id": "2bede4b3ca0c8532",
@@ -11105,10 +11112,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-448947-engineering-manager-backend-at-bigbasket-bangalore",
       "score": 36.0,
-      "recommendation": "SKIP",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979051+00:00",
-      "last_seen": "2026-11-07T09:19:45.979052+00:00"
+      "last_seen": "2026-11-08T09:37:15.721964+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "7e8d7718baeca1a6": {
       "id": "7e8d7718baeca1a6",
@@ -11122,7 +11130,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979070+00:00",
-      "last_seen": "2026-11-07T09:19:45.979071+00:00"
+      "last_seen": "2026-11-08T09:37:15.722032+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "c0d7719152fcacef": {
       "id": "c0d7719152fcacef",
@@ -11133,10 +11142,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-450056-power-bi-developer-at-accenture-2-bangalore",
       "score": 32.0,
-      "recommendation": "SKIP",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979089+00:00",
-      "last_seen": "2026-11-07T09:19:45.979090+00:00"
+      "last_seen": "2026-11-08T09:37:15.722101+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "9a185cd0db116b54": {
       "id": "9a185cd0db116b54",
@@ -11150,7 +11160,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979147+00:00",
-      "last_seen": "2026-11-07T09:19:45.979148+00:00"
+      "last_seen": "2026-11-08T09:37:15.720643+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "6a8b245745a21903": {
       "id": "6a8b245745a21903",
@@ -11164,7 +11175,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979164+00:00",
-      "last_seen": "2026-11-07T09:19:45.979165+00:00"
+      "last_seen": "2026-11-08T09:37:15.721338+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "ecbfdb5f1d2c53ae": {
       "id": "ecbfdb5f1d2c53ae",
@@ -11178,7 +11190,8 @@
       "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979214+00:00",
-      "last_seen": "2026-11-07T09:19:45.979215+00:00"
+      "last_seen": "2026-11-08T09:37:15.722497+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "1ec141386f99a00f": {
       "id": "1ec141386f99a00f",
@@ -11189,10 +11202,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-448285-application-architect-full-stack-gen-ai-java-at-accenture-2-hyderabad",
       "score": 32.0,
-      "recommendation": "SKIP",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979251+00:00",
-      "last_seen": "2026-11-07T09:19:45.979252+00:00"
+      "last_seen": "2026-11-08T09:37:15.722625+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "6eb53a6e5d9efa44": {
       "id": "6eb53a6e5d9efa44",
@@ -11203,10 +11217,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-449376-record-to-report-manager-at-accenture-2-mumbai",
       "score": 32.0,
-      "recommendation": "SKIP",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979267+00:00",
-      "last_seen": "2026-11-07T09:19:45.979268+00:00"
+      "last_seen": "2026-11-08T09:37:15.722683+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "b52dd86a22e4e92e": {
       "id": "b52dd86a22e4e92e",
@@ -11217,10 +11232,11 @@
       "source_name": "Instahyre",
       "official_application_url": "https://www.instahyre.com/job-450058-senior-ai-security-engineer-llm-vulnerability-at-codefeast-work-from-home",
       "score": 51.0,
-      "recommendation": "APPLY",
+      "recommendation": "REVIEW",
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:45.979290+00:00",
-      "last_seen": "2026-11-07T09:19:45.979291+00:00"
+      "last_seen": "2026-11-08T09:37:15.721067+00:00",
+      "status": "PREVIOUSLY_REVIEWED"
     },
     "7a45a2702c9b5579": {
       "id": "7a45a2702c9b5579",
@@ -11529,6 +11545,272 @@
       "application_status": "NEW",
       "first_seen": "2026-11-07T09:19:49.860054+00:00",
       "last_seen": "2026-11-07T09:19:49.860055+00:00"
+    },
+    "3530f129f2c19486": {
+      "id": "3530f129f2c19486",
+      "canonical_job_key": "salvosoftware::ai,developer::india_other",
+      "title": "AI Developer",
+      "company": "Salvo Software",
+      "location": "Worldwide / Remote",
+      "source_name": "RemoteOK",
+      "official_application_url": "https://remoteOK.com/remote-jobs/remote-ai-developer-salvo-software-1137701",
+      "score": 71.5,
+      "recommendation": "APPLY",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:16.185516+00:00",
+      "last_seen": "2026-11-08T09:37:16.185524+00:00"
+    },
+    "d80f74003b0f96d1": {
+      "id": "d80f74003b0f96d1",
+      "canonical_job_key": "pinegapai::ai,engineer::blr",
+      "title": "AI Engineer",
+      "company": "PineGap.ai",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-423568-ai-engineer-at-pinegap-bangalore",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:15.720900+00:00",
+      "last_seen": "2026-11-08T09:37:15.720905+00:00"
+    },
+    "ab31f2bd60117526": {
+      "id": "ab31f2bd60117526",
+      "canonical_job_key": "indianeduhub::executive,finance::blr",
+      "title": "Finance Executive",
+      "company": "Indian Edu Hub",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-450067-finance-executive-at-indian-edu-hub-2-bangalore",
+      "score": 38.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:15.721128+00:00",
+      "last_seen": "2026-11-08T09:37:15.721132+00:00"
+    },
+    "bf936ba837495719": {
+      "id": "bf936ba837495719",
+      "canonical_job_key": "flipkart::data,engineer::blr",
+      "title": "Senior Data Engineer",
+      "company": "Flipkart",
+      "location": "Bangalore",
+      "source_name": "Instahyre",
+      "official_application_url": "https://www.instahyre.com/job-449101-senior-data-engineer-at-flipkart-bangalore",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:15.721473+00:00",
+      "last_seen": "2026-11-08T09:37:15.721478+00:00"
+    },
+    "d3835563b4c8b92d": {
+      "id": "d3835563b4c8b92d",
+      "canonical_job_key": "lseg::engineer,reliability::blr",
+      "title": "Senior Reliability Engineer",
+      "company": "LSEG",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-reliability-engineer-at-lseg-4306360764",
+      "score": 47.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:15.710862+00:00",
+      "last_seen": "2026-11-08T09:37:15.710868+00:00"
+    },
+    "8496c4a35a2b2c7a": {
+      "id": "8496c4a35a2b2c7a",
+      "canonical_job_key": "docusign::engineer,software::blr",
+      "title": "Software Engineer",
+      "company": "Docusign",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/software-engineer-at-docusign-4470017208",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:15.711034+00:00",
+      "last_seen": "2026-11-08T09:37:15.711038+00:00"
+    },
+    "cd99c77cd655c167": {
+      "id": "cd99c77cd655c167",
+      "canonical_job_key": "wellsfargo::engineer,infrastructure::blr",
+      "title": "Senior Infrastructure Engineer",
+      "company": "Wells Fargo",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-infrastructure-engineer-at-wells-fargo-4472099280",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:15.711344+00:00",
+      "last_seen": "2026-11-08T09:37:15.711348+00:00"
+    },
+    "dd5c4e4409bfe4d3": {
+      "id": "dd5c4e4409bfe4d3",
+      "canonical_job_key": "aqilea::architect,azure,cloud,engineer::india_other",
+      "title": "Azure Cloud Senior Engineer and Architect",
+      "company": "Aqilea",
+      "location": "Hyderabad, Telangana, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/azure-cloud-senior-engineer-and-architect-at-aqilea-4487638365",
+      "score": 39.5,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:16.039183+00:00",
+      "last_seen": "2026-11-08T09:37:16.039191+00:00"
+    },
+    "44fbf9f19034009f": {
+      "id": "44fbf9f19034009f",
+      "canonical_job_key": "minfy::cloud,engineer,platform::india_other",
+      "title": "Senior Cloud Platform Engineer",
+      "company": "Minfy",
+      "location": "Hyderabad, Telangana, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-cloud-platform-engineer-at-minfy-4471451730",
+      "score": 43.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:16.039403+00:00",
+      "last_seen": "2026-11-08T09:37:16.039407+00:00"
+    },
+    "d11876778d46e9dc": {
+      "id": "d11876778d46e9dc",
+      "canonical_job_key": "algosec::devops,engineer,india::india_other",
+      "title": "DevOps Engineer, India",
+      "company": "AlgoSec",
+      "location": "New Delhi, Delhi, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/devops-engineer-india-at-algosec-4488758231",
+      "score": 50.5,
+      "recommendation": "APPLY",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:17.117415+00:00",
+      "last_seen": "2026-11-08T09:37:17.117418+00:00"
+    },
+    "91c64a65a11a5366": {
+      "id": "91c64a65a11a5366",
+      "canonical_job_key": "nagrakudelskiindia::cloud,engineer::blr",
+      "title": "Cloud Engineer",
+      "company": "Nagra Kudelski, India",
+      "location": "Greater Bengaluru Area",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/cloud-engineer-at-nagra-kudelski-india-4487637590",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:17.682796+00:00",
+      "last_seen": "2026-11-08T09:37:17.682799+00:00"
+    },
+    "97930f3de2011b0c": {
+      "id": "97930f3de2011b0c",
+      "canonical_job_key": "phonepe::12,4,engineer,on,prem,reliability,site,to,years::blr",
+      "title": "Site Reliability Engineer - On-Prem (4 to 12 Years)",
+      "company": "PhonePe",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/site-reliability-engineer-on-prem-4-to-12-years-at-phonepe-4461154327",
+      "score": 48.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:18.573133+00:00",
+      "last_seen": "2026-11-08T09:37:18.573136+00:00"
+    },
+    "eb93b62642a0ec44": {
+      "id": "eb93b62642a0ec44",
+      "canonical_job_key": "jefferies::ai,engineer,ops,platform,reliability,tooling::india_other",
+      "title": "Associate - AI Tooling Ops - Platform Reliability Engineer",
+      "company": "Jefferies",
+      "location": "Pune Division, Maharashtra, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/associate-ai-tooling-ops-platform-reliability-engineer-at-jefferies-4471851519",
+      "score": 47.5,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:18.976237+00:00",
+      "last_seen": "2026-11-08T09:37:18.976241+00:00"
+    },
+    "0a34ee48c102e2fe": {
+      "id": "0a34ee48c102e2fe",
+      "canonical_job_key": "microsoft::engineer,software::blr",
+      "title": "Senior Software Engineer",
+      "company": "Microsoft",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-microsoft-4472003346",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:19.373963+00:00",
+      "last_seen": "2026-11-08T09:37:19.373972+00:00"
+    },
+    "03e0ed63e7a90d75": {
+      "id": "03e0ed63e7a90d75",
+      "canonical_job_key": "cognite::engineer,software::blr",
+      "title": "Software Engineer",
+      "company": "Cognite",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/software-engineer-at-cognite-4471880277",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:19.374279+00:00",
+      "last_seen": "2026-11-08T09:37:19.374282+00:00"
+    },
+    "857e9454fd127f4a": {
+      "id": "857e9454fd127f4a",
+      "canonical_job_key": "netapp::engineer,information,kong,sys::blr",
+      "title": "Information Sys Engineer( Kong)",
+      "company": "NetApp",
+      "location": "Bengaluru, Karnataka, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/information-sys-engineer-kong-at-netapp-4477396889",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:19.374449+00:00",
+      "last_seen": "2026-11-08T09:37:19.374454+00:00"
+    },
+    "29bf1a373990988e": {
+      "id": "29bf1a373990988e",
+      "canonical_job_key": "mongodb::engineer,platform::india_other",
+      "title": "Senior Platform Engineer",
+      "company": "MongoDB",
+      "location": "Gurugram, Haryana, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-platform-engineer-at-mongodb-4443912156",
+      "score": 40.0,
+      "recommendation": "REVIEW",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:19.657755+00:00",
+      "last_seen": "2026-11-08T09:37:19.657764+00:00"
+    },
+    "e0ac019a96ec6697": {
+      "id": "e0ac019a96ec6697",
+      "canonical_job_key": "teradata::ai,cloud,engineer::india_other",
+      "title": "Senior Cloud AI Engineer",
+      "company": "Teradata",
+      "location": "Pune/Pimpri-Chinchwad Area",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-cloud-ai-engineer-at-teradata-4461311387",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:19.657920+00:00",
+      "last_seen": "2026-11-08T09:37:19.657924+00:00"
+    },
+    "739f805ae4a0eba3": {
+      "id": "739f805ae4a0eba3",
+      "canonical_job_key": "nvidia::broadcasting,engineer,media,software,system::india_other",
+      "title": "Senior System Software Engineer - Media and Broadcasting",
+      "company": "NVIDIA",
+      "location": "Pune City, Maharashtra, India",
+      "source_name": "LinkedIn Jobs",
+      "official_application_url": "https://in.linkedin.com/jobs/view/senior-system-software-engineer-media-and-broadcasting-at-nvidia-4395485435",
+      "score": 36.0,
+      "recommendation": "SKIP",
+      "application_status": "NEW",
+      "first_seen": "2026-11-08T09:37:19.658210+00:00",
+      "last_seen": "2026-11-08T09:37:19.658213+00:00"
     }
   }
 }
